@@ -1,0 +1,1863 @@
+Subzer0570 (Udit Damare); 
+community-jenkins-io; @alyssat posted in Jenkins GSoC 2023: 
+Rishav-k (Rishav Kumar); 
+MarkEWaite (Mark Waite); 
+Kris Stern; 
+MarkEWaite (Mark Waite); 
+Kris Stern; 
+rahoolonly (Rahool); 
+Dheeraj; here is a small list of projects to which you can contribute: 
+mPokornyETM (mPokornyETM); 
+therealamit (Amit Kumar Deoghoria); 
+MarkEWaite (Mark Waite); 
+mPokornyETM (mPokornyETM); When you has read it and you are still lost, you can look in here: 
+PrathmeshAdsod (Prathmesh Adsod); 
+community-jenkins-io; 
+piyush-1234 (piyush); 
+Kris Stern; 
+piyush-1234 (piyush); 
+Delta456 (Swastik Baranwal); 
+Delta456 (Swastik Baranwal); 
+Delta456 (Swastik Baranwal); 
+Jmm; 
+Delta456 (Swastik Baranwal); 
+Delta456 (Swastik Baranwal); 
+Jmm; 
+Jmm; 
+Delta456 (Swastik Baranwal); 
+Delta456 (Swastik Baranwal); 
+Jmm; 
+Delta456 (Swastik Baranwal); 
+Delta456 (Swastik Baranwal); 
+Jmm; 
+Delta456 (Swastik Baranwal); 
+Delta456 (Swastik Baranwal); 
+Jmm; 
+Delta456 (Swastik Baranwal); 
+Delta456 (Swastik Baranwal); 
+Jmm; I mean: 
+Delta456 (Swastik Baranwal); 
+Jmm; 
+Delta456 (Swastik Baranwal); 
+Delta456 (Swastik Baranwal); 
+Jmm; 
+mPokornyETM (mPokornyETM); 
+mPokornyETM (mPokornyETM); 
+anurag-sachan (Anurag Sachan); 
+Jmm; 
+halkeye; 
+vedant-z (Vedant Borkar); 
+vedant-z (Vedant Borkar); 
+vedant-z (Vedant Borkar); 
+vedant-z (Vedant Borkar); 
+Jmm; 
+iqbalrohail (Rohail Iqbal); 
+iqbalrohail (Rohail Iqbal); 
+Ulli Hafner; 
+iqbalrohail (Rohail Iqbal); 
+Ulli Hafner; There is our list of open newbie friendly issues: 
+community-jenkins-io; @alyssat posted in Google Summer of Code 2023: 
+iqbalrohail (Rohail Iqbal); 
+shraddha761 (shraddha761); 
+MarkEWaite (Mark Waite); 
+jagrutitiw_twitter (Jagruti); 
+jagrutitiw_twitter (Jagruti); 
+halkeye; 
+mPokornyETM (mPokornyETM); 
+mPokornyETM (mPokornyETM); 
+mPokornyETM (mPokornyETM); 
+mPokornyETM (mPokornyETM); 
+jagrutitiw_twitter (Jagruti); 
+jagrutitiw_twitter (Jagruti); 
+jagrutitiw_twitter (Jagruti); 
+jagrutitiw_twitter (Jagruti); Did you mean this documentation: 
+iqbalrohail (Rohail Iqbal); 
+mPokornyETM (mPokornyETM); 
+MarkEWaite (Mark Waite); 
+adityagoyal200 (Aditya goyal); 
+Ulli Hafner; 
+MarkEWaite (Mark Waite); 
+pratik2315 (pratik2315); 
+Jmm; 
+Jmm; 
+Jmm; 
+pratik2315 (pratik2315); 
+Jmm; 
+pratik2315 (pratik2315); 
+iqbalrohail (Rohail Iqbal); 
+iqbalrohail (Rohail Iqbal); 
+pratik2315 (pratik2315); 
+iqbalrohail (Rohail Iqbal); 
+community-jenkins-io; @Jmm (Jean-Marc Meessen) posted in GSoC 2023: 
+Jmm; FYI: 
+alyssat (Alyssat); We will be hosting a webinar for the above (https://www.jenkins.io/blog/2022/11/23/get-prepared-for-gsoc/. It is currently scheduled for Dec 20 @ 4pm UTC. Call in info: 
+iqbalrohail (Rohail Iqbal); 
+Subzer0570 (Udit Damare); 
+mPokornyETM (mPokornyETM); 
+mPokornyETM (mPokornyETM); 
+mPokornyETM (mPokornyETM); 
+dipanshu; 
+dipanshu; 
+dipanshu; 
+dipanshu; 
+community-jenkins-io; 
+community-jenkins-io; 
+alyssat (Alyssat); 
+community-jenkins-io; 
+community-jenkins-io; 
+community-jenkins-io; 
+Subzer0570 (Udit Damare); 
+ADITYADAS1999 (ADITYA DAS); 
+iqbalrohail (Rohail Iqbal); 
+iqbalrohail (Rohail Iqbal); 
+ADITYADAS1999 (ADITYA DAS); 
+mPokornyETM (mPokornyETM); 
+mPokornyETM (mPokornyETM); 
+Subzer0570 (Udit Damare); 
+OmAximani0 (Om Aximani); 
+Ulli Hafner; 
+Vandit1604 (Vandit Singh); 
+alyssat (Alyssat); 
+Vandit1604 (Vandit Singh); 
+daniel-plainview (MUKUND B Srinivas); 
+daniel-plainview (MUKUND B Srinivas); 
+daniel-plainview (MUKUND B Srinivas); 
+Ulli Hafner; 
+Vandit1604 (Vandit Singh); 
+MarkEWaite (Mark Waite); 
+Dheeraj; 
+daniel-plainview (MUKUND B Srinivas); 
+prak30 (prak30); 
+ADITYADAS1999 (ADITYA DAS); > We will be hosting a webinar for the above (https://www.jenkins.io/blog/2022/11/23/get-prepared-for-gsoc/. It is currently scheduled for Dec 20 @ 4pm UTC. Call in info: 
+pratik2315 (pratik2315); 
+pratik2315 (pratik2315); 
+ADITYADAS1999 (ADITYA DAS); 
+community-jenkins-io; @Jmm (Jean-Marc Meessen) posted in Reminder: 
+alyssat (Alyssat); 
+daniel-plainview (MUKUND B Srinivas); 
+daniel-plainview (MUKUND B Srinivas); 
+daniel-plainview (MUKUND B Srinivas); 
+community-jenkins-io; 
+Jmm; 
+Jmm; Note, daniel-plainview (MUKUND B Srinivas), there might be something smelly: 
+Jmm; False alarm (and my bad): 
+community-jenkins-io; 
+alyssat (Alyssat); 
+Jmm; 
+pratik2315 (pratik2315); 
+community-jenkins-io; @alyssat posted in 2022 Dec 20: Google Summer of Code 2023: 
+daniel-plainview (MUKUND B Srinivas); 
+daniel-plainview (MUKUND B Srinivas); 
+daniel-plainview (MUKUND B Srinivas); 
+daniel-plainview (MUKUND B Srinivas); 
+daniel-plainview (MUKUND B Srinivas); 
+daniel-plainview (MUKUND B Srinivas); 
+daniel-plainview (MUKUND B Srinivas); 
+halkeye; 
+Jmm; 
+Ulli Hafner; 
+Jmm; 
+Ulli Hafner; 
+Ulli Hafner; 
+Jmm; Ulli Hafner: 
+Ulli Hafner; 
+Jmm; 
+Jmm; The bug is confirmed: 
+Jmm; Will have a look how to fix this. This is the code used to generate the page: 
+Jmm; 
+Jmm; 
+Vandit1604 (Vandit Singh); 
+halkeye; 
+daniel-plainview (MUKUND B Srinivas); 
+daniel-plainview (MUKUND B Srinivas); 
+daniel-plainview (MUKUND B Srinivas); 
+MarkEWaite (Mark Waite); 
+MarkEWaite (Mark Waite); 
+Vandit1604 (Vandit Singh); 
+NotMyFault (Alexander Brandes); 
+mPokornyETM (mPokornyETM); 
+MarkEWaite (Mark Waite); 
+jphysicsx17 (jphysicsx17); 
+Vandit1604 (Vandit Singh); 
+halkeye; 
+halkeye; 
+Vandit1604 (Vandit Singh); 
+halkeye; 
+Vandit1604 (Vandit Singh); 
+Vandit1604 (Vandit Singh); 
+Vandit1604 (Vandit Singh); 
+Vandit1604 (Vandit Singh); 
+NotMyFault (Alexander Brandes); Take a look at the contributing guide how to assemble the website locally: 
+Vandit1604 (Vandit Singh); > Take a look at the contributing guide how to assemble the website locally: 
+Vandit1604 (Vandit Singh); 
+Vandit1604 (Vandit Singh); 
+halkeye; 
+Vandit1604 (Vandit Singh); 
+Vandit1604 (Vandit Singh); 
+Vandit1604 (Vandit Singh); 
+halkeye; 
+halkeye; 
+halkeye; 
+halkeye; 
+Vandit1604 (Vandit Singh); 
+Vandit1604 (Vandit Singh); 
+halkeye; 
+Subzer0570 (Udit Damare); 
+Subzer0570 (Udit Damare); 
+Subzer0570 (Udit Damare); 
+Subzer0570 (Udit Damare); 
+Subzer0570 (Udit Damare); 
+Subzer0570 (Udit Damare); 
+halkeye; 
+Subzer0570 (Udit Damare); 
+Subzer0570 (Udit Damare); 
+Subzer0570 (Udit Damare); 
+halkeye; 
+halkeye; 
+Subzer0570 (Udit Damare); 
+MarkEWaite (Mark Waite); 
+MarkEWaite (Mark Waite); 
+MarkEWaite (Mark Waite); 
+NotMyFault (Alexander Brandes); 
+Kris Stern; batman005 (Hrithik Goswami): 
+Kris Stern; 
+Kris Stern; And to get ideas about what issues to work on you can probably reference the guide we have for Hactoberfest 2022, which is still somewhat relevant: 
+Vandit1604 (Vandit Singh); 
+halkeye; 
+MarkEWaite (Mark Waite); 
+halkeye; 
+Subzer0570 (Udit Damare); 
+Subzer0570 (Udit Damare); 
+daniel-plainview (MUKUND B Srinivas); I am trying to work on [this issue](https://issues.jenkins.io/browse/WEBSITE-663) , however I would like to know : 
+MarkEWaite (Mark Waite); 
+MarkEWaite (Mark Waite); 
+daniel-plainview (MUKUND B Srinivas); 
+pushker001 (pushker001); 
+pushker001 (pushker001); 
+MarkEWaite (Mark Waite); 
+iamrajiv (Rajiv Singh); Hi, I am interested in mentoring the project [Building Jenkins.io with alternative tools](https://www.jenkins.io/projects/gsoc/2023/project-ideas/alternative-jenkinsio-build-tool/). I am also open to being a co-mentor. I am also open to being a co-mentor. As an open-source enthusiast, I have completed the following programs: 
+MarkEWaite (Mark Waite); 
+iamrajiv (Rajiv Singh); 
+iamrajiv (Rajiv Singh); 
+halkeye; 
+iamrajiv (Rajiv Singh); 
+iamrajiv (Rajiv Singh); 
+halkeye; 
+halkeye; 
+halkeye; 
+halkeye; 
+iamrajiv (Rajiv Singh); 
+halkeye; 
+NotMyFault (Alexander Brandes); 
+NotMyFault (Alexander Brandes); 
+halkeye; NotMyFault: 
+NotMyFault (Alexander Brandes); 
+mauryan_24_twitter (Mauryan AKA Zops 😼); 
+Subzer0570 (Udit Damare); 
+Subzer0570 (Udit Damare); 
+Subzer0570 (Udit Damare); 
+halkeye; 
+Subzer0570 (Udit Damare); 
+Subzer0570 (Udit Damare); 
+Subzer0570 (Udit Damare); 
+Subzer0570 (Udit Damare); 
+Subzer0570 (Udit Damare); 
+halkeye; 
+Vandit1604 (Vandit Singh); 
+Vandit1604 (Vandit Singh); 
+Subzer0570 (Udit Damare); 
+Subzer0570 (Udit Damare); 
+Vandit1604 (Vandit Singh); 
+Subzer0570 (Udit Damare); 
+Vandit1604 (Vandit Singh); 
+Subzer0570 (Udit Damare); 
+Vandit1604 (Vandit Singh); 
+Vandit1604 (Vandit Singh); 
+Subzer0570 (Udit Damare); 
+Vandit1604 (Vandit Singh); 
+Subzer0570 (Udit Damare); 
+Subzer0570 (Udit Damare); 
+Vandit1604 (Vandit Singh); 
+Subzer0570 (Udit Damare); 
+Vandit1604 (Vandit Singh); 
+Subzer0570 (Udit Damare); 
+Subzer0570 (Udit Damare); 
+Subzer0570 (Udit Damare); 
+MarkEWaite (Mark Waite); 
+Subzer0570 (Udit Damare); 
+Ashis kumar Naik; 
+MarkEWaite (Mark Waite); 
+Vandit1604 (Vandit Singh); 
+ilya2s; 
+Subzer0570 (Udit Damare); 
+Subzer0570 (Udit Damare); 
+Subzer0570 (Udit Damare); 
+Subzer0570 (Udit Damare); 
+Subzer0570 (Udit Damare); 
+Subzer0570 (Udit Damare); 
+Subzer0570 (Udit Damare); 
+Subzer0570 (Udit Damare); 
+Subzer0570 (Udit Damare); 
+Subzer0570 (Udit Damare); 
+Subzer0570 (Udit Damare); 
+halkeye; Subzer0570 (Udit Damare): 
+Subzer0570 (Udit Damare); 
+Subzer0570 (Udit Damare); 
+Vandit1604 (Vandit Singh); 
+Vandit1604 (Vandit Singh); 
+Subzer0570 (Udit Damare); 
+halkeye; 
+Kris Stern; <@ilya2s:matrix.org "Happy new year Jenkins community..."> Hi ilya2s Welcome to the Jenkins community! Regarding tech stack it really depends on the project. Here is a list of project ideas for GSoC 2023 for your perusal: 
+Kris Stern; ilya2s: It would be great if you could start by making some pull requests for some issues that need help with, for ideas of what issues you can work on you could perhaps get inspiration from say this page: 
+Kris Stern; 
+Kris Stern; 
+Subzer0570 (Udit Damare); 
+ilya2s; 
+Kris Stern; 
+Vandit1604 (Vandit Singh); 
+Vandit1604 (Vandit Singh); 
+Kris Stern; 
+Kris Stern; Another tangentially relevant article from AWS would be this one: 
+Vandit1604 (Vandit Singh); 
+Vandit1604 (Vandit Singh); 
+samycolen (samycolen); 
+halkeye; 
+Subzer0570 (Udit Damare); 
+Vandit1604 (Vandit Singh); 
+Vandit1604 (Vandit Singh); 
+Kris Stern; 
+Kris Stern; 
+Ankushsup (Ankush Upadhyay); 
+daniel-plainview (MUKUND B Srinivas); 
+daniel-plainview (MUKUND B Srinivas); 
+daniel-plainview (MUKUND B Srinivas); 
+Ankushsup (Ankush Upadhyay); 
+Ankushsup (Ankush Upadhyay); 
+Ankushsup (Ankush Upadhyay); 
+MarkEWaite (Mark Waite); 
+MarkEWaite (Mark Waite); 
+MarkEWaite (Mark Waite); 
+Asrk03 (Arnab Sarkar); 
+Vandit1604 (Vandit Singh); 
+Vandit1604 (Vandit Singh); 
+Kris Stern; <@vandit1604-63401d426da03739849d8b03:gitter.im "> One does not need to concern o..."> A good place to start is the Jenkins Remoting library on GitHub: 
+Asrk03 (Arnab Sarkar); 
+Aankirz (Ankit Kiran); 
+Kris Stern; Hi Asrk03 (Arnab Sarkar) Aankirz (Ankit Kiran) Welcome to the Jenkins community! For a start please take a look at the project ideas we currently have for GSoC 2023: 
+Kris Stern; 
+Kris Stern; 
+ilya2s; 
+smilingprogrammer (Oyewale Abdulsobur); 
+Jmm; 
+ilya2s; 
+ilya2s; 
+Jmm; 
+ilya2s; 
+smilingprogrammer (Oyewale Abdulsobur); 
+ilya2s; 
+Kris Stern; 
+smilingprogrammer (Oyewale Abdulsobur); 
+Kris Stern; 
+Jmm; smilingprogrammer (Oyewale Abdulsobur): 
+smilingprogrammer (Oyewale Abdulsobur); 
+Muddassir-sultan (Muddassir-sultan); 
+Muddassir-sultan (Muddassir-sultan); hey !!! Iam MUDDASSIR SULTAN from NIT ALLAHABAD currently a 2nd year undergraduate I am new to open source and look forward towards contribution Techstack: 
+smilingprogrammer (Oyewale Abdulsobur); 
+smilingprogrammer (Oyewale Abdulsobur); 
+smilingprogrammer (Oyewale Abdulsobur); 
+smilingprogrammer (Oyewale Abdulsobur); 
+smilingprogrammer (Oyewale Abdulsobur); 
+MarkEWaite (Mark Waite); 
+Kris Stern; 
+Vandit1604 (Vandit Singh); 
+MarkEWaite (Mark Waite); 
+Kris Stern; 
+MarkEWaite (Mark Waite); 
+MarkEWaite (Mark Waite); 
+MarkEWaite (Mark Waite); 
+Vandit1604 (Vandit Singh); 
+MarkEWaite (Mark Waite); 
+Vandit1604 (Vandit Singh); 
+MarkEWaite (Mark Waite); 
+Kris Stern; 
+Kris Stern; 
+Vandit1604 (Vandit Singh); 
+MarkEWaite (Mark Waite); 
+Kris Stern; 
+Vandit1604 (Vandit Singh); 
+Kris Stern; 
+MarkEWaite (Mark Waite); 
+smilingprogrammer (Oyewale Abdulsobur); 
+Kris Stern; 
+iamrajiv (Rajiv Singh); 
+iamrajiv (Rajiv Singh); 
+halkeye; iamrajiv (Rajiv Singh): 
+Vandit1604 (Vandit Singh); 
+Kris Stern; 
+MarkEWaite (Mark Waite); 
+iamrajiv (Rajiv Singh); 
+Subzer0570 (Udit Damare); 
+Subzer0570 (Udit Damare); 
+halkeye; 
+halkeye; 
+Subzer0570 (Udit Damare); 
+MarkEWaite (Mark Waite); 
+halkeye; 
+Subzer0570 (Udit Damare); 
+Subzer0570 (Udit Damare); 
+halkeye; Subzer0570 (Udit Damare): 
+Subzer0570 (Udit Damare); 
+pushker001 (pushker001); 
+pushker001 (pushker001); 
+MarkEWaite (Mark Waite); 
+freyam (Freyam Mehta); 
+Kris Stern; <@freyam-6055fe4f6da037398472a110:gitter.im "Greetings, everyone! "> Hi freyam (Freyam Mehta) Welcome to the Jenkins community! We currently have an active discussion about this on Discourse here: 
+freyam (Freyam Mehta); 
+Jmm; 
+daniel-plainview (MUKUND B Srinivas); 
+Kris Stern; <@daniel-plainview-5ff9b89dd73408ce4ff864ff:gitter.im "I have set up the environment fo..."> Hi daniel-plainview (MUKUND B Srinivas) Do you mean you have tried these steps but it didn't work for you?: 
+Kris Stern; 
+freyam (Freyam Mehta); 
+freyam (Freyam Mehta); 
+AmanSarraf (Aman Kumar Sarraf); 
+Jmm; 
+AmanSarraf (Aman Kumar Sarraf); 
+lakshmishreea122003 (Lakshmi Shree A); 
+lakshmishreea122003 (Lakshmi Shree A); 
+lakshmishreea122003 (Lakshmi Shree A); 
+MarkEWaite (Mark Waite); 
+lakshmishreea122003 (Lakshmi Shree A); 
+MarkEWaite (Mark Waite); 
+community-jenkins-io; 
+lakshmishreea122003 (Lakshmi Shree A); 
+sai-praveenkumar (SaiPraveenKumar Jallipalli); 
+smilingprogrammer (Oyewale Abdulsobur); 
+Chinni12102003 (Chinni12102003); 
+Chinni12102003 (Chinni12102003); 
+MarkEWaite (Mark Waite); 
+MarkEWaite (Mark Waite); 
+Chinni12102003 (Chinni12102003); 
+RAJASHEKARGUNAGANTI (Rajashekar Gunaganti); 
+RAJASHEKARGUNAGANTI (Rajashekar Gunaganti); 
+Kris Stern; 
+Kris Stern; To get familiar with Jenkins, perhaps these tutorials will help: 
+Kris Stern; 
+jagrutitiw_twitter (Jagruti); Could someone tell me where I can install the  "Plugin Health Score" from. For this project idea: 
+Vandit1604 (Vandit Singh); 
+Dheeraj; This is the repo where the project lives: 
+Dheeraj; 
+Dheeraj; 
+iamrajiv (Rajiv Singh); 
+halkeye; 
+iamrajiv (Rajiv Singh); 
+Shubham-Patel07 (Shubham Patel); 
+Shubham-Patel07 (Shubham Patel); 
+Shubham-Patel07 (Shubham Patel); 
+Shubham-Patel07 (Shubham Patel); 
+Shubham-Patel07 (Shubham Patel); 
+smilingprogrammer (Oyewale Abdulsobur); 
+Chinni12102003 (Chinni12102003); 
+Jmm; 
+lakshmishreea122003 (Lakshmi Shree A); 
+Kris Stern; 
+Kris Stern; 
+Chinni12102003 (Chinni12102003); 
+Chinni12102003 (Chinni12102003); 
+community-jenkins-io; 
+halkeye; Jmm: 
+Kris Stern; <@halkeye:g4v.dev "Jmm: 
+jagrutitiw_twitter (Jagruti); 
+jagrutitiw_twitter (Jagruti); 
+jagrutitiw_twitter (Jagruti); 
+Vandit1604 (Vandit Singh); 
+Vandit1604 (Vandit Singh); 
+NotMyFault (Alexander Brandes); 
+MarkEWaite (Mark Waite); 
+Vandit1604 (Vandit Singh); 
+Dheeraj; 
+Dheeraj; 
+Subzer0570 (Udit Damare); 
+Dheeraj; 
+halkeye; 
+halkeye; 
+smilingprogrammer (Oyewale Abdulsobur); 
+halkeye; smilingprogrammer (Oyewale Abdulsobur): 
+halkeye; smilingprogrammer (Oyewale Abdulsobur): 
+smilingprogrammer (Oyewale Abdulsobur); 
+smilingprogrammer (Oyewale Abdulsobur); 
+smilingprogrammer (Oyewale Abdulsobur); 
+halkeye; 
+smilingprogrammer (Oyewale Abdulsobur); 
+halkeye; 
+smilingprogrammer (Oyewale Abdulsobur); 
+Kris Stern; <@subzer0570-635123a46da03739849e1765:gitter.im "I want to study  and prepare for..."> Hi Subzer0570 (Udit Damare) For a related article maybe you can try this one from AWS: 
+Kris Stern; 
+shraddha761 (shraddha761); 
+gounthar (Bruno Verachten); 
+sai-praveenkumar (SaiPraveenKumar Jallipalli); 
+gounthar (Bruno Verachten); 
+varshadr (varshadr); 
+gounthar (Bruno Verachten); 
+Kris Stern; 
+@dhruvg1807-63c945376da0373984bd4277;gitter.im: 
+Jmm; 
+Kris Stern; 
+@dhruvg1807-63c945376da0373984bd4277;gitter.im: 
+Kris Stern; 
+Kris Stern; 
+@dhruvg1807-63c945376da0373984bd4277;gitter.im: 
+smilingprogrammer (Oyewale Abdulsobur); 
+smilingprogrammer (Oyewale Abdulsobur); 
+smilingprogrammer (Oyewale Abdulsobur); 
+smilingprogrammer (Oyewale Abdulsobur); 
+smilingprogrammer (Oyewale Abdulsobur); 
+Kris Stern; 
+Kris Stern; I suppose you are referring to this?: 
+Kris Stern; 
+Dheeraj; 
+Dheeraj; 
+jagrutitiw_twitter (Jagruti); 
+halkeye; jagrutitiw_twitter (Jagruti): 
+jagrutitiw_twitter (Jagruti); 
+halkeye; jagrutitiw_twitter (Jagruti): 
+halkeye; 
+halkeye; jagrutitiw_twitter (Jagruti): 
+halkeye; 
+Jagruti; 
+Jagruti; 
+halkeye; Jagruti: 
+Jagruti; 
+ash-sxn (Ashutosh Saxena ); 
+MarkEWaite (Mark Waite); 
+ash-sxn (Ashutosh Saxena ); 
+GauravKakoti (Gaurav Kakoti); 
+Kris Stern; 
+Kris Stern; 
+Kris Stern; For info about out ecosystem you can refer to say: 
+daniel-plainview (MUKUND B Srinivas); 
+jagrutitiw_twitter (Jagruti); 
+Kris Stern; 
+Kris Stern; 
+Kris Stern; smilingprogrammer (Oyewale Abdulsobur): 
+halkeye; 
+Subzer0570 (Udit Damare); 
+Ulli Hafner; 
+Dheeraj; 
+jagrutitiw_twitter (Jagruti); 
+Dheeraj; 
+Dheeraj; 
+Jagruti; 
+smilingprogrammer (Oyewale Abdulsobur); 
+smilingprogrammer (Oyewale Abdulsobur); 
+smilingprogrammer (Oyewale Abdulsobur); 
+smilingprogrammer (Oyewale Abdulsobur); 
+Dheeraj; 
+smilingprogrammer (Oyewale Abdulsobur); 
+AagamShah2314 (AagamShah); 
+Kris Stern; 
+Kris Stern; 
+Kris Stern; 
+Kris Stern; 
+Jagruti; 
+lakshmishreea122003 (Lakshmi Shree A); 
+Kris Stern; 
+Kris Stern; <@lakshmishreea122003-63a2fc776da0373984a0cb1c:gitter.im "I am trying to work on the proje..."> I would recommend starting by working on some issues in the issues tracker for the JCasC repo at: 
+Kris Stern; 
+lakshmishreea122003 (Lakshmi Shree A); 
+lakshmishreea122003 (Lakshmi Shree A); 
+iamrajiv (Rajiv Singh); 
+Akarsh-14_gitlab (Akarsh-14); 
+Kris Stern; <@akarsh-14_gitlab-63d3dd4f6da0373984bd8890:gitter.im "Hello I have installed Jenkins a..."> Have you tried something like this?: 
+Kris Stern; 
+Kris Stern; 
+Akarsh-14_gitlab (Akarsh-14); 
+Kris Stern; Akarsh-14_gitlab (Akarsh-14): 
+Kris Stern; 
+Jagruti; 
+Jagruti; 
+Jagruti; 
+Akarsh-14_gitlab (Akarsh-14); 
+Kris Stern; Jagruti: 
+Kris Stern; 
+Akarsh-14_gitlab (Akarsh-14); 
+Kris Stern; Akarsh-14_gitlab (Akarsh-14): 
+Kris Stern; 
+Kris Stern; 
+Kris Stern; 
+halkeye; 
+Kris Stern; 
+Jagruti; 
+Kris Stern; 
+daniel-plainview (MUKUND B Srinivas); 
+harsh-ps-2003 (Harsh Pratap Singh); 
+harsh-ps-2003 (Harsh Pratap Singh); 
+harsh-ps-2003 (Harsh Pratap Singh);  Error response from daemon: error while creating mount source path '/host_mnt/srv/docker/jenkins': mkdir /host_mnt/srv: 
+Kris Stern; 
+Kris Stern; harsh-ps-2003 (Harsh Pratap Singh): 
+Kris Stern; 
+Kris Stern; 
+Kris Stern; <@harsh-ps-2003-63ce2d0d6da0373984bd6022:gitter.im "Error response from daemon: 
+Kris Stern; 
+Kris Stern; 
+Kris Stern; 
+harsh-ps-2003 (Harsh Pratap Singh); 
+Kris Stern; 
+Kris Stern; 
+Kris Stern; harsh-ps-2003 (Harsh Pratap Singh): 
+siddhanthrathod; 
+siddhanthrathod; 
+siddhanthrathod; 
+Jiakuang He (Sam); 
+MarkEWaite (Mark Waite); 
+harsh-ps-2003 (Harsh Pratap Singh); 
+harsh-ps-2003 (Harsh Pratap Singh); 
+harsh-ps-2003 (Harsh Pratap Singh); 
+Kris Stern; Just wanted to check to make sure if we are on the same page. Did you use these instructions to remove Docker Desktop?: 
+Kris Stern; 
+harsh-ps-2003 (Harsh Pratap Singh); 
+harsh-ps-2003 (Harsh Pratap Singh); 
+harsh-ps-2003 (Harsh Pratap Singh); 
+Kris Stern; 
+harsh-ps-2003 (Harsh Pratap Singh); 
+Kris Stern; Hi harsh-ps-2003 (Harsh Pratap Singh) : 
+Kris Stern; 
+Kris Stern; 
+harsh-ps-2003 (Harsh Pratap Singh); Error response from daemon: error while creating mount source path '/host_mnt/srv/docker/gitlab/logs': mkdir /host_mnt/srv: 
+harsh-ps-2003 (Harsh Pratap Singh); 
+Kris Stern; 
+Kris Stern; 
+harsh-ps-2003 (Harsh Pratap Singh); 
+Kris Stern; Well I found this: 
+harsh-ps-2003 (Harsh Pratap Singh); 
+harsh-ps-2003 (Harsh Pratap Singh); 
+Kris Stern; 
+Harsh3341 (Harsh Gupta); 
+yashre-bh (Shreya Bhagat); 
+yashre-bh (Shreya Bhagat); 
+yashre-bh (Shreya Bhagat); 
+yashre-bh (Shreya Bhagat); 
+MarkEWaite (Mark Waite); 
+yashre-bh (Shreya Bhagat); 
+yashre-bh (Shreya Bhagat); 
+Jiakuang He (Sam); 
+MarkEWaite (Mark Waite); 
+MarkEWaite (Mark Waite); 
+yashre-bh (Shreya Bhagat); 
+yashre-bh (Shreya Bhagat); 
+MarkEWaite (Mark Waite); 
+yashre-bh (Shreya Bhagat); 
+MarkEWaite (Mark Waite); 
+yashre-bh (Shreya Bhagat); 
+pushker001 (pushker001); 
+smilingprogrammer (Oyewale Abdulsobur); 
+smilingprogrammer (Oyewale Abdulsobur); 
+smilingprogrammer (Oyewale Abdulsobur); 
+yashre-bh (Shreya Bhagat); 
+yashre-bh (Shreya Bhagat); 
+Dheeraj; 
+yashre-bh (Shreya Bhagat); 
+yashre-bh (Shreya Bhagat); 
+Jmm; 
+yashre-bh (Shreya Bhagat); 
+Kris Stern; 
+Kris Stern; 
+Kris Stern; 
+Kris Stern; Harsh3341_gitlab (Harsh Gupta): 
+mchirag2002 (Chirag Mathur); 
+Kris Stern; 
+Kris Stern; 
+yashre-bh (Shreya Bhagat); 
+mchirag2002 (Chirag Mathur); 
+Kris Stern; 
+Kris Stern; 
+yashre-bh (Shreya Bhagat); 
+Kris Stern; yashre-bh (Shreya Bhagat): 
+yashre-bh (Shreya Bhagat); 
+Ulli Hafner; In JENKINS-70498 an example file is already given: 
+Ulli Hafner; 
+abhinav700 (abhinav700); 
+lakshmishreea122003 (Lakshmi Shree A); 
+lakshmishreea122003 (Lakshmi Shree A); 
+Kris Stern; 
+Kris Stern; I think for a starter you could try this page on our website about contributing: 
+abhinav700 (abhinav700); 
+Kris Stern; Other than that you may also explore the GSoC project idea we have on offer for 2023: 
+Kris Stern; 
+Kris Stern; 
+abhinav700 (abhinav700); 
+Kris Stern; 
+Kris Stern; 
+harsh-ps-2003 (Harsh Pratap Singh); 
+Kris Stern; 
+harsh-ps-2003 (Harsh Pratap Singh); 
+Kris Stern; 
+Kris Stern; 
+Kris Stern; 
+harsh-ps-2003 (Harsh Pratap Singh); 
+pushker001 (pushker001); 
+pushker001 (pushker001); 
+Kris Stern; 
+Kris Stern; You can try disabling it temporarily and reenable it after you have done with making the directories, but that seems a bit drastic to me. See: 
+Kris Stern; 
+Kris Stern; 
+lakshmishreea122003 (Lakshmi Shree A); 
+Kris Stern; 
+Kris Stern; 
+Kris Stern; 
+harsh-ps-2003 (Harsh Pratap Singh); 
+Kris Stern; 
+community-jenkins-io; @Jmm (Jean-Marc Meessen) posted in GSoC 2023: 
+Kris Stern; 
+yashre-bh (Shreya Bhagat); 
+harsh-ps-2003 (Harsh Pratap Singh); > You can try disabling it temporarily and reenable it after you have done with making the directories, but that seems a bit drastic to me. See: 
+Kris Stern; 
+Kris Stern; 
+pushker001 (pushker001); 
+harsh-ps-2003 (Harsh Pratap Singh); 
+pushker001 (pushker001); 
+MarkEWaite (Mark Waite); 
+harsh-ps-2003 (Harsh Pratap Singh); 
+Ulli Hafner; <@yashre-bh-62485b2c6da037398493a758:gitter.im "working on https://issues.jenkin..."> This is nothing special: 
+yashre-bh (Shreya Bhagat); 
+yashre-bh (Shreya Bhagat); 
+yashre-bh (Shreya Bhagat); 
+yashre-bh (Shreya Bhagat); 
+daniel-plainview (MUKUND B Srinivas); 
+smilingprogrammer (Oyewale Abdulsobur); 
+smilingprogrammer (Oyewale Abdulsobur); 
+smilingprogrammer (Oyewale Abdulsobur); 
+smilingprogrammer (Oyewale Abdulsobur); 
+Ulli Hafner; 
+Kris Stern; Have you tried all the suggestions here?: 
+community-jenkins-io; 
+harsh-ps-2003 (Harsh Pratap Singh); > Have you tried all the suggestions here?: 
+yashre-bh (Shreya Bhagat); 
+harsh-ps-2003 (Harsh Pratap Singh); 
+Kris Stern; 
+harsh-ps-2003 (Harsh Pratap Singh); Docker Desktop settings are not retaining the file sharing configurations after a restart. I am trying to add this path : 
+harsh-ps-2003 (Harsh Pratap Singh); 
+harsh-ps-2003 (Harsh Pratap Singh); 
+Kris Stern; 
+Kris Stern; 
+Kris Stern; pushker001 (pushker001): 
+Kris Stern; <@krisstern:matrix.org "pushker001 (pushker001): 
+Kris Stern; 
+harsh-ps-2003 (Harsh Pratap Singh); > Docker Desktop settings are not retaining the file sharing configurations after a restart. I am trying to add this path : 
+Kris Stern; 
+harsh-ps-2003 (Harsh Pratap Singh); 
+community-jenkins-io; 
+harsh-ps-2003 (Harsh Pratap Singh); 
+harsh-ps-2003 (Harsh Pratap Singh); 
+harsh-ps-2003 (Harsh Pratap Singh); 
+harsh-ps-2003 (Harsh Pratap Singh); 
+Kris Stern; 
+Kris Stern; 
+harsh-ps-2003 (Harsh Pratap Singh); 
+harsh-ps-2003 (Harsh Pratap Singh); 
+Kris Stern; 
+harsh-ps-2003 (Harsh Pratap Singh); 
+harsh-ps-2003 (Harsh Pratap Singh); 
+Kris Stern; 
+Kris Stern; 
+harsh-ps-2003 (Harsh Pratap Singh); 
+Kris Stern; 
+Kris Stern; 
+pushker001 (pushker001); 
+Kris Stern; 
+Kris Stern; 
+Kris Stern; 
+harsh-ps-2003 (Harsh Pratap Singh); 
+Kris Stern; 
+harsh-ps-2003 (Harsh Pratap Singh); 
+harsh-ps-2003 (Harsh Pratap Singh); 
+pushker001 (pushker001); 
+Kris Stern; 
+harsh-ps-2003 (Harsh Pratap Singh); 
+Dheeraj; @smilingprogrammer  hmmm interesting...if you don't mind, can you please post these messages on this channel: 
+Kris Stern; 
+@shamlymhd-620323c46da03739848ffd8e;gitter.im: 
+@shamlymhd-620323c46da03739848ffd8e;gitter.im: 
+harsh-ps-2003 (Harsh Pratap Singh); 
+Kris Stern; 
+Kris Stern; shamlymhd (shamlymhd): 
+Kris Stern; 
+harsh-ps-2003 (Harsh Pratap Singh); 
+Kris Stern; 
+harsh-ps-2003 (Harsh Pratap Singh); 
+harsh-ps-2003 (Harsh Pratap Singh); 
+Kris Stern; 
+Kris Stern; Seems like a long list to set up: 
+harsh-ps-2003 (Harsh Pratap Singh); 
+Kris Stern; 
+Harsh3341 (Harsh Gupta); 
+Harsh3341 (Harsh Gupta); 
+Kris Stern; 
+Harsh3341 (Harsh Gupta); 
+Kris Stern; 
+Harsh3341 (Harsh Gupta); 
+Kris Stern; 
+@shamlymhd-620323c46da03739848ffd8e;gitter.im: Hi Kris and Thank you!. I'm looking into GitLab Plugin Modernization : 
+Kris Stern; Here is a list of relevant issue that you can work on regarding GitLab plugin project idea: 
+@shamlymhd-620323c46da03739848ffd8e;gitter.im: 
+ash-sxn (Ashutosh Saxena ); 
+ash-sxn (Ashutosh Saxena ); 
+ash-sxn (Ashutosh Saxena ); 
+ash-sxn (Ashutosh Saxena ); 
+ash-sxn (Ashutosh Saxena ); 
+daniel-plainview (MUKUND B Srinivas); 
+daniel-plainview (MUKUND B Srinivas); 
+daniel-plainview (MUKUND B Srinivas); 
+Ulli Hafner; 
+Kris Stern; 
+daniel-plainview (MUKUND B Srinivas); 
+Kris Stern; 
+ash-sxn (Ashutosh Saxena ); 
+ash-sxn (Ashutosh Saxena ); 
+daniel-plainview (MUKUND B Srinivas); 
+Kris Stern; 
+Kris Stern; 
+ash-sxn (Ashutosh Saxena ); 
+Ulli Hafner; I'm not sure if this would help: in my development environment for my plugins I am also configuring a Jenkins instance using docker compose: 
+community-jenkins-io; 
+abhinav700 (abhinav700); 
+Kris Stern; 
+harsh-ps-2003 (Harsh Pratap Singh); 
+Kris Stern; 
+Kris Stern; 
+Kris Stern; 
+harsh-ps-2003 (Harsh Pratap Singh); 
+harsh-ps-2003 (Harsh Pratap Singh); 
+Kris Stern; 
+Kris Stern; 
+Jmm; 
+harsh-ps-2003 (Harsh Pratap Singh); 
+harsh-ps-2003 (Harsh Pratap Singh); 
+harsh-ps-2003 (Harsh Pratap Singh); 
+harsh-ps-2003 (Harsh Pratap Singh); 
+yashre-bh (Shreya Bhagat); facing a few errors while building analysis-model plugin in IntelliJ: 
+yashre-bh (Shreya Bhagat); 
+yashre-bh (Shreya Bhagat); 
+yashre-bh (Shreya Bhagat); 
+yashre-bh (Shreya Bhagat); 
+Ulli Hafner; 
+yashre-bh (Shreya Bhagat); 
+yashre-bh (Shreya Bhagat); 
+yashre-bh (Shreya Bhagat); For some context: 
+yashre-bh (Shreya Bhagat); 
+Ulli Hafner; 
+Ulli Hafner; 
+Ulli Hafner; 
+yashre-bh (Shreya Bhagat); 
+Ulli Hafner; 
+MarkEWaite (Mark Waite); 
+abhinav700 (abhinav700); 
+harsh-ps-2003 (Harsh Pratap Singh); 
+yashre-bh (Shreya Bhagat); 
+Ulli Hafner; 
+Ulli Hafner; 
+yashre-bh (Shreya Bhagat); 
+yashre-bh (Shreya Bhagat); 
+yashre-bh (Shreya Bhagat); 
+Ulli Hafner; 
+yashre-bh (Shreya Bhagat); 
+yashre-bh (Shreya Bhagat); 
+Kris Stern; 
+Kris Stern; 
+Kris Stern; ash-sxn (Ashutosh Saxena ): 
+Kris Stern; 
+yashre-bh (Shreya Bhagat); 
+harsh-ps-2003 (Harsh Pratap Singh); 
+daniel-plainview (MUKUND B Srinivas); 
+Kris Stern; 
+Kris Stern; 
+yashre-bh (Shreya Bhagat); 
+yashre-bh (Shreya Bhagat); 
+Kris Stern; 
+Kris Stern; 
+Kris Stern; 
+yashre-bh (Shreya Bhagat); 
+yashre-bh (Shreya Bhagat); 
+harsh-ps-2003 (Harsh Pratap Singh); 
+Kris Stern; 
+Kris Stern; abhinav700 (abhinav700): 
+Kris Stern; 
+Kris Stern; 
+Kris Stern; Looks like you will need to mount the directories with a `-v` flag. Reference : 
+harsh-ps-2003 (Harsh Pratap Singh); 
+Kris Stern; 
+yashre-bh (Shreya Bhagat); 
+harsh-ps-2003 (Harsh Pratap Singh); 
+Kris Stern; 
+harsh-ps-2003 (Harsh Pratap Singh); 
+Kris Stern; 
+Kris Stern; 
+harsh-ps-2003 (Harsh Pratap Singh); 
+Kris Stern; 
+Kris Stern; 
+Kris Stern; 
+harsh-ps-2003 (Harsh Pratap Singh); 
+harsh-ps-2003 (Harsh Pratap Singh); 
+Kris Stern; 
+Kris Stern; 
+Ulli Hafner; 
+harsh-ps-2003 (Harsh Pratap Singh); 
+Kris Stern; 
+Kris Stern; I am guessing the Docker Compose equivalent would be something like: 
+harsh-ps-2003 (Harsh Pratap Singh); 
+Kris Stern; 
+harsh-ps-2003 (Harsh Pratap Singh); 
+harsh-ps-2003 (Harsh Pratap Singh); 
+yashre-bh (Shreya Bhagat); 
+Kris Stern; 
+Kris Stern; 
+yashre-bh (Shreya Bhagat); 
+Kris Stern; 
+Ulli Hafner; 
+Ulli Hafner; 
+yashre-bh (Shreya Bhagat); 
+yashre-bh (Shreya Bhagat); 
+yashre-bh (Shreya Bhagat); 
+Kris Stern; 
+yashre-bh (Shreya Bhagat); 
+Ulli Hafner; 
+Harsh3341 (Harsh Gupta); 
+Ulli Hafner; 
+Harsh3341 (Harsh Gupta); 
+yashre-bh (Shreya Bhagat); 
+Kris Stern; 
+yashre-bh (Shreya Bhagat); 
+Kris Stern; 
+Kris Stern; 
+Kris Stern; 
+Ulli Hafner; 
+yashre-bh (Shreya Bhagat); 
+Kris Stern; 
+Ulli Hafner; 
+Harsh3341 (Harsh Gupta); 
+Kris Stern; 
+Harsh3341 (Harsh Gupta); 
+Harsh3341 (Harsh Gupta); 
+Kris Stern; 
+Kris Stern; 
+Kris Stern; 
+Kris Stern; 
+Kris Stern; 
+Harsh3341 (Harsh Gupta); 
+Harsh3341 (Harsh Gupta); 
+Harsh3341 (Harsh Gupta); 
+Kris Stern; 
+Kris Stern; 
+Harsh3341 (Harsh Gupta); 
+Kris Stern; 
+harsh-ps-2003 (Harsh Pratap Singh); 
+Harsh3341 (Harsh Gupta); 
+Kris Stern; 
+Kris Stern; 
+Kris Stern; 
+harsh-ps-2003 (Harsh Pratap Singh); 
+halkeye; 
+Kris Stern; 
+Harsh3341 (Harsh Gupta); 
+abhinav700 (abhinav700); 
+Harsh3341 (Harsh Gupta); 
+Harsh3341 (Harsh Gupta); 
+Dheeraj; 
+harsh-ps-2003 (Harsh Pratap Singh); 
+Kris Stern; harsh-ps-2003 (Harsh Pratap Singh): 
+Kris Stern; 
+harsh-ps-2003 (Harsh Pratap Singh); > @harsh-ps-2003: 
+harsh-ps-2003 (Harsh Pratap Singh); 
+Kris Stern; 
+daniel-plainview (MUKUND B Srinivas); 
+daniel-plainview (MUKUND B Srinivas); 
+daniel-plainview (MUKUND B Srinivas); 
+daniel-plainview (MUKUND B Srinivas); 
+daniel-plainview (MUKUND B Srinivas); 
+harsh-ps-2003 (Harsh Pratap Singh); > > @harsh-ps-2003: 
+harsh-ps-2003 (Harsh Pratap Singh); 
+yashre-bh (Shreya Bhagat); 
+Kris Stern; 
+Kris Stern; 
+daniel-plainview (MUKUND B Srinivas); 
+Kris Stern; 
+Kris Stern; 
+Kris Stern; 
+Kris Stern; 
+Kris Stern; 
+harsh-ps-2003 (Harsh Pratap Singh); 
+Kris Stern; I found out we can probably use the docker image for `linux/amd64` for Mac with M1 chip, see: 
+harsh-ps-2003 (Harsh Pratap Singh); 
+Kris Stern; 
+harsh-ps-2003 (Harsh Pratap Singh); 
+Kris Stern; 
+Kris Stern; 
+Harsh3341 (Harsh Gupta); 
+Kris Stern; 
+ash-sxn (Ashutosh Saxena ); 
+Kris Stern; 
+Kris Stern; 
+ash-sxn (Ashutosh Saxena ); 
+Kris Stern; Had to increase the `shm_size` using `shm_size: 
+MarkEWaite (Mark Waite); 
+Harsh3341 (Harsh Gupta); 
+MarkEWaite (Mark Waite); 
+Kris Stern; 
+Kris Stern; 
+Kris Stern; 
+Kris Stern; 
+Kris Stern; 
+Kris Stern; 
+Kris Stern; 
+harsh-ps-2003 (Harsh Pratap Singh); 
+harsh-ps-2003 (Harsh Pratap Singh); > Had to increase the `shm_size` using `shm_size: 
+Kris Stern; 
+Kris Stern; 
+harsh-ps-2003 (Harsh Pratap Singh); @krisstern:matrix.org here is my docker-compose `version: 
+harsh-ps-2003 (Harsh Pratap Singh); 
+harsh-ps-2003 (Harsh Pratap Singh); 
+Kris Stern; 
+Kris Stern; 
+Kris Stern; 
+Kris Stern; 
+harsh-ps-2003 (Harsh Pratap Singh); 
+harsh-ps-2003 (Harsh Pratap Singh); 
+Kris Stern; 
+Kris Stern; 
+Kris Stern; 
+Kris Stern; 
+halkeye; Kris Stern: 
+Kris Stern; 
+@shamlymhd-620323c46da03739848ffd8e;gitter.im: 
+Kris Stern; 
+@shamlymhd-620323c46da03739848ffd8e;gitter.im: 
+@shamlymhd-620323c46da03739848ffd8e;gitter.im: 
+@shamlymhd-620323c46da03739848ffd8e;gitter.im: 
+Kris Stern; 
+Kris Stern; 
+@shamlymhd-620323c46da03739848ffd8e;gitter.im: 
+Kris Stern; 
+@shamlymhd-620323c46da03739848ffd8e;gitter.im: 
+Kris Stern; 
+lakshmishreea122003 (Lakshmi Shree A); 
+Kris Stern; 
+Kris Stern; 
+harsh-ps-2003 (Harsh Pratap Singh); 
+lakshmishreea122003 (Lakshmi Shree A); 
+lakshmishreea122003 (Lakshmi Shree A); 
+harsh-ps-2003 (Harsh Pratap Singh); 
+harsh-ps-2003 (Harsh Pratap Singh); 
+Kris Stern; 
+Kris Stern; 
+Kris Stern; 
+lakshmishreea122003 (Lakshmi Shree A); 
+Kris Stern; 
+lakshmishreea122003 (Lakshmi Shree A); 
+Kris Stern; 
+Kris Stern; 
+harsh-ps-2003 (Harsh Pratap Singh); 
+harsh-ps-2003 (Harsh Pratap Singh); 
+harsh-ps-2003 (Harsh Pratap Singh); 
+Kris Stern; 
+prathi-mani (Mani Prathi); 
+Kris Stern; 
+Kris Stern; 
+Kris Stern; 
+PrathamAditya (Pratham Aditya Salhotra); 
+Kris Stern; 
+Kris Stern; 
+Kris Stern; 
+Kris Stern; Hi harsh-ps-2003 (Harsh Pratap Singh) Just opened an issue you might be interested in working on based on our conversation in this thread: 
+prathi-mani (Mani Prathi); 
+harsh-ps-2003 (Harsh Pratap Singh); 
+harsh-ps-2003 (Harsh Pratap Singh); > > Hi @harsh-ps-2003 Just opened an issue you might be interested in working on based on our conversation in this thread: 
+harsh-ps-2003 (Harsh Pratap Singh); 
+harsh-ps-2003 (Harsh Pratap Singh); @krisstern:matrix.org i modified the readme file : 
+community-jenkins-io; 
+Kris Stern; 
+avirajsingh7 (Aviraj Gour); 
+MarkEWaite (Mark Waite); 
+Kris Stern; 
+harsh-ps-2003 (Harsh Pratap Singh); @krisstern:matrix.org Tried my first pr : 
+yashre-bh (Shreya Bhagat); 
+harsh-ps-2003 (Harsh Pratap Singh); 
+yashre-bh (Shreya Bhagat); 
+harsh-ps-2003 (Harsh Pratap Singh); 
+harsh-ps-2003 (Harsh Pratap Singh); > @krisstern:matrix.org Tried my first pr : 
+Kris Stern; 
+harsh-ps-2003 (Harsh Pratap Singh); 
+Kris Stern; 
+MarkEWaite (Mark Waite); 
+harsh-ps-2003 (Harsh Pratap Singh); 
+MondalSayantan (Sayantan Mondal); 
+MondalSayantan (Sayantan Mondal); 
+MondalSayantan (Sayantan Mondal); 
+Kris Stern; 
+Kris Stern; 
+harsh-ps-2003 (Harsh Pratap Singh); 
+Kris Stern; 
+harsh-ps-2003 (Harsh Pratap Singh); 
+Kris Stern; 
+harsh-ps-2003 (Harsh Pratap Singh); 
+Kris Stern; 
+Kris Stern; 
+MondalSayantan (Sayantan Mondal); 
+MondalSayantan (Sayantan Mondal); 
+Kris Stern; 
+Kris Stern; If this does not work we may try to use gitpod: 
+Dheeraj; 
+prathi-mani (Mani Prathi); 
+Kris Stern; 
+ash-sxn (Ashutosh Saxena ); 
+lakshmishreea122003 (Lakshmi Shree A); 
+lakshmishreea122003 (Lakshmi Shree A); 
+Kris Stern; 
+harsh-ps-2003 (Harsh Pratap Singh); 
+Kris Stern; 
+Kris Stern; 
+lakshmishreea122003 (Lakshmi Shree A); 
+Kris Stern; 
+Kris Stern; 
+Kris Stern; 
+lakshmishreea122003 (Lakshmi Shree A); 
+Kris Stern; 
+Jmm; 
+Jmm; 
+Kris Stern; 
+Jmm; 
+harsh-ps-2003 (Harsh Pratap Singh); 
+Kris Stern; 
+lakshmishreea122003 (Lakshmi Shree A); 
+lakshmishreea122003 (Lakshmi Shree A); 
+Kris Stern; I think you are supposed to carry out additional steps like the ones described here: 
+lakshmishreea122003 (Lakshmi Shree A); 
+Jmm; 
+harsh-ps-2003 (Harsh Pratap Singh); 
+Kris Stern; 
+lakshmishreea122003 (Lakshmi Shree A); 
+harsh-ps-2003 (Harsh Pratap Singh); 
+Kris Stern; 
+harsh-ps-2003 (Harsh Pratap Singh); 
+harsh-ps-2003 (Harsh Pratap Singh); 
+MarkEWaite (Mark Waite); 
+MarkEWaite (Mark Waite); 
+lakshmishreea122003 (Lakshmi Shree A); 
+MarkEWaite (Mark Waite); 
+lakshmishreea122003 (Lakshmi Shree A); 
+halkeye; 
+MondalSayantan (Sayantan Mondal); 
+MondalSayantan (Sayantan Mondal); 
+MondalSayantan (Sayantan Mondal); 
+Dheeraj; 
+Kris Stern; 
+harsh-ps-2003 (Harsh Pratap Singh); 
+Kris Stern; 
+harsh-ps-2003 (Harsh Pratap Singh); 
+MondalSayantan (Sayantan Mondal); 
+MondalSayantan (Sayantan Mondal); 
+harsh-ps-2003 (Harsh Pratap Singh); 
+Kris Stern; 
+MondalSayantan (Sayantan Mondal); 
+MondalSayantan (Sayantan Mondal); 
+harsh-ps-2003 (Harsh Pratap Singh); 
+Kris Stern; 
+halkeye; 
+MondalSayantan (Sayantan Mondal); 
+MondalSayantan (Sayantan Mondal); 
+MondalSayantan (Sayantan Mondal); 
+Kris Stern; 
+Kris Stern; 
+harsh-ps-2003 (Harsh Pratap Singh); 
+harsh-ps-2003 (Harsh Pratap Singh); 
+harsh-ps-2003 (Harsh Pratap Singh); 
+ash-sxn (Ashutosh Saxena ); 
+ash-sxn (Ashutosh Saxena ); 
+ash-sxn (Ashutosh Saxena ); 
+ash-sxn (Ashutosh Saxena ); 
+MondalSayantan (Sayantan Mondal); 
+MondalSayantan (Sayantan Mondal); 
+MondalSayantan (Sayantan Mondal); 
+yashre-bh (Shreya Bhagat); 
+ash-sxn (Ashutosh Saxena ); 
+Ulli Hafner; 
+ash-sxn (Ashutosh Saxena ); 
+MondalSayantan (Sayantan Mondal); Hi, when I run the command 'mvn spring-boot:run -Dskip.yarn -Dspring.profiles.active=dev', I get this error 'java.lang.RuntimeException: 
+MondalSayantan (Sayantan Mondal); 
+Kris Stern; 
+Kris Stern; 
+MondalSayantan (Sayantan Mondal); 
+Kris Stern; 
+Kris Stern; 
+Kris Stern; 
+Kris Stern; 
+Harsh3341 (Harsh Gupta); 
+MondalSayantan (Sayantan Mondal); 
+MondalSayantan (Sayantan Mondal); 
+Kris Stern; 
+MondalSayantan (Sayantan Mondal); 
+MondalSayantan (Sayantan Mondal); 
+MondalSayantan (Sayantan Mondal); 
+Kris Stern; 
+HumbleFool830 (HumbleFool); 
+yashre-bh (Shreya Bhagat); 
+Kris Stern; Any issues running these here?: 
+yashre-bh (Shreya Bhagat); 
+yashre-bh (Shreya Bhagat); 
+yashre-bh (Shreya Bhagat); 
+Kris Stern; 
+Kris Stern; 
+Kris Stern; 
+yashre-bh (Shreya Bhagat); 
+Kris Stern; 
+Kris Stern; 
+Kris Stern; A good reference for your chosen project idea is: 
+Dheeraj; 
+daniel-plainview (MUKUND B Srinivas); 
+Dheeraj; 
+Dheeraj; yup: 
+HumbleFool830 (HumbleFool); 
+HumbleFool830 (HumbleFool); 
+daniel-plainview (MUKUND B Srinivas); 
+Jmm; 
+Harsh3341 (Harsh Gupta); 
+MarkEWaite (Mark Waite); 
+MarkEWaite (Mark Waite); 
+MarkEWaite (Mark Waite); 
+Kris Stern; 
+Kris Stern; 
+community-jenkins-io; 
+yashre-bh (Shreya Bhagat); file following this tutorial for Jenkins-cli: 
+Vandit1604 (Vandit Singh); 
+yashre-bh (Shreya Bhagat); 
+Kris Stern; 
+Kris Stern; 
+Kris Stern; 
+Kris Stern; You can find the link to the Documentation Hours here: 
+yashre-bh (Shreya Bhagat); 
+Kris Stern; 
+yashre-bh (Shreya Bhagat); 
+Kris Stern; 
+community-jenkins-io; 
+yashre-bh (Shreya Bhagat); 
+MondalSayantan (Sayantan Mondal); 
+yashre-bh (Shreya Bhagat); 
+yashre-bh (Shreya Bhagat); 
+yashre-bh (Shreya Bhagat); 
+yashre-bh (Shreya Bhagat); @MondalSayantan this URL gives an error: 
+Dheeraj; https://plugin-health.jenkins.io/ worked fine for me too. But I think you can set it to anything. Found this: 
+yashre-bh (Shreya Bhagat); used this: 
+Dheeraj; 
+ash-sxn (Ashutosh Saxena ); 
+ash-sxn (Ashutosh Saxena ); 
+ash-sxn (Ashutosh Saxena ); 
+ash-sxn (Ashutosh Saxena ); 
+ash-sxn (Ashutosh Saxena ); 
+yashre-bh (Shreya Bhagat); 
+Kris Stern; 
+Dneth04 (Nethra); 
+yashre-bh (Shreya Bhagat); 
+Dheeraj; 
+yashre-bh (Shreya Bhagat); 
+yashre-bh (Shreya Bhagat); 
+yashre-bh (Shreya Bhagat); 
+Kris Stern; 
+Kris Stern; 
+Dneth04 (Nethra); 
+Dneth04 (Nethra); 
+daniel-plainview (MUKUND B Srinivas); 
+harsh-ps-2003 (Harsh Pratap Singh); 
+Kris Stern; 
+Kris Stern; 
+Kris Stern; 
+abhinav700 (abhinav700); 
+daniel-plainview (MUKUND B Srinivas); 
+ash-sxn (Ashutosh Saxena ); 
+Kris Stern; 
+MarkEWaite (Mark Waite); 
+yashre-bh (Shreya Bhagat); 
+Kris Stern; 
+Dneth04 (Nethra); 
+Dneth04 (Nethra); 
+abhinav700 (abhinav700); 
+Vandit1604 (Vandit Singh); 
+Dneth04 (Nethra); 
+Dneth04 (Nethra); 
+Dheeraj; 
+yashre-bh (Shreya Bhagat); 
+Kris Stern; 
+Kris Stern; 
+yashre-bh (Shreya Bhagat); 
+Kris Stern; 
+Kris Stern; 
+Kris Stern; 
+Kris Stern; 
+yashre-bh (Shreya Bhagat); adding this tag over the code snippet there: 
+yashre-bh (Shreya Bhagat); 
+Kris Stern; 
+Kris Stern; 
+Ulli Hafner; 
+Ulli Hafner; 
+Kris Stern; 
+yashre-bh (Shreya Bhagat); 
+MarkEWaite (Mark Waite); 
+ash-sxn (Ashutosh Saxena ); 
+ash-sxn (Ashutosh Saxena ); 
+berviantoleo (Bervianto Leo Pratama); 
+ash-sxn (Ashutosh Saxena ); 
+Mukund B Srinivas; 
+Mukund B Srinivas; 
+Mukund B Srinivas; 
+Kris Stern; 
+MarkEWaite (Mark Waite); 
+Mukund B Srinivas; 
+Jmm; 
+Jmm; Gentle reminder to the poll for the best GSoC Office Hours time: 
+prince-panwar (prince-panwar); 
+prince-panwar (prince-panwar); 
+prince-panwar (prince-panwar); 
+prince-panwar (prince-panwar); 
+Dneth04 (Nethra); 
+MarkEWaite (Mark Waite); prince-panwar (prince-panwar): 
+prince-panwar (prince-panwar); 
+prince-panwar (prince-panwar); 
+berviantoleo (Bervianto Leo Pratama); 
+Jmm; 
+ash-sxn (Ashutosh Saxena ); 
+lakshmishreea122003 (Lakshmi Shree A); 
+Jmm; 
+PrathamAditya (Pratham Aditya Salhotra); 
+Kris Stern; 
+Vandit1604 (Vandit Singh); 
+community-jenkins-io; 
+Vandit1604 (Vandit Singh); 
+Kunal Singh; Kris Stern: 
+Kris Stern; Kunal Singh: 
+Kunal Singh; 
+harsh-ps-2003 (Harsh Pratap Singh); Kris Stern: Sorry for being inactive 🙁 was really busy with exams. I want to work on some good first issues now, thus I am setting up the global configuration of jenkins by connecting webhook url with gitlab. I am getting `Url is blocked: 
+Pratik Dey; 
+abhinav700 (abhinav700); 
+Kunal Singh; Kris Stern: 
+Kris Stern; 
+Kris Stern; 
+Kris Stern; 
+Kris Stern; 
+Kunal Singh; 
+Kris Stern; 
+Kris Stern; 
+Kunal Singh; 
+Kunal Singh; 
+Kris Stern; 
+Kris Stern; 
+Kris Stern; 
+Kris Stern; 
+Kunal Singh; 
+Kunal Singh; 
+Kris Stern; 
+Kris Stern; 
+Kris Stern; 
+harsh-ps-2003 (Harsh Pratap Singh); Kris Stern: I tried exposing my Jenkins localhost:8080 using ngrok, but got `Hook execution failed: URL 'https://https//dcee-14-139-38-200.ap.ngrok.io/job/gitlab-sample-job/' is blocked: 
+Pratik Dey; 
+abhinav700 (abhinav700); 
+Kris Stern; 
+harsh-ps-2003 (Harsh Pratap Singh); Kris Stern: 
+harsh-ps-2003 (Harsh Pratap Singh); <@harsh-ps-2003-63ce2d0d6da0373984bd6022:gitter.im "Kris Stern: 
+Kris Stern; 
+harsh-ps-2003 (Harsh Pratap Singh); 
+Dneth04 (Nethra); 
+Aryanshrana (Aryansh Rana); 
+Dneth04 (Nethra); 
+Dneth04 (Nethra); Kris Stern: 
+MarkEWaite (Mark Waite); Dneth04 (Nethra): 
+MarkEWaite (Mark Waite); 
+Kris Stern; 
+Freyam; 
+harsh-ps-2003 (Harsh Pratap Singh); Kris Stern: 
+Kris Stern; 
+harsh-ps-2003 (Harsh Pratap Singh); 
+Kris Stern; 
+Kris Stern; 
+harsh-ps-2003 (Harsh Pratap Singh); 
+harsh-ps-2003 (Harsh Pratap Singh); 
+Kris Stern; 
+harsh-ps-2003 (Harsh Pratap Singh); 
+Kris Stern; 
+harsh-ps-2003 (Harsh Pratap Singh); 
+Kris Stern; 
+Kris Stern; 
+harsh-ps-2003 (Harsh Pratap Singh); 
+Kris Stern; 
+yashre-bh (Shreya Bhagat); 
+harsh-ps-2003 (Harsh Pratap Singh); Kris Stern: 
+Kris Stern; 
+Aditya Rawat; 
+Kris Stern; 
+Kris Stern; 
+Kris Stern; 
+Kris Stern; 
+Rohit Naidu; 
+harsh-ps-2003 (Harsh Pratap Singh); 
+Aryanshrana (Aryansh Rana); 
+Dneth04 (Nethra); 
+Dneth04 (Nethra); MarkEWaite (Mark Waite): 
+Kris Stern; 
+Dneth04 (Nethra); 
+Kris Stern; 
+Dneth04 (Nethra); 
+Kris Stern; 
+Kris Stern; 
+Kris Stern; 
+Dneth04 (Nethra); 
+Kris Stern; 
+Dneth04 (Nethra); 
+Dneth04 (Nethra); 
+Dneth04 (Nethra); 
+Dneth04 (Nethra); 
+Kris Stern; 
+Dneth04 (Nethra); 
+Dneth04 (Nethra); 
+Dneth04 (Nethra); 
+Dneth04 (Nethra); 
+Dneth04 (Nethra); 
+Kris Stern; 
+Kris Stern; 
+Kris Stern; 
+Kris Stern; 
+Dneth04 (Nethra); 
+Kris Stern; 
+Dneth04 (Nethra); 
+Dneth04 (Nethra); 
+Kris Stern; 
+Kris Stern; 
+Dneth04 (Nethra); 
+Kris Stern; 
+Dneth04 (Nethra); 
+Kris Stern; 
+Dneth04 (Nethra); 
+Dneth04 (Nethra); 
+Dneth04 (Nethra); 
+Kris Stern; 
+alyssat (Alyssat); Hi Everyone. Google has announced and published their mentoring orgs for GSoC 2023 https://summerofcode.withgoogle.com/programs/2023. Jenkins has been accepted!! yay!!  We will be hosting the first Jenkins in GSoC Office Hours tomorrow at 4pm UTC. Project idea overviews is on the agenda.  Call in info Topic: 
+Kris Stern; 
+Kris Stern; 
+Kris Stern; 
+Kris Stern; 
+Kris Stern; 
+harsh-ps-2003 (Harsh Pratap Singh); 
+Kris Stern; 
+Kris Stern; 
+harsh-ps-2003 (Harsh Pratap Singh); 
+Kris Stern; 
+harsh-ps-2003 (Harsh Pratap Singh); 
+Kris Stern; 
+Kris Stern; 
+harsh-ps-2003 (Harsh Pratap Singh); 
+Kris Stern; 
+Kris Stern; 
+harsh-ps-2003 (Harsh Pratap Singh); 
+Kris Stern; 
+harsh-ps-2003 (Harsh Pratap Singh); 
+harsh-ps-2003 (Harsh Pratap Singh); 
+Kris Stern; 
+Kris Stern; 
+harsh-ps-2003 (Harsh Pratap Singh); 
+Kris Stern; 
+harsh-ps-2003 (Harsh Pratap Singh); 
+Kris Stern; 
+harsh-ps-2003 (Harsh Pratap Singh); 
+Kris Stern; 
+harsh-ps-2003 (Harsh Pratap Singh); 
+Kris Stern; 
+harsh-ps-2003 (Harsh Pratap Singh); 
+Kris Stern; 
+harsh-ps-2003 (Harsh Pratap Singh); 
+Kris Stern; 
+harsh-ps-2003 (Harsh Pratap Singh); 
+Kris Stern; harsh-ps-2003 (Harsh Pratap Singh): 
+harsh-ps-2003 (Harsh Pratap Singh); 
+harsh-ps-2003 (Harsh Pratap Singh); 
+Kris Stern; 
+harsh-ps-2003 (Harsh Pratap Singh); 
+Kris Stern; 
+harsh-ps-2003 (Harsh Pratap Singh); 
+harsh-ps-2003 (Harsh Pratap Singh); Kris Stern: 
+Kris Stern; 
+harsh-ps-2003 (Harsh Pratap Singh); 
+Kris Stern; 
+harsh-ps-2003 (Harsh Pratap Singh); 
+harsh-ps-2003 (Harsh Pratap Singh); 
+Kris Stern; Sure, bye for now. See if this can help you with the webhook testing issue: 
+Kris Stern; 
+Kris Stern; 
+harsh-ps-2003 (Harsh Pratap Singh); 
+Kris Stern; 
+harsh-ps-2003 (Harsh Pratap Singh); 
+harsh-ps-2003 (Harsh Pratap Singh); 
+harsh-ps-2003 (Harsh Pratap Singh); 
+harsh-ps-2003 (Harsh Pratap Singh); 
+Aryanshrana (Aryansh Rana); 
+Kris Stern; 
+Neutron; 
+HARSH SHARMA; 
+HARSH SHARMA; 
+Abhishek Rana; 
+riyasingh1004 (Riya Singh); 
+Kris Stern; 
+Kris Stern; 
+Giridharan002 (Giridharan002); 
+Kris Stern; 
+ash-sxn (Ashutosh Saxena ); 
+Kris Stern; 
+Kris Stern; 
+Giridharan002 (Giridharan002); 
+ash-sxn (Ashutosh Saxena ); 
+Kris Stern; 
+Kris Stern; 
+ash-sxn (Ashutosh Saxena ); 
+Kris Stern; 
+Kris Stern; 
+Kris Stern; 
+PrathamAditya (Pratham Aditya Salhotra); 
+ash-sxn (Ashutosh Saxena ); 
+Giridharan002 (Giridharan002); 
+Aryanshrana (Aryansh Rana); 
+Kris Stern; Try this resource for the concept: 
+Kris Stern; 
+Aryanshrana (Aryansh Rana); 
+Kris Stern; 
+Aditya Rawat; Kris Stern: 
+harsh-ps-2003 (Harsh Pratap Singh); Kris Stern: 
+Kris Stern; 
+Kris Stern; 
+Kris Stern; 
+Aditya Rawat; Kris Stern: 
+Kris Stern; 
+harsh-ps-2003 (Harsh Pratap Singh); 
+Kris Stern; 
+harsh-ps-2003 (Harsh Pratap Singh); 
+Kris Stern; 
+harsh-ps-2003 (Harsh Pratap Singh); 
+Kris Stern; 
+Kris Stern; 
+harsh-ps-2003 (Harsh Pratap Singh); 
+Kris Stern; 
+alyssat (Alyssat); 
+ash-sxn (Ashutosh Saxena ); 
+Jmm; 
+Jmm; 
+ash-sxn (Ashutosh Saxena ); 
+alyssat (Alyssat); 
+alyssat (Alyssat); 
+harsh-ps-2003 (Harsh Pratap Singh); 
+Kris Stern; 
+lakshmishreea122003 (Lakshmi Shree A); 
+Aditya Rawat; Kris Stern: 
+harsh-ps-2003 (Harsh Pratap Singh); Kris Stern: 
+Dneth04 (Nethra); 
+Jmm; 
+harsh-ps-2003 (Harsh Pratap Singh); Kris Stern: 
+community-jenkins-io; @alyssat posted in Jenkins GSoC 2023: 
+harsh-ps-2003 (Harsh Pratap Singh); 
+harsh-ps-2003 (Harsh Pratap Singh); 
+harsh-ps-2003 (Harsh Pratap Singh); 
+harsh-ps-2003 (Harsh Pratap Singh); 
+harsh-ps-2003 (Harsh Pratap Singh); 
+harsh-ps-2003 (Harsh Pratap Singh); 
+harsh-ps-2003 (Harsh Pratap Singh); Kris Stern: 
+Kris Stern; 
+harsh-ps-2003 (Harsh Pratap Singh); 
+Kris Stern; <@harsh-ps-2003-63ce2d0d6da0373984bd6022:gitter.im "Kris Stern: 
+Kris Stern; 
+harsh-ps-2003 (Harsh Pratap Singh); 
+Kris Stern; 
+harsh-ps-2003 (Harsh Pratap Singh); <@harsh-ps-2003-63ce2d0d6da0373984bd6022:gitter.im "Kris Stern: 
+Kris Stern; 
+harsh-ps-2003 (Harsh Pratap Singh); 
+Kris Stern; 
+Kris Stern; 
+Kris Stern; 
+harsh-ps-2003 (Harsh Pratap Singh); 
+Kris Stern; <@harsh-ps-2003-63ce2d0d6da0373984bd6022:gitter.im "Kris Stern: 
+Kris Stern; 
+harsh-ps-2003 (Harsh Pratap Singh); 
+Kris Stern; 
+Kris Stern; 
+harsh-ps-2003 (Harsh Pratap Singh); 
+harsh-ps-2003 (Harsh Pratap Singh); 
+harsh-ps-2003 (Harsh Pratap Singh); Kris Stern: 
+Jmm; Ref: 
+harsh-ps-2003 (Harsh Pratap Singh); <@jmmeessen:matrix.org "Ref: 
+Jmm; 
+Saarthak Maini; 
+harsh-ps-2003 (Harsh Pratap Singh); 
+harsh-ps-2003 (Harsh Pratap Singh); 
+Kris Stern; 
+Kris Stern; 
+harsh-ps-2003 (Harsh Pratap Singh); <@harsh-ps-2003-63ce2d0d6da0373984bd6022:gitter.im "Kris Stern: 
+Kris Stern; 
+harsh-ps-2003 (Harsh Pratap Singh); 
+harsh-ps-2003 (Harsh Pratap Singh); 
+Dneth04 (Nethra); Jmm: 
+Aditya Rawat; Kris Stern: 
+Aditya Rawat; 
+Dneth04 (Nethra); 
+ADITYA; 
+dhruvithakkar210; 
+Pulkit Chugh; 
+Jmm; 
+Mukund B Srinivas; 
+Kris Stern; 
+Kris Stern; 
+Dneth04 (Nethra); <@bejadirajeshreddy18:gitter.im "I'm new to contribution .i state..."> Rajesh Reddy Bejadi: 
+tokaygeckot; 
+lper1582 (Loghi Perinpanayagam); 
+tokaygeckot; 
+harsh-ps-2003 (Harsh Pratap Singh); Kris Stern: 
+harsh-ps-2003 (Harsh Pratap Singh); 
+potter-cmd; 
+community-jenkins-io; 
+Kris Stern; <@harsh-ps-2003-63ce2d0d6da0373984bd6022:gitter.im "Kris Stern: 
+Kris Stern; 
+amatuzzehra; 
+Kris Stern; 
+Kris Stern; 
+Kris Stern; 
+harsh-ps-2003 (Harsh Pratap Singh); 
+Kris Stern; 
+harsh-ps-2003 (Harsh Pratap Singh); 
+Muhammed Sabbah; 
+Muhammed Sabbah; 
+iamrajiv (Rajiv Singh); riyasingh1004 (Riya Singh): 
+harsh-ps-2003 (Harsh Pratap Singh); 
+harsh-ps-2003 (Harsh Pratap Singh); 
+Kris Stern; 
+Kris Stern; 
+harsh-ps-2003 (Harsh Pratap Singh); Kris Stern: 
+Kris Stern; 
+Kris Stern; riyasingh1004 (Riya Singh): 
+Kris Stern; 
+Kris Stern; harsh-ps-2003 (Harsh Pratap Singh): 
+Kris Stern; 
+Amishakumari544 (Amisha Kumari); 
+iamrajiv (Rajiv Singh); 
+PrathamAditya (Pratham Aditya Salhotra); 
+Kris Stern; BTW, your patches are now part of the new release of the GitLab plugin: 
+Kris Stern; 
+Kris Stern; 
+Kris Stern; 
+PrathamAditya (Pratham Aditya Salhotra); 
+PrathamAditya (Pratham Aditya Salhotra); Kris Stern: 
+Kris Stern; 
+Kris Stern; 
+Kris Stern; 
+Dneth04 (Nethra); 
+Kris Stern; 
+Kris Stern; 
+Dneth04 (Nethra); 
+Kris Stern; 
+Dneth04 (Nethra); 
+Kris Stern; 
+Dneth04 (Nethra); 
+Dneth04 (Nethra); 
+Kris Stern; 
+Kris Stern; 
+Dneth04 (Nethra); 
+Dneth04 (Nethra); 
+Kris Stern; 
+Dneth04 (Nethra); 
+Dneth04 (Nethra); 
+Dneth04 (Nethra); 
+tokaygeckot; 
+Kris Stern; 
+Dneth04 (Nethra); 
+Kris Stern; 
+Kris Stern; 
+tokaygeckot; 
+Dneth04 (Nethra); 
+Dneth04 (Nethra); 
+Kris Stern; 
+Dneth04 (Nethra); 
+Dneth04 (Nethra); 
+Dneth04 (Nethra); 
+Dneth04 (Nethra); 
+Dneth04 (Nethra); 
+Kris Stern; 
+Dneth04 (Nethra); 
+Dneth04 (Nethra); 
+Kris Stern; 
+Kris Stern; 
+Dneth04 (Nethra); 
+Kris Stern; 
+Dneth04 (Nethra); 
+Dneth04 (Nethra); 
+Kris Stern; 
+daniel-plainview (MUKUND B Srinivas); 
+daniel-plainview (MUKUND B Srinivas); 
+daniel-plainview (MUKUND B Srinivas); 
+Kris Stern; Hi daniel-plainview (MUKUND B Srinivas) Do you mean this plugin?: 
+Mukund B Srinivas; 
+Vandit1604 (Vandit Singh); 
+Muhammed Sabbah; 
+Kris Stern; 
+Kris Stern; <@vandit1604-63401d426da03739849d8b03:gitter.im "Using print statements to debug ..."> Vandit1604 (Vandit Singh): 
+Kris Stern; 
+Vandit1604 (Vandit Singh); 
+Kris Stern; 
+Kris Stern; 
+Kris Stern; 
+Kris Stern; 
+Kris Stern; 
+harsh-ps-2003 (Harsh Pratap Singh); 
+daniel-plainview (MUKUND B Srinivas); 
+daniel-plainview (MUKUND B Srinivas); 
+iamrajiv (Rajiv Singh); 
+iamrajiv (Rajiv Singh); Dneth04 (Nethra): 
+iamrajiv (Rajiv Singh); 
+iamrajiv (Rajiv Singh); daniel-plainview (MUKUND B Srinivas): 
+Mukund B Srinivas; 
+Mukund B Srinivas; 
+Jagruti; 
+Jagruti; 
+Mukund B Srinivas; 
+Jagruti; 
+PrathamAditya (Pratham Aditya Salhotra); 
+Kris Stern; 
+Kris Stern; 
+Mukund B Srinivas; 
+Kris Stern; 
+Kris Stern; 
+Kris Stern; 
+Mukund B Srinivas; 
+samycolen (samycolen); 
+Kris Stern; 
+andrew-doghry; 
+Kaushik-Iyer (Kaushik-Iyer); 
+Kaushik-Iyer (Kaushik-Iyer); 
+Jagruti; 
+Kris Stern; 
+Kris Stern; 
+Kris Stern; 
+Kris Stern; 
+Kris Stern; 
+Kris Stern; 
+Kris Stern; 
+Kris Stern; 
+Meenal Jain; 
+Kris Stern; 
+Kris Stern; 
+Kris Stern; 
+Kris Stern; 
+Kris Stern; 
+Meenal Jain; 
+Kris Stern; 
+Meenal Jain; 
+Kris Stern; 
+Meenal Jain; 
+Kaushik-Iyer (Kaushik-Iyer); 
+Kris Stern; 
+dipanshu; 
+aritrasinha108 (Aritra Sinha); 
+Dheeraj; 
+Venu Choudhary; 
+Venu Choudhary; 
+iamrajiv (Rajiv Singh); 
+iamrajiv (Rajiv Singh); 
+iamrajiv (Rajiv Singh); 
+yash-sudo-web; 
+Mostafa Ashraf; 
+community-jenkins-io; @Jmm (Jean-Marc Meessen) posted in GSoC project ideas presentation: 
+Dneth04 (Nethra); 
+Kaushik-Iyer (Kaushik-Iyer); 
+lzeee; 
+Aman Gupta; 
+MsAkiNom; 
+MsAkiNom; 
+community-jenkins-io; @Jmm (Jean-Marc Meessen) posted in GSoC Project Idea Presentation: 
+community-jenkins-io; 
+Anshuman Shukla (@anshuman-com;gitter.im): 
+Dheeraj; 
+tokaygeckot; 
+Dheeraj; 
+tokaygeckot; 
+tokaygeckot; 
+tokaygeckot; 
+dhruvithakkar210; Hi I am Dhruvi Thakkar, I am working on Jenkins project - Building Jenkins.io with alternative tools proposed for GSOC 23'.Recently my pull request got merged and i have raised other requests mentors can u pls review it and merge it.  I have experience with tool you mentioned Antora  and DevOps tools such as  Version Control Tool: 
+Jmm; 
+MarkEWaite (Mark Waite); 
+Kris Stern; 
+Kris Stern; 
+dipanshu; 
+dipanshu; 
+tokaygeckot; 
+Kris Stern; tokaygeckot: 
+tokaygeckot; 
+Kris Stern; 
+tokaygeckot; 
+Kris Stern; 
+Kris Stern; 
+Kris Stern; 
+Kris Stern; 
+Anshuman Shukla (@anshuman-com;gitter.im): 
+Muhammed Sabbah; 
+dhruvithakkar210; 
+i-am-yuvi (Yuvraj Chhetri); 
+NotMyFault (Alexander Brandes); 
+dhruvithakkar210; 
+Jmm; 
+Kris Stern; 
+i-am-yuvi (Yuvraj Chhetri); 
+Kris Stern; 
+tokaygeckot; 
+Kris Stern; 
+i-am-yuvi (Yuvraj Chhetri); 
+tokaygeckot; 
+Kris Stern; 
+tokaygeckot; 
+Kris Stern; 
+Kris Stern; 
+Kris Stern; 
+i-am-yuvi (Yuvraj Chhetri); Kris Stern: 
+Kris Stern; 
+dhruvithakkar210; 
+i-am-yuvi (Yuvraj Chhetri); 
+Kris Stern; 
+tokaygeckot; 
+dhruvithakkar210; 
+Kris Stern; 
+Kris Stern; 
+tokaygeckot; 
+Kris Stern; 
+Kris Stern; 
+tokaygeckot; 
+tokaygeckot; 
+Kris Stern; 
+tokaygeckot; 
+tokaygeckot; 
+Kris Stern; 
+Kris Stern; Just wanted to check with you: 
+Subzer0570 (Udit Damare); 
+Kris Stern; 
+Kris Stern; 
+Subzer0570 (Udit Damare); 
+Subzer0570 (Udit Damare); 
+tokaygeckot; 
+Kris Stern; 
+Kris Stern; 
+Kris Stern; 
+Kris Stern; 
+Kris Stern; 
+Subzer0570 (Udit Damare); 
+Kris Stern; 
+Dhruv Jain; 
+alyssat (Alyssat); We are on the GSoC office hours now going over project ideas: 
+Dneth04 (Nethra); 
+tokaygeckot; 
+community-jenkins-io; @alyssat posted in Jenkins GSoC 2023 Office Hours: 
+Kris Stern; 
+Kris Stern; 
+Kris Stern; 
+Kris Stern; And, how did you enter your private key? Was it via choosing a file on your machine? If so make sure the permissions are correctly set. You can try something like this: 
+Kris Stern; I am saying this because I see `ERROR: 
+MsAkiNom; 
+MsAkiNom; Mostafa Ashraf: 
+Jmm; 
+Jmm; 
+MsAkiNom; 

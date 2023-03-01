@@ -1,0 +1,481 @@
+jleon33 (jleon33); 
+Dheeraj; 
+jleon33 (jleon33); 
+alecharp (Adrien Lecharpentier); 
+Dheeraj; 
+Dheeraj; 
+impact-maker (impact-maker); 
+hervelemeur; 
+alecharp (Adrien Lecharpentier); 
+alecharp (Adrien Lecharpentier); so, in order to run the application locally, what you need to have is a local database running. You can start is as you wish, but there is an helper in the project in the form of a `docker compose` command: 
+alecharp (Adrien Lecharpentier); 
+alecharp (Adrien Lecharpentier); 
+alecharp (Adrien Lecharpentier); 
+Dheeraj; 
+Dheeraj; 
+alecharp (Adrien Lecharpentier); 
+alecharp (Adrien Lecharpentier); 
+Dheeraj; okay :thumbsup: 
+alecharp (Adrien Lecharpentier); 
+Dheeraj; 
+impact-maker (impact-maker); 
+hervelemeur; impact-maker (impact-maker): 
+alecharp (Adrien Lecharpentier); 
+Dheeraj; 
+hervelemeur; dheerajodha (Dheeraj Singh Jodha): 
+Dheeraj; 
+Dheeraj; 
+alecharp (Adrien Lecharpentier); 
+impact-maker (impact-maker); 
+harsh-ps-2003 (Harsh Pratap Singh); 
+Dheeraj; This message is in reply to Harsh Pratap Singh's email (titled: "GSoC 2023: 
+impact-maker (impact-maker); 
+harsh-ps-2003 (Harsh Pratap Singh); 
+alecharp (Adrien Lecharpentier); 
+alecharp (Adrien Lecharpentier); 
+alecharp (Adrien Lecharpentier); 
+alecharp (Adrien Lecharpentier); 
+alecharp (Adrien Lecharpentier); 
+alecharp (Adrien Lecharpentier); 
+alecharp (Adrien Lecharpentier); 
+hervelemeur; 
+alecharp (Adrien Lecharpentier); 
+harsh-ps-2003 (Harsh Pratap Singh); 
+alecharp (Adrien Lecharpentier); 
+alecharp (Adrien Lecharpentier); 
+alecharp (Adrien Lecharpentier); 
+alecharp (Adrien Lecharpentier); 
+impact-maker (impact-maker); 
+harsh-ps-2003 (Harsh Pratap Singh); 
+hervelemeur; 
+hervelemeur; 
+harsh-ps-2003 (Harsh Pratap Singh); 
+Jmm; 
+hervelemeur; 
+harsh-ps-2003 (Harsh Pratap Singh); 
+harsh-ps-2003 (Harsh Pratap Singh); 
+hervelemeur; 
+hervelemeur; 
+harsh-ps-2003 (Harsh Pratap Singh); 
+harsh-ps-2003 (Harsh Pratap Singh); How to reproduce this error : 
+alecharp (Adrien Lecharpentier); 
+alecharp (Adrien Lecharpentier); 
+alecharp (Adrien Lecharpentier); 
+impact-maker (impact-maker); 
+hervelemeur; 
+harsh-ps-2003 (Harsh Pratap Singh); 
+alecharp (Adrien Lecharpentier); 
+alecharp (Adrien Lecharpentier); 
+alecharp (Adrien Lecharpentier); 
+harsh-ps-2003 (Harsh Pratap Singh); @alecharp when i am trying to run probe jep-229 using : java -jar plugin-health-scoring.jar --probe jep-229 i am getting : 
+alecharp (Adrien Lecharpentier); 
+alecharp (Adrien Lecharpentier); 
+Jmm; 
+harsh-ps-2003 (Harsh Pratap Singh); 
+jagrutitiw_twitter (Jagruti); 
+jagrutitiw_twitter (Jagruti); 
+harsh-ps-2003 (Harsh Pratap Singh); 
+jagrutitiw_twitter (Jagruti); 
+harsh-ps-2003 (Harsh Pratap Singh); 
+jagrutitiw_twitter (Jagruti); Thanks. `.env.example` solves a lot of issues. In the documentation they have only mentioned: 
+harsh-ps-2003 (Harsh Pratap Singh); 
+hervelemeur; 
+harsh-ps-2003 (Harsh Pratap Singh); 
+harsh-ps-2003 (Harsh Pratap Singh); 
+Jagruti; 
+Jagruti; 
+Jagruti; 
+alecharp (Adrien Lecharpentier); 
+alecharp (Adrien Lecharpentier); 
+alecharp (Adrien Lecharpentier); 
+alecharp (Adrien Lecharpentier); 
+alecharp (Adrien Lecharpentier); 
+impact-maker (impact-maker); 
+Kris Stern; 
+impact-maker (impact-maker); 
+Dheeraj; 
+Dheeraj; 
+impact-maker (impact-maker); 
+Kris Stern; 
+Kris Stern; 
+Kris Stern; 
+Dheeraj; 
+impact-maker (impact-maker); 
+alecharp (Adrien Lecharpentier); 
+alecharp (Adrien Lecharpentier); 
+alecharp (Adrien Lecharpentier); 
+alecharp (Adrien Lecharpentier); 
+alecharp (Adrien Lecharpentier); 
+impact-maker (impact-maker); 
+impact-maker (impact-maker); 
+impact-maker (impact-maker); 
+alecharp (Adrien Lecharpentier); 
+alecharp (Adrien Lecharpentier); 
+Jagruti; 
+Jagruti; 
+impact-maker (impact-maker); 
+impact-maker (impact-maker); 
+Jagruti; 
+Jagruti; 
+Jagruti; 
+Jagruti; 
+alecharp (Adrien Lecharpentier); 
+alecharp (Adrien Lecharpentier); 
+alecharp (Adrien Lecharpentier); 
+alecharp (Adrien Lecharpentier); 
+alecharp (Adrien Lecharpentier); 
+alecharp (Adrien Lecharpentier); > Also, from ProbeContext class I understand, it gives additional information about each probe like: 
+alecharp (Adrien Lecharpentier); 
+alecharp (Adrien Lecharpentier); 
+alecharp (Adrien Lecharpentier); 
+alecharp (Adrien Lecharpentier); 
+alecharp (Adrien Lecharpentier); 
+alecharp (Adrien Lecharpentier); 
+alecharp (Adrien Lecharpentier); 
+alecharp (Adrien Lecharpentier); 
+alecharp (Adrien Lecharpentier); 
+Dheeraj; just for reference, this is where the update center URL is getting read from: 
+alecharp (Adrien Lecharpentier); 
+Dheeraj; 
+Dheeraj; 
+Dheeraj; 
+Jagruti; 
+Jagruti; 
+Dheeraj; 
+alecharp (Adrien Lecharpentier); 
+Jagruti; 
+Jagruti; 
+Jagruti; 
+alecharp (Adrien Lecharpentier); 
+alecharp (Adrien Lecharpentier); 
+alecharp (Adrien Lecharpentier); 
+Kris Stern; 
+Dheeraj; 
+Kris Stern; 
+alecharp (Adrien Lecharpentier); 
+MondalSayantan (Sayantan Mondal); 
+MondalSayantan (Sayantan Mondal); 
+alecharp (Adrien Lecharpentier); 
+alecharp (Adrien Lecharpentier); 
+Kris Stern; 
+Kris Stern; 
+alecharp (Adrien Lecharpentier); 
+MondalSayantan (Sayantan Mondal); 
+alecharp (Adrien Lecharpentier); from GitHub page, you can commit suggestions (or add multiple suggestion into one commit). You can also do that in your CLI by adding `Co-Authored-By: 
+alecharp (Adrien Lecharpentier); 
+alecharp (Adrien Lecharpentier); 
+MondalSayantan (Sayantan Mondal); 
+alecharp (Adrien Lecharpentier); 
+yashre-bh (Shreya Bhagat); 
+hervelemeur; 
+yashre-bh (Shreya Bhagat); 
+MondalSayantan (Sayantan Mondal); 
+yashre-bh (Shreya Bhagat); 
+yashre-bh (Shreya Bhagat); first: 
+yashre-bh (Shreya Bhagat); 
+yashre-bh (Shreya Bhagat); 
+MondalSayantan (Sayantan Mondal); > first: 
+MondalSayantan (Sayantan Mondal); 
+MondalSayantan (Sayantan Mondal); 
+yashre-bh (Shreya Bhagat); 
+MondalSayantan (Sayantan Mondal); 
+Dheeraj; 
+Dheeraj; @MondalSayantan: 
+MondalSayantan (Sayantan Mondal); 
+MondalSayantan (Sayantan Mondal); 
+MondalSayantan (Sayantan Mondal); 
+MondalSayantan (Sayantan Mondal); 
+MondalSayantan (Sayantan Mondal); 
+MondalSayantan (Sayantan Mondal); 
+alecharp (Adrien Lecharpentier); 
+alecharp (Adrien Lecharpentier); 
+alecharp (Adrien Lecharpentier); One major thing about what @dheerajodha said: 
+alecharp (Adrien Lecharpentier); 
+alecharp (Adrien Lecharpentier); 
+Jagruti; 
+alecharp (Adrien Lecharpentier); 
+alecharp (Adrien Lecharpentier); 
+alecharp (Adrien Lecharpentier); 
+Dheeraj; 
+MondalSayantan (Sayantan Mondal); 
+Dheeraj; 
+MondalSayantan (Sayantan Mondal); 
+MondalSayantan (Sayantan Mondal); 
+MondalSayantan (Sayantan Mondal); 
+Dheeraj; <@dheerajodha-60474fe16da0373984665858:gitter.im "Sure thing, I'll try to do some ..."> alecharp (Adrien Lecharpentier): 
+alecharp (Adrien Lecharpentier); dheerajodha (Dheeraj Singh Jodha): 
+alecharp (Adrien Lecharpentier); 
+Dheeraj; 
+alecharp (Adrien Lecharpentier); 
+Dheeraj; 
+alecharp (Adrien Lecharpentier); 
+alecharp (Adrien Lecharpentier); dheerajodha (Dheeraj Singh Jodha): 
+alecharp (Adrien Lecharpentier); dheerajodha (Dheeraj Singh Jodha): 
+Dheeraj; alecharp (Adrien Lecharpentier): 
+alecharp (Adrien Lecharpentier); 
+alecharp (Adrien Lecharpentier); 
+Dheeraj; 
+alecharp (Adrien Lecharpentier); 
+alecharp (Adrien Lecharpentier); 
+Dheeraj; 
+alecharp (Adrien Lecharpentier); Jagruti: 
+Jagruti; 
+alecharp (Adrien Lecharpentier); 
+Jagruti; 
+Jagruti; I have made the PR here: 
+Jagruti; 
+alecharp (Adrien Lecharpentier); 
+alecharp (Adrien Lecharpentier); 
+alecharp (Adrien Lecharpentier); 
+Jagruti; 
+alecharp (Adrien Lecharpentier); 
+alecharp (Adrien Lecharpentier); 
+Jagruti; 
+alecharp (Adrien Lecharpentier); 
+alecharp (Adrien Lecharpentier); 
+Jagruti; 
+alecharp (Adrien Lecharpentier); 
+alecharp (Adrien Lecharpentier); Jagruti: 
+Jagruti; 
+alecharp (Adrien Lecharpentier); 
+alecharp (Adrien Lecharpentier); 
+alecharp (Adrien Lecharpentier); 
+Jagruti; 
+Jagruti; 
+Jagruti; 
+Jagruti; 
+alecharp (Adrien Lecharpentier); 
+Jagruti; 
+Jagruti; 
+Jagruti; 
+Jagruti; 
+Jagruti; I tried other links: 
+alecharp (Adrien Lecharpentier); 
+alecharp (Adrien Lecharpentier); 
+alecharp (Adrien Lecharpentier); 
+Kris Stern; Jagruti: 
+Jagruti; 
+Jmm; As this is also a very active GSoC channel, I am cross-posting the announcement of the chosen GSoC Office Hours time (Thursdays at 16h00 UTC): 
+Jagruti; In [ScoreResult.java class](https://github.com/Jagrutiti/plugin-health-scoring/blob/05198a2af5ced21f610738aac60e89e85f6955af/src/main/java/io/jenkins/pluginhealth/scoring/model/ScoreResult.java) there are three fields: 
+Jagruti; 
+Jagruti; 
+Jagruti; 
+Jagruti; 
+Kris Stern; Hi Jagruti For learning React I recommend this fun free course from Scrimba: 
+Kris Stern; Maybe you can find more scoring computation info here: 
+Kris Stern; 
+Jagruti; 
+Jagruti; 
+Kris Stern; 
+Kris Stern; 
+Dheeraj; 
+Jagruti; 
+Dheeraj; 
+Dheeraj; 
+Dheeraj; 
+Jagruti; 
+Dheeraj; 
+Dheeraj; 
+Dheeraj; 
+Jagruti; 
+Dheeraj; 
+Dheeraj; 
+Jagruti; 
+Jagruti; 
+Dheeraj; 
+alecharp (Adrien Lecharpentier); 
+alecharp (Adrien Lecharpentier); 
+alecharp (Adrien Lecharpentier); 
+alecharp (Adrien Lecharpentier); 
+alecharp (Adrien Lecharpentier); 
+Jagruti; Hey alecharp (Adrien Lecharpentier) this is my draft proposal: 
+alecharp (Adrien Lecharpentier); 
+Jagruti; 
+Jmm; 
+Dheeraj; 
+Kris Stern; 
+Jagruti; 
+Jagruti; In my proposal I should have columns like: 
+Dheeraj; 
+Jagruti; 
+Jagruti; 
+alecharp (Adrien Lecharpentier); 
+alecharp (Adrien Lecharpentier); 
+alecharp (Adrien Lecharpentier); 
+alecharp (Adrien Lecharpentier); 
+alecharp (Adrien Lecharpentier); 
+alecharp (Adrien Lecharpentier); MondalSayantan (Sayantan Mondal): 
+Sayantan Mondal; 
+alecharp (Adrien Lecharpentier); Sayantan Mondal: 
+Sayantan Mondal; 
+Jagruti; 
+MondalSayantan (Sayantan Mondal); alecharp (Adrien Lecharpentier)Dheeraj: 
+Kris Stern; 
+MondalSayantan (Sayantan Mondal); 
+Kris Stern; 
+yashre-bh (Shreya Bhagat); 
+yashre-bh (Shreya Bhagat); 
+Kris Stern; 
+yashre-bh (Shreya Bhagat); 
+yashre-bh (Shreya Bhagat); 
+yashre-bh (Shreya Bhagat); 
+yashre-bh (Shreya Bhagat); 
+alecharp (Adrien Lecharpentier); 
+alecharp (Adrien Lecharpentier); 
+alecharp (Adrien Lecharpentier); 
+yashre-bh (Shreya Bhagat); 
+yashre-bh (Shreya Bhagat); 
+alecharp (Adrien Lecharpentier); 
+yashre-bh (Shreya Bhagat); 
+alecharp (Adrien Lecharpentier); 
+yashre-bh (Shreya Bhagat); 
+alecharp (Adrien Lecharpentier); 
+alecharp (Adrien Lecharpentier); 
+alecharp (Adrien Lecharpentier); 
+yashre-bh (Shreya Bhagat); 
+alecharp (Adrien Lecharpentier); 
+yashre-bh (Shreya Bhagat); 
+yashre-bh (Shreya Bhagat); 
+yashre-bh (Shreya Bhagat); 
+yashre-bh (Shreya Bhagat); 
+alecharp (Adrien Lecharpentier); 
+yashre-bh (Shreya Bhagat); 
+alecharp (Adrien Lecharpentier); 
+alecharp (Adrien Lecharpentier); 
+alecharp (Adrien Lecharpentier); 
+yashre-bh (Shreya Bhagat); 
+yashre-bh (Shreya Bhagat); 
+alecharp (Adrien Lecharpentier); 
+alecharp (Adrien Lecharpentier); 
+alecharp (Adrien Lecharpentier); 
+alecharp (Adrien Lecharpentier); 
+yashre-bh (Shreya Bhagat); 
+alecharp (Adrien Lecharpentier); 
+yashre-bh (Shreya Bhagat); 
+yashre-bh (Shreya Bhagat); I just checked the logs: 
+alecharp (Adrien Lecharpentier); 
+yashre-bh (Shreya Bhagat); 
+alecharp (Adrien Lecharpentier); 
+yashre-bh (Shreya Bhagat); 
+alecharp (Adrien Lecharpentier); 
+yashre-bh (Shreya Bhagat); 
+alecharp (Adrien Lecharpentier); 
+yashre-bh (Shreya Bhagat); 
+yashre-bh (Shreya Bhagat); 
+alecharp (Adrien Lecharpentier); no the opposite. `local : 
+alecharp (Adrien Lecharpentier); 
+yashre-bh (Shreya Bhagat); 
+yashre-bh (Shreya Bhagat); 
+alecharp (Adrien Lecharpentier); yashre-bh (Shreya Bhagat): 
+Dheeraj; yashre-bh (Shreya Bhagat): 
+yashre-bh (Shreya Bhagat); <@alecharp-57757416c2f0db084a20d26d:gitter.im "yashre-bh (Shreya Bhagat): 
+alecharp (Adrien Lecharpentier); 
+alecharp (Adrien Lecharpentier); 
+yashre-bh (Shreya Bhagat); 
+yashre-bh (Shreya Bhagat); 
+alecharp (Adrien Lecharpentier); 
+alecharp (Adrien Lecharpentier); 
+alecharp (Adrien Lecharpentier); 
+yashre-bh (Shreya Bhagat); 
+yashre-bh (Shreya Bhagat); 
+alecharp (Adrien Lecharpentier); 
+alecharp (Adrien Lecharpentier); 
+yashre-bh (Shreya Bhagat); 
+yashre-bh (Shreya Bhagat); 
+yashre-bh (Shreya Bhagat); running the mvn command after exporting all variales gives: 
+alecharp (Adrien Lecharpentier); 
+alecharp (Adrien Lecharpentier); 
+yashre-bh (Shreya Bhagat); 
+yashre-bh (Shreya Bhagat); 
+alecharp (Adrien Lecharpentier); 
+yashre-bh (Shreya Bhagat); 
+Dheeraj; 
+yashre-bh (Shreya Bhagat); 
+alecharp (Adrien Lecharpentier); 
+alecharp (Adrien Lecharpentier); 
+yashre-bh (Shreya Bhagat); 
+yashre-bh (Shreya Bhagat); 
+yashre-bh (Shreya Bhagat); 
+yashre-bh (Shreya Bhagat); 
+alecharp (Adrien Lecharpentier); 
+yashre-bh (Shreya Bhagat); 
+alecharp (Adrien Lecharpentier); 
+Kris Stern; 
+yashre-bh (Shreya Bhagat); 
+yashre-bh (Shreya Bhagat); 
+Kris Stern; 
+Kris Stern; 
+Jagruti; 
+Kris Stern; 
+Dheeraj; Hi Everyone. Google has announced and published their mentoring orgs for GSoC 2023 https://summerofcode.withgoogle.com/programs/2023. Jenkins has been accepted!! yay!!  We will be hosting the first Jenkins in GSoC Office Hours tomorrow at 4pm UTC. Project idea overviews is on the agenda.  Call in info Topic: 
+Dheeraj; 
+Kris Stern; 
+MondalSayantan (Sayantan Mondal); 
+Jmm; 
+Harsh Gupta; Dheeraj: 
+Jagruti; 
+Dheeraj; 
+Harsh Gupta; 
+Dheeraj; 
+yashre-bh (Shreya Bhagat); 
+Dheeraj; Related: 
+Dheeraj; alecharp (Adrien Lecharpentier): 
+alecharp (Adrien Lecharpentier); 
+alecharp (Adrien Lecharpentier); 
+yashre-bh (Shreya Bhagat); 
+Dheeraj; 
+alecharp (Adrien Lecharpentier); 
+alecharp (Adrien Lecharpentier); 
+yashre-bh (Shreya Bhagat); 
+Kris Stern; 
+Kris Stern; 
+alecharp (Adrien Lecharpentier); 
+yashre-bh (Shreya Bhagat); 
+alecharp (Adrien Lecharpentier); 
+alecharp (Adrien Lecharpentier); 
+alecharp (Adrien Lecharpentier); 
+Shreya Bhagat; 
+Jagruti; 
+alecharp (Adrien Lecharpentier); 
+MondalSayantan (Sayantan Mondal); alecharp (Adrien Lecharpentier): 
+Kris Stern; 
+alecharp (Adrien Lecharpentier); Shreya Bhagat: 
+Jagruti; 
+Kris Stern; 
+Jagruti; 
+Jmm; 
+Dheeraj; 
+Harsh Gupta; Dheeraj: 
+alecharp (Adrien Lecharpentier); 
+Jmm; 
+Harsh Gupta; 
+lzeee; 
+alecharp (Adrien Lecharpentier); 
+alecharp (Adrien Lecharpentier); 
+lzeee; 
+lzeee; 
+lzeee; 
+lzeee; alecharp (Adrien Lecharpentier): 
+alecharp (Adrien Lecharpentier); 
+lzeee; 
+Dheeraj; 
+lzeee; 
+lzeee; 
+Jagruti; 
+Harsh Gupta; Hi, Dhee alecharp (Adrien Lecharpentier): 
+Dheeraj; 
+Harsh Gupta; 
+alecharp (Adrien Lecharpentier); 
+alecharp (Adrien Lecharpentier); 
+alecharp (Adrien Lecharpentier); 
+alecharp (Adrien Lecharpentier); 
+alecharp (Adrien Lecharpentier); 
+Dheeraj; 
+Harsh Gupta; 
+Dheeraj; 
+lzeee; 
+lzeee; 
+Jagruti; 
+Dheeraj; 
+alecharp (Adrien Lecharpentier); 
+alecharp (Adrien Lecharpentier); 

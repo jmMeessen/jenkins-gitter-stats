@@ -1,0 +1,491 @@
+04/11/2022, 21:47:08 - jleon33 (jleon33): @dheerajodha how did your lightning talk go today? 
+06/11/2022, 09:58:19 - Dheeraj: Hi @jleon33, thanks for asking!
+07/11/2022, 13:24:24 - jleon33 (jleon33): very nice! thats great to hear
+16/11/2022, 18:46:53 - alecharp (Adrien Lecharpentier): @dheerajodha in case you are around, if you could review  https://github.com/jenkins-infra/plugin-health-scoring/pull/112 it would be great.
+16/11/2022, 19:00:51 - Dheeraj: Done, thanks!
+02/12/2022, 12:23:44 - Dheeraj: @alecharp I'm sorry for being silent on my PR https://github.com/jenkins-infra/plugin-health-scoring/pull/109
+20/01/2023, 10:58:30 - impact-maker (impact-maker): Hi, team just wanted to give a quick introduction. This is mandeep, I am an open source enthusiast looking forward to contribute to the plugin_health_score project and  make some valuable contributions.
+20/01/2023, 10:59:03 - hervelemeur: Welcome!
+20/01/2023, 11:05:47 - alecharp (Adrien Lecharpentier): Hello Mandeep, glad to have you.
+20/01/2023, 11:08:06 - alecharp (Adrien Lecharpentier): so, in order to run the application locally, what you need to have is a local database running. You can start is as you wish, but there is an helper in the project in the form of a `docker compose` command: you can just run `docker compose run db -d` to start a database locally. This is using a `.env` file content to setup from credentials. You can see an example of that file in `.env.example`
+20/01/2023, 11:14:59 - alecharp (Adrien Lecharpentier): once you have your database, you need to make sure those credentials are known by the spring-boot application. To do that, if you run the application from command line (`mvn spring-boot:run`) then you need to export manually the environment variables in your shell (or bash or whatever) 
+20/01/2023, 11:15:58 - alecharp (Adrien Lecharpentier): so it would be something like `export POSTGRES_HOST = localhost`,  `export POSTGRES_PORT=5432`, `export POSTGRES_USER=whatever`, etc.
+20/01/2023, 11:16:21 - alecharp (Adrien Lecharpentier): and only then, on the same shell, you can run `mvn spring-boot:run`
+20/01/2023, 16:40:20 - Dheeraj: Welcome Mandeep!
+20/01/2023, 16:48:54 - Dheeraj: @alecharp While running `mvn spring-boot:run -Dskip.yarn` the cron string for `PROBE_ENGINE_CRON` gives the following error:
+20/01/2023, 16:55:23 - alecharp (Adrien Lecharpentier): it seems that the .env.example has some invalid values
+20/01/2023, 16:56:07 - alecharp (Adrien Lecharpentier): and it is also incorrect as we need the github app and not the github token
+20/01/2023, 18:15:35 - Dheeraj: okay :thumbsup: 
+20/01/2023, 18:16:14 - alecharp (Adrien Lecharpentier): probably a good idea to see what I forgot to update in the contribution guide about that..
+20/01/2023, 18:48:47 - Dheeraj: definitely, I will open a PR to have discussions there.
+21/01/2023, 10:48:52 - impact-maker (impact-maker): @dheerajodha @alecharp  I was about to mention the same cron job error I was facing. In case you have not made the issue to update the contributing guide, should I go ahead to do the same. 
+21/01/2023, 11:18:54 - hervelemeur: impact-maker (impact-maker): go ahead :)
+23/01/2023, 09:43:15 - alecharp (Adrien Lecharpentier): @impact-maker please make sure to commit in a dedicated branch, not on `main` 
+23/01/2023, 11:43:27 - Dheeraj: @alecharp I made a GitHub App, with "Repository content (read-only)" permissions, and supplied the value for `GITHUB_APP_ID`, `GITHUB_APP_PRIVATE_KEY_PATH`,  and `GITHUB_APP_INSTALLATION_NAME` env vars. But on running the probe engine, I see this message:
+23/01/2023, 11:59:41 - hervelemeur: dheerajodha (Dheeraj Singh Jodha): have you installed your github app into your github "org" (here your user)?
+23/01/2023, 12:00:10 - hervelemeur sent an image. (Media omitted)
+23/01/2023, 12:08:52 - Dheeraj: No sir 😄 
+23/01/2023, 12:09:42 - Dheeraj: I installed it now, and probe engine works fine 😌 
+23/01/2023, 12:32:45 - alecharp (Adrien Lecharpentier): perfect
+24/01/2023, 07:36:29 - impact-maker (impact-maker): sure will do that
+24/01/2023, 12:18:29 - harsh-ps-2003 (Harsh Pratap Singh): Message deleted
+25/01/2023, 06:45:44 - Dheeraj: This message is in reply to Harsh Pratap Singh's email (titled: "GSoC 2023: Add probes to 'Plugin Health Score'") to me. I'm replying to his queries here so as to have public conversations which would benefit others as well, plus I can be corrected if my responses are incorrect :)
+25/01/2023, 08:17:51 - impact-maker (impact-maker): In reference to the issue #181 we have to create the health score on top every plugin as well as refine the score system to make it more accurate.  What sort of parameters should the new scoring system comprise of .
+25/01/2023, 11:21:07 - harsh-ps-2003 (Harsh Pratap Singh): Hey! This is Harsh here. I  am currently in my freshman year, situated in India, and want to contribute to plugin health score. I was trying to understand the codebase from about a week. When I try running plugin-health-scoring-app-1, the app is starting up successfully, however it is exiting automatically without any error message(can share the logs if required). Its database is not exiting automatically and seems to be working fine. I am not able to comprehend why is this happening.I have installed jenkins lts and plugin health score app on the same port so maybe that's an issue(I changed the port in compose.yml to 8081:8081 but still isn't working. I think someone should change the ports form 8080:8080 to some other unoccupied port as it can be quite confusing for newcomers who already have jenkins container on their system to first exit it and then start plugin health container. If there is some special reason for having the same ports then please share the reason). Does plugin health scoring app require jenkins to run beforehand!? Whats the mistake from my side? And I also want to access the database of plugin health scoring app. Which SQL client in IDE are you folks using. I don't have much knowledge about it sorry?
+25/01/2023, 11:22:19 - alecharp (Adrien Lecharpentier): @impact-maker about https://github.com/jenkins-infra/plugin-health-scoring/issues/192, please, do not create empty issues. It's better to have a description of what you have in mind as an improvement or as an issue so we can understand from the start. Here, it's look more like spam to me.
+25/01/2023, 11:24:19 - alecharp (Adrien Lecharpentier): @harsh-ps-2003 
+25/01/2023, 11:25:43 - alecharp (Adrien Lecharpentier): > I think someone should change the ports form 8080:8080 to some other unoccupied port as it can be quite confusing for newcomers who already have jenkins container on their system to first exit it and then start plugin health container
+25/01/2023, 11:26:49 - alecharp (Adrien Lecharpentier): > If there is some special reason for having the same ports then please share the reason
+25/01/2023, 11:27:33 - alecharp (Adrien Lecharpentier): > Does plugin health scoring app require jenkins to run beforehand!?
+25/01/2023, 11:28:30 - alecharp (Adrien Lecharpentier): >  Which SQL client in IDE are you folks using. I don't have much knowledge about it sorry?
+25/01/2023, 11:28:57 - alecharp (Adrien Lecharpentier): > Dont know how to configure CI/CD pipelines 
+25/01/2023, 11:29:15 - hervelemeur: https://dbeaver.io/ is nice too as universal database client
+25/01/2023, 11:30:51 - alecharp (Adrien Lecharpentier): > And I also have to study about Collections, Streams and other advanced Java concepts.
+25/01/2023, 11:31:20 - harsh-ps-2003 (Harsh Pratap Singh): @alecharp i tried running the application independently still It was exiting on its own 😟 
+25/01/2023, 11:32:52 - alecharp (Adrien Lecharpentier): > never practically wrote junit tests.
+25/01/2023, 11:34:25 - alecharp (Adrien Lecharpentier): > I will try solving some good first issues of Jenkins later, maybe you can point me to some.
+25/01/2023, 11:34:43 - alecharp (Adrien Lecharpentier): > i tried running the application independently still It was exiting on its own :(
+25/01/2023, 11:49:01 - alecharp (Adrien Lecharpentier): is it the same as https://github.com/jenkins-infra/plugin-health-scoring/issues/187 ?
+25/01/2023, 12:18:29 - impact-maker (impact-maker): Updated the description 
+25/01/2023, 12:29:09 - harsh-ps-2003 (Harsh Pratap Singh): Message deleted
+25/01/2023, 12:29:47 - hervelemeur: https://gist.github.com/ can be nice to share logs ;)
+25/01/2023, 12:30:56 - hervelemeur: Be sure to sanitize them before posting though
+25/01/2023, 12:31:38 - harsh-ps-2003 (Harsh Pratap Singh): @hervelemeur:matrix.org  you are my saviour :) thanks
+25/01/2023, 12:31:44 - Jmm: Sanitize, meaning remove anything that shouldn't be published (secrets, paswords, etc)
+25/01/2023, 12:32:02 - hervelemeur: it means remove from them any password or sensitive information
+25/01/2023, 12:32:51 - harsh-ps-2003 (Harsh Pratap Singh): oh thanks! 
+25/01/2023, 12:35:28 - harsh-ps-2003 (Harsh Pratap Singh): @alecharp here is the log :
+25/01/2023, 12:36:52 - hervelemeur: Fix your cron settings :)
+25/01/2023, 12:37:11 - hervelemeur: (line 39 of your logs)
+25/01/2023, 13:09:12 - harsh-ps-2003 (Harsh Pratap Singh): @hervelemeur:matrix.org  thanks for the help :) working perfectly
+25/01/2023, 16:55:40 - harsh-ps-2003 (Harsh Pratap Singh): How to reproduce this error : https://github.com/jenkins-infra/plugin-health-scoring/issues/138#issue-1466551846.
+25/01/2023, 17:02:42 - alecharp (Adrien Lecharpentier): > In the dockerfile a non root user 'phs' was created for some reason(please share the reason)
+25/01/2023, 17:03:16 - alecharp (Adrien Lecharpentier):  > Does this user have the necessary permissions to do so?
+26/01/2023, 10:31:21 - alecharp (Adrien Lecharpentier): @harsh-ps-2003 forgot
+26/01/2023, 13:30:47 - impact-maker (impact-maker): Hi @alecharp I have been working on issue #65 (Sort probes in UI based on execution order or name), since it had some inactivity. Should I send across the pull request (I have made a branch probe_sorting in my forked repo). 
+26/01/2023, 14:17:46 - hervelemeur: go :)
+26/01/2023, 19:30:51 - harsh-ps-2003 (Harsh Pratap Singh): @alecharp i am asking a pretty silly question but when i run plugin health score app 1 i am not getting this error! 
+27/01/2023, 10:27:23 - alecharp (Adrien Lecharpentier): @impact-maker have you start your work off the existing pull-request or from scratch?
+27/01/2023, 10:28:35 - alecharp (Adrien Lecharpentier): @harsh-ps-2003 you need to run the probes once. it happens because the code is using jgit to clone the plugins repository. this only happens when you run the probes
+27/01/2023, 10:31:02 - alecharp (Adrien Lecharpentier): > As the plugins are downloaded parallelly so creating a directory first As the plugins are downloaded parallelly so creating a directory first 
+27/01/2023, 12:07:51 - harsh-ps-2003 (Harsh Pratap Singh): @alecharp when i am trying to run probe jep-229 using : java -jar plugin-health-scoring.jar --probe jep-229 i am getting : Web server failed to start. Port 8080 was already in use. but port 8080 is not in use as on checking lsof -i 8080 nothing is showing up 😟 Any hints
+27/01/2023, 15:45:59 - alecharp (Adrien Lecharpentier): this is not how you use the application. 
+27/01/2023, 15:46:18 - alecharp (Adrien Lecharpentier): please see the contributing guide, which describe how you can run the application
+27/01/2023, 16:11:02 - Jmm: <@impact-maker-61dfead16da03739848e3bc0:gitter.im "Hi @alecharp I have been working..."> Hello impact-maker (impact-maker) 
+27/01/2023, 20:02:47 - harsh-ps-2003 (Harsh Pratap Singh): @dheerajodha @alecharp i did everything which is mentioned in contribution guide already, thats the reason i was asking. The github app is already installed but i dont know how to use it. I ran all the commands mentioned in the guide but maybe i am missing the idea of what should happen on running except seeing a successful build. Can you point me to some comprehensive resource so that i can understand the application and errors better. I want to reproduce the error so that i can try implementing the idea for fixing the bug. Sorry for the silly questions :(
+28/01/2023, 14:09:33 - jagrutitiw_twitter (Jagruti): Hey everyone,
+28/01/2023, 14:10:21 - jagrutitiw_twitter (Jagruti): Where do I set the port? I did not find any reference to it in the documentation.
+28/01/2023, 14:10:29 - harsh-ps-2003 (Harsh Pratap Singh): @jagrutitiw_twitter open the .env.example file
+28/01/2023, 14:10:59 - jagrutitiw_twitter (Jagruti): Past those details to .env?
+28/01/2023, 14:11:41 - harsh-ps-2003 (Harsh Pratap Singh): @jagrutitiw_twitter ya
+28/01/2023, 14:15:40 - jagrutitiw_twitter (Jagruti): Thanks. `.env.example` solves a lot of issues. In the documentation they have only mentioned: `link:.env.example[]` Does this syntax mean to refer to `.env.example`?
+28/01/2023, 14:18:04 - harsh-ps-2003 (Harsh Pratap Singh): @jagrutitiw_twitter i dont know what that means to be honest(noob me :) ) i just figured out how to run the application locally by my own. i still have doubts. 
+28/01/2023, 15:45:48 - hervelemeur: Feel free to open a PR to improve the doc explaining the need to copy and adapt the values from the .env.example file to a .env file
+28/01/2023, 17:25:14 - harsh-ps-2003 (Harsh Pratap Singh): @hervelemeur:matrix.org thats one of the thing i would surely want to do. Making sure the documentation is well explained is so damn crucial for helping a beginner contributor.
+28/01/2023, 20:01:28 - harsh-ps-2003 (Harsh Pratap Singh): @alecharp @dheerajodha i dont think there is enough info in contribution guide on how to access the apps dashboard and run the probes using webhook url? What am i missing? I dont seem to understand how to run the app. Help 😟
+29/01/2023, 12:38:15 - Jagruti: Hey dheerajodha (Dheeraj Singh Jodha) , alecharp (Adrien Lecharpentier) 
+29/01/2023, 12:48:41 - Jagruti: I am using Intellij. How can I setup this database in Database browser?
+29/01/2023, 13:26:48 - Jagruti sent an image. (Media omitted)
+29/01/2023, 13:26:49 - Jagruti: I am able to see the probes and scores in the UI but not in the database:
+30/01/2023, 12:23:24 - alecharp (Adrien Lecharpentier): @harsh-ps-2003 
+30/01/2023, 12:24:12 - alecharp (Adrien Lecharpentier): @jagruti1:matrix.org 
+30/01/2023, 12:26:57 - alecharp (Adrien Lecharpentier): > How can I setup this database in Database browser?
+30/01/2023, 12:28:35 - alecharp (Adrien Lecharpentier): @jagrutitiw_twitter 
+03/02/2023, 09:14:30 - alecharp (Adrien Lecharpentier): please note that I'm refactoring the documentation of the project in https://github.com/jenkins-infra/plugin-health-scoring/pull/203
+03/02/2023, 10:25:51 - impact-maker (impact-maker): Hi, I am working on the tips and wont hesitate to ask for guidance on the channel. Will learn from the feedback and continue to make valuable contributions for the organisation. Will ask adrien in case  I face any issues. Thank you being such a supportive open source organisation.
+03/02/2023, 13:58:27 - Kris Stern: No worries impact-maker (impact-maker) We appreciate your contribution! 
+04/02/2023, 15:32:07 - impact-maker (impact-maker): Hi @alecharp  currently I am not able to see the list of plugins and their respective set of old score(Last 5 to 10 scores). I would need some help/suggestion to reproduce the issue #193.
+04/02/2023, 17:24:45 - Dheeraj: Sorry for the late response. On the terminal where you've run the command `docker compose up`, what do the logs say?
+04/02/2023, 17:36:29 - Dheeraj: Sorry for the late response. I'm not sure which way you're running the app (via the "CLI" or "Docker Compose" method), but what exactly are you seeing? and what are you expecting to see?
+05/02/2023, 11:11:22 - impact-maker (impact-maker): @alecharp @dheerajodha @jleon33 I am looking forward to implement the probe to see if spotbugs is configured/enabled. It would be really helpful to get some resources to implement and test a probe. Some insights on spotbugs would also be helpful. Also should I send across a introductory pull request for the issue made by @jleon33 as I have started the initial part of the frontend for the spotbug probe. 
+05/02/2023, 13:40:31 - Kris Stern: Hi impact-maker (impact-maker) Even though I am not one of the potential mentors for the project, but as one of the GSoC org admins I would say it would be highly inappropriate to start to engage in any direct work that is supposed to be a significant part of the proposed GSoC project idea, as this seems like jumping the gun for me. 
+05/02/2023, 13:42:28 - Kris Stern: This may in fact have a negative impact on your proposal getting selected
+05/02/2023, 14:29:49 - Kris Stern: I do understand you have an interest in working on [#151](https://github.com/jenkins-infra/plugin-health-scoring/issues/151), but while you are at it, do be careful of the scope of the task you take on. 
+06/02/2023, 07:08:48 - Dheeraj: Refer to the contributing guide to see how to set up the project locally. I'm assuming you have done that already, so your database should already be populated with the plugins and their scores. To better understand your situation, what have you tried so far, and which error are you seeing?
+06/02/2023, 10:07:31 - impact-maker (impact-maker): I have checked the database now it is showing the plugin as well as the scores. I was checking the frontend for the same, so wanted to confirm that does the frontend currently have only two tabs- One for probes list and the other scores list page and no tab for the plugin list(Only the database entries  stores the plugin list). 
+06/02/2023, 10:45:03 - alecharp (Adrien Lecharpentier): no, the application is not meant to be listing the plugins
+06/02/2023, 10:45:44 - alecharp (Adrien Lecharpentier): however, you can access the score of a specific plugin by taping the url `/scores/PLUGIN_NAME` (replacing `PLUGIN_NAME`)
+06/02/2023, 10:47:36 - alecharp (Adrien Lecharpentier): I wouldn't suggestion to start with this for now. This probe is rather complex and potentially blocked by a pull request I made on another project which hasn't been merged nor released.
+06/02/2023, 10:49:14 - alecharp (Adrien Lecharpentier): I would also suggest that you keep your focus on what you want to contribute because a week ago, you offered to look into https://github.com/jenkins-infra/plugin-health-scoring/issues/193, which is not part of any GSoC project so it's fine for that, but you haven't proposed anything about it. 
+06/02/2023, 10:51:15 - alecharp (Adrien Lecharpentier): > I have started the initial part of the frontend for the spotbug probe. 
+06/02/2023, 21:33:48 - impact-maker (impact-maker): Hi  @alecharp  I needed some more clarity on the problem statement.
+06/02/2023, 21:39:31 - impact-maker (impact-maker): Currently I am able to see two scores fetched for every plugin id for two specific dates. So are we looking to fetch only the top 5-10 scores in database table or every plugin we just want the latest 5 scores. Any screenshot on the current issue would be quite helpful to fully understand the problem statement.
+06/02/2023, 21:43:45 - impact-maker (impact-maker): @alecharp I was trying to work on both the issues/enhancements to get a better code coverage and understanding. Will try to  work on the scoring issue for now and avoid getting my hands on spotbugs probe as suggested by @jleon33.
+07/02/2023, 10:00:45 - alecharp (Adrien Lecharpentier): we just want to keep 5 scores for each plugin
+07/02/2023, 10:01:08 - alecharp (Adrien Lecharpentier): I'm not sure what screenshot you might need.. 
+08/02/2023, 07:08:55 - Jagruti: Hey everyone,
+08/02/2023, 07:20:57 - Jagruti: Even in `ProbeContext` it return `UpdateCenter`. How does it function?
+08/02/2023, 08:48:42 - impact-maker (impact-maker): [![Screenshot from 2023-02-08 13-17-12.png](https://files.gitter.im/6296203f6da037398497b03b/YHrq/thumb/Screenshot-from-2023-02-08-13-17-12.png)](https://files.gitter.im/6296203f6da037398497b03b/YHrq/Screenshot-from-2023-02-08-13-17-12.png)
+08/02/2023, 08:50:56 - impact-maker (impact-maker): Hi @alecharp corresponding to each plugin id I can see just 2 scores of some specific dates. Could you let me know how to reproduce the last 5-10 scores corresponding to each plugin id. This was the screenshot I was talking about in the last thread
+08/02/2023, 13:10:57 - Jagruti: Hey
+08/02/2023, 13:11:18 - Jagruti: These are two different lines of `DeprecatedPluginProbe` to call the update-center.
+08/02/2023, 13:11:27 - Jagruti: I know it is the syntax I do not understand how `plugins()` came into the picture in line no. 49?
+08/02/2023, 13:14:40 - Jagruti: This line is similar too:
+08/02/2023, 14:22:37 - alecharp (Adrien Lecharpentier): Message deleted
+08/02/2023, 14:22:39 - alecharp (Adrien Lecharpentier): Message deleted
+08/02/2023, 14:23:01 - alecharp (Adrien Lecharpentier): it's a class which only purpose is to contain data
+08/02/2023, 14:23:17 - alecharp (Adrien Lecharpentier): This is the Java representation of the update-center file
+08/02/2023, 14:23:46 - alecharp (Adrien Lecharpentier): > fetchUpdateCenter() reads and returns an URL. 
+08/02/2023, 14:24:06 - alecharp (Adrien Lecharpentier): > Also, from ProbeContext class I understand, it gives additional information about each probe like: lastCommitData, github repo, etc. 
+08/02/2023, 14:24:17 - alecharp (Adrien Lecharpentier): correct
+08/02/2023, 14:25:19 - alecharp (Adrien Lecharpentier): This is so, when we are executing all the probes on each individual plugin, we are not trying to download the update center every single time.
+08/02/2023, 14:25:42 - alecharp (Adrien Lecharpentier): this way, the update-center is downloaded once, at the beginning of the probeengine execution 
+08/02/2023, 14:26:04 - alecharp (Adrien Lecharpentier): it also makes sure that the same update-center content is used for all the plugins
+08/02/2023, 14:27:25 - alecharp (Adrien Lecharpentier): this means that the scoreengine produced only 2 scores for each plugin so far in your local environment. 
+08/02/2023, 14:27:47 - alecharp (Adrien Lecharpentier): Change your `PROBE_ENGINE_CRON` environment variable to produce more of them
+08/02/2023, 14:29:28 - alecharp (Adrien Lecharpentier): The first one is assigning to a local variable the reference to a `UpdateCenter` object which is referenced in the `ProbeContext` object passed as a parameter of the method
+08/02/2023, 14:30:39 - alecharp (Adrien Lecharpentier): the second one is assigning to a local variable the reference of an update-center `Plugin` which can be retrieved from the `plugins` map in the `UpdateCenter` object
+08/02/2023, 14:34:04 - alecharp (Adrien Lecharpentier): note that those are two different classes
+08/02/2023, 14:39:53 - Dheeraj: just for reference, this is where the update center URL is getting read from: https://github.com/jenkins-infra/plugin-health-scoring/blob/2ebf654ed43a68deb9adebb8c127ae9f0729a5e5/src/main/resources/application.yaml#L22
+08/02/2023, 14:40:19 - alecharp (Adrien Lecharpentier): yes
+08/02/2023, 14:40:44 - Dheeraj: You can use any of the online websites which print JSON in a prettier way, that would help you look at the data stored in the update-center more clearly.
+08/02/2023, 14:51:31 - Dheeraj: Are you sure? we are not "calling update-center using updateCenter.Plugin" on Line 49. `....updateCenter.Plugin` is the **type** of `updateCenterPlugin` variable.
+08/02/2023, 14:59:56 - Dheeraj: might be something fishy going on in your IDE, but have you tried using a debugger? that would help answer a lot of your questions.
+08/02/2023, 15:06:53 - Jagruti: >so basically you removed line 51 and started rewriting word by word and not getting suggestions for getDetails() after plugin.
+08/02/2023, 15:07:20 - Jagruti: It did not prompt for `getDetails()` after `=`
+08/02/2023, 15:10:49 - Dheeraj: maybe you need to enable code completion in your IDE
+08/02/2023, 15:13:00 - alecharp (Adrien Lecharpentier): please note that what I asked was a probe and you are for the moment speaking about Scoring process. Those are two different thing. Did you create the new probe first?
+08/02/2023, 15:16:15 - Jagruti: I did create the Probe alecharp (Adrien Lecharpentier) 
+08/02/2023, 15:16:23 - Jagruti: You can check the new commit in the PR
+08/02/2023, 15:16:46 - Jagruti: I hope I build the right probe🤞
+08/02/2023, 15:56:54 - alecharp (Adrien Lecharpentier): thank. I commented the PR
+08/02/2023, 15:58:31 - alecharp (Adrien Lecharpentier): @jagruti1:matrix.org I'm sorry but I fail to understand the problem there is with `plugin.getDetails().get(XYZ)`
+08/02/2023, 15:59:53 - alecharp (Adrien Lecharpentier): Thank you @dheerajodha I didn't see that could be misunderstand. 
+08/02/2023, 16:32:29 - harsh-ps-2003 (Harsh Pratap Singh) left the room
+08/02/2023, 19:14:14 - Kris Stern: Hi alecharp (Adrien Lecharpentier) jleon33 (jleon33) dheerajodha (Dheeraj Singh Jodha), would that be okay for me to update the project ideas page for the two projects for which you guys are potential mentors for in order to add details? 
+08/02/2023, 19:46:02 - Dheeraj: Sure thing, let me know if I can help you, thanks!
+08/02/2023, 19:57:23 - Kris Stern: Okay, let me start adding details and tag you guys once I have a PR submitted
+09/02/2023, 09:49:24 - alecharp (Adrien Lecharpentier): of course!
+09/02/2023, 14:14:26 - MondalSayantan (Sayantan Mondal): [![image.png](https://files.gitter.im/6296203f6da037398497b03b/pqlQ/thumb/image.png)](https://files.gitter.im/6296203f6da037398497b03b/pqlQ/image.png)
+09/02/2023, 14:14:29 - MondalSayantan (Sayantan Mondal): I am getting 0/0 results in all. Is that what I should expect?
+09/02/2023, 14:29:40 - alecharp (Adrien Lecharpentier): if the probe engine never run, this is normal
+09/02/2023, 14:30:10 - alecharp (Adrien Lecharpentier): please see the `PROBE_ENGINE_CRON` environment variable to see when it is supposed to be executed
+09/02/2023, 16:48:02 - Kris Stern: Great alecharp (Adrien Lecharpentier) Working on it now
+09/02/2023, 17:25:50 - Kris Stern: Hi guys,
+10/02/2023, 14:37:03 - alecharp (Adrien Lecharpentier): @MondalSayantan in general, when you end up committing a piece of code, a correction, anything that was not initially wrote by yourself, it is recommended to attribute the code to the person who suggested the code. 
+10/02/2023, 14:52:04 - MondalSayantan (Sayantan Mondal): Hi, please forgive me if I have done something wrong. I have corrected the code you mentioned in your review, but I don't know how to attribute it. Could you please tell me how to do it?
+10/02/2023, 15:00:30 - alecharp (Adrien Lecharpentier): from GitHub page, you can commit suggestions (or add multiple suggestion into one commit). You can also do that in your CLI by adding `Co-Authored-By: Firstname Lastname <email@provider.ext>` in your commit message (generally, last line of the commit message)
+10/02/2023, 15:01:07 - alecharp (Adrien Lecharpentier): or a simple `Thanks @username` is also appreciated in general
+10/02/2023, 15:01:17 - alecharp (Adrien Lecharpentier): https://docs.github.com/en/pull-requests/committing-changes-to-your-project/creating-and-editing-commits/creating-a-commit-with-multiple-authors
+10/02/2023, 15:01:38 - MondalSayantan (Sayantan Mondal): Thank you so much for pointing it out. I should have done that. I am really embarrassed and sorry
+10/02/2023, 15:08:32 - alecharp (Adrien Lecharpentier): no problem, we all learn
+10/02/2023, 17:56:12 - yashre-bh (Shreya Bhagat): https://github.com/jenkins-infra/plugin-health-scoring/blob/main/docs/CONTRIBUTING.adoc#github-app
+10/02/2023, 18:01:48 - hervelemeur: whatever you want, I suggest your github profile url :)
+10/02/2023, 18:08:07 - yashre-bh (Shreya Bhagat): okay!
+11/02/2023, 09:23:45 - MondalSayantan (Sayantan Mondal): Hey everyone, in a Docs Office Hours this week, Mark suggested me to work on a probe which checks if 'Contribution' guidance is present in a plugin. I would love some suggestions before I move forward with this 
+11/02/2023, 10:11:24 - yashre-bh (Shreya Bhagat): https://github.com/jenkins-infra/plugin-health-scoring/issues/193
+11/02/2023, 10:21:10 - yashre-bh (Shreya Bhagat): first: .env file is supposed to be in the root directory, right?
+11/02/2023, 10:22:07 - yashre-bh (Shreya Bhagat): `GITHUB_APP_INSTALLATION_NAME` takes my username, and `GITHUB_APP_ID` takes my the id no. displayed on the github app configuration page
+11/02/2023, 10:24:03 - yashre-bh (Shreya Bhagat): now how to accuss the front end/application?
+11/02/2023, 11:31:02 - MondalSayantan (Sayantan Mondal): > first: .env file is supposed to be in the root directory, right?
+11/02/2023, 11:31:34 - MondalSayantan (Sayantan Mondal): > `GITHUB_APP_INSTALLATION_NAME` takes my username, and `GITHUB_APP_ID` takes my the id no. displayed on the github app configuration page
+11/02/2023, 11:32:44 - MondalSayantan (Sayantan Mondal): > now how to accuss the front end/application?
+11/02/2023, 11:40:59 - yashre-bh (Shreya Bhagat): got it! thanks a lot
+11/02/2023, 12:29:54 - MondalSayantan (Sayantan Mondal): You are welcome!
+11/02/2023, 13:10:04 - Dheeraj: Message deleted
+11/02/2023, 13:16:44 - Dheeraj: @MondalSayantan: I tried to answer your question, sending it here as a separate message because it would be useful for others too.
+11/02/2023, 14:23:09 - MondalSayantan (Sayantan Mondal): Thank you @dheerajodha, this is really helpful :)
+11/02/2023, 14:25:53 - MondalSayantan (Sayantan Mondal): My approach, which is also Mark's idea, is to look into how the `jenkinsfile` probe is working and take a reference from there. The probe should give me a Boolean value which I can use for scoring
+12/02/2023, 08:28:40 - MondalSayantan (Sayantan Mondal): Message deleted
+12/02/2023, 09:33:27 - MondalSayantan (Sayantan Mondal): I am trying to understand how the probe engine is getting the scm link, visiting the link and checking if files like `Jenkinsfile` are present. 
+13/02/2023, 05:25:38 - MondalSayantan (Sayantan Mondal): After more research, I think my answer lies in ProbeContext.java, in these lines of codes.
+13/02/2023, 05:28:32 - MondalSayantan (Sayantan Mondal): Hi @dheerajodha, could you please correct me where I am going wrong and also provide some hints?
+13/02/2023, 11:57:41 - alecharp (Adrien Lecharpentier): The plugin code is cloned by the `LastCommitDateProbe` class. So be sure that your probe is executed after that one (see the  `@Order` on the probes class). Once it is cloned, the path to the repository is stored in the context. So you need to get the value from the context. be sure to check it's not `null` nor `invalid`.
+13/02/2023, 12:01:54 - alecharp (Adrien Lecharpentier): once you have the path of the local clone of the plugin, you can explore it. Please see the GitHub documentation, as contributing guide can be in several places within a repository.
+13/02/2023, 12:04:43 - alecharp (Adrien Lecharpentier): One major thing about what @dheerajodha said: you don't need to touch the code of the ProbeEngine to implement a new Probe. You need to implement the method of that class (`Probe`) accordingly to what your probe requires (needs a new release to have a different outcome? needs the source code of the plugin to have changed to have a different outcome?). 
+13/02/2023, 12:05:55 - alecharp (Adrien Lecharpentier): You don't need to use the `addDetails` of `Plugin`, the `ProbeEngine` does that for you (if it is required). 
+13/02/2023, 12:09:00 - alecharp (Adrien Lecharpentier): the method `apply` is called by the `ProbeEngine` and was meant to be able to do some "cleanup" is required on all probe implementation without having to touch every single implementation. The method to implement is `doApply`. And because `apply` is `final` you cannot override it anyway.
+13/02/2023, 17:04:58 - Jagruti: Hey alecharp (Adrien Lecharpentier) , dheerajodha (Dheeraj Singh Jodha)
+13/02/2023, 17:29:23 - alecharp (Adrien Lecharpentier): We already have ideas for some probes, but it would be nice if in the proposal you can come up with your own idea, to show us you understand the project purpose. 
+13/02/2023, 17:30:17 - alecharp (Adrien Lecharpentier): Having tests and clear scenario of how probes should work, with external resources if you are using any, documentation links.
+13/02/2023, 18:02:46 - alecharp (Adrien Lecharpentier): @dheerajodha do you have time to review https://github.com/jenkins-infra/plugin-health-scoring/pull/205?
+13/02/2023, 18:03:41 - Dheeraj: Sure thing, I'll try to do some of it now. And most of it tomorrow (12 hrs from now).
+13/02/2023, 18:07:19 - MondalSayantan (Sayantan Mondal): Thank you @alecharp. I had forgotten to add the `@Order` annotation for which I was facing some problems
+13/02/2023, 18:12:10 - Dheeraj: Glad to know! Feel free to ask any more questions that you might be having!
+13/02/2023, 18:47:14 - MondalSayantan (Sayantan Mondal): > The plugin code is cloned by the `LastCommitDateProbe` class. 
+13/02/2023, 18:48:28 - MondalSayantan (Sayantan Mondal): I was wondering, if something can be done to separate the cloning of the repositories and the probe job. Would it be a right design decision?
+13/02/2023, 18:50:05 - MondalSayantan (Sayantan Mondal): It might be irrelevant but I am very curious to know the answer :)
+14/02/2023, 06:57:20 - Dheeraj: <@dheerajodha-60474fe16da0373984665858:gitter.im "Sure thing, I'll try to do some ..."> alecharp (Adrien Lecharpentier): Added my comments, and sorry for "approving" while adding the comments with auto-merge enabled. But, code-wise looks good.
+14/02/2023, 09:50:18 - alecharp (Adrien Lecharpentier): dheerajodha (Dheeraj Singh Jodha): please see https://github.com/jenkins-infra/plugin-health-scoring/pull/212
+14/02/2023, 10:09:29 - alecharp (Adrien Lecharpentier): and don't worry. we all have to learn. Maybe I should stop this auto-merge and deactivate from the repository.
+14/02/2023, 11:14:31 - Dheeraj: I think its nice feature. I can get used to it 😺
+14/02/2023, 11:29:16 - alecharp (Adrien Lecharpentier): just need to remember that if you offer suggestions, don't approve but request changes ;) 
+14/02/2023, 11:29:56 - Dheeraj: Noted! 🫡
+14/02/2023, 11:32:23 - alecharp (Adrien Lecharpentier): we can always have a follow-up pull request with a "skip-changelog" to not clutter the release note 
+14/02/2023, 12:17:50 - NotMyFault left the room
+14/02/2023, 13:39:21 - alecharp (Adrien Lecharpentier): dheerajodha (Dheeraj Singh Jodha): in case you have a bit of time to spare, please see https://github.com/jenkins-infra/plugin-health-scoring/pull/213 and I mentioned you on MondalSayantan (Sayantan Mondal) pull request for future review. Please let me know if you still have time for this kind of work. Saying no is a valid and acceptable answer, I won't take it personally and you will still be welcome back later when you have more time
+14/02/2023, 14:28:16 - Harsh3341_gitlab (Harsh Gupta) changed their display name to Harsh3341 (Harsh Gupta)
+14/02/2023, 14:49:02 - alecharp (Adrien Lecharpentier): dheerajodha (Dheeraj Singh Jodha): I updated my PR description to include the documentation link. it's not like I updated the PR template which mention this exact requirement a few hours ago. Sorry I didn't follow my own rules.. 
+14/02/2023, 15:03:24 - Dheeraj: alecharp (Adrien Lecharpentier): Sure thing, I like reviewing the PRs as it keeps me in sync with the recent dev happening in the project.
+14/02/2023, 15:05:40 - alecharp (Adrien Lecharpentier): it would be great if you could just have a look at my last comment on the PR, normally your review is just to make sure I'm not making things up.
+14/02/2023, 15:06:59 - alecharp (Adrien Lecharpentier): I expect your review to be required by next week on 211 (as still in draft) but 213 normally it's a 5min read
+14/02/2023, 15:07:16 - Dheeraj: on it now 👌
+14/02/2023, 15:08:46 - alecharp (Adrien Lecharpentier): thank you very much!
+14/02/2023, 15:48:18 - alecharp (Adrien Lecharpentier): enjoy your time off dheerajodha (Dheeraj Singh Jodha) 
+14/02/2023, 20:14:59 - Dheeraj: Thanks alecharp (Adrien Lecharpentier) !!
+15/02/2023, 11:22:00 - alecharp (Adrien Lecharpentier): Jagruti: I just noticed something in the pull request I merged yesterday. The "key" of the scoring implementation is suffixed with `-probe` which is misleading. Would you mind open a pull request to fix that? I can do it if you don't have time
+15/02/2023, 11:24:34 - Jagruti: I will do that. Thank you for pointing out alecharp (Adrien Lecharpentier) 
+15/02/2023, 11:24:54 - alecharp (Adrien Lecharpentier): I'm sorry I didn't see it doing the review.
+15/02/2023, 11:25:49 - Jagruti: No problem. 
+15/02/2023, 12:41:21 - Jagruti: I have made the PR here: https://github.com/jenkins-infra/plugin-health-scoring/pull/215 alecharp (Adrien Lecharpentier) 
+15/02/2023, 12:42:13 - Jagruti: Let me know if you want me to do anything else. 
+15/02/2023, 14:09:29 - alecharp (Adrien Lecharpentier): please provide a description on the pull request and attend to the failing tests.
+15/02/2023, 14:10:12 - alecharp (Adrien Lecharpentier): I'm sorry but I doubt that you ran `mvn verify` locally because there are failing tests
+15/02/2023, 14:19:23 - alecharp (Adrien Lecharpentier): thanks
+15/02/2023, 15:32:35 - Jagruti: My bad. Actually  I did ran `mvn clean verify`. It was taking longer to complete. Then I forgot about it. 
+15/02/2023, 15:58:46 - alecharp (Adrien Lecharpentier): I was confused because you checked the box on the PR but it's fine. 
+15/02/2023, 15:59:08 - alecharp (Adrien Lecharpentier): mark your PR as ready for review when all the checks are green.
+15/02/2023, 16:16:13 - Jagruti: I will be more careful from next time. 
+15/02/2023, 16:32:07 - alecharp (Adrien Lecharpentier): No problem. CI is here also to check that.
+15/02/2023, 16:50:09 - alecharp (Adrien Lecharpentier): Thank you for your work Jagruti 
+15/02/2023, 16:52:10 - Jagruti: Thank you for your guidance :)
+15/02/2023, 17:01:42 - alecharp (Adrien Lecharpentier): is it ok for me to mark it as ready for review now?
+16/02/2023, 09:52:52 - alecharp (Adrien Lecharpentier): Jagruti: hello, looking at https://github.com/jenkins-infra/plugin-health-scoring/pull/215/commits, it seems that you are committing code from two different environment. This is absolutely not a problem, however, you might want to make sure to have the same Git user configuration in both. Please see https://docs.github.com/en/get-started/getting-started-with-git/setting-your-username-in-git
+16/02/2023, 14:48:33 - Jagruti: One is work laptop and the other is personal laptop. 
+16/02/2023, 15:13:16 - alecharp (Adrien Lecharpentier): no problem. 
+16/02/2023, 15:14:30 - alecharp (Adrien Lecharpentier): if you want your contributions on this project to have always your personal email, you can also have conditional configuration https://agateau.com/2015/splitting-your-gitconfig/
+16/02/2023, 15:15:09 - alecharp (Adrien Lecharpentier): this way, you can say that the git useremail on the folder plugin-health-scoring is different from the one used on other folder
+16/02/2023, 15:16:48 - Jagruti: Thank you. Open source contributions is my personal work. I will have a look at this. 
+16/02/2023, 16:15:24 - Jagruti: Hey alecharp (Adrien Lecharpentier) 
+16/02/2023, 16:19:21 - Jagruti: Another probe could be:
+16/02/2023, 17:02:26 - Jagruti: In the Contributing to Open source doc. 
+16/02/2023, 17:06:21 - alecharp (Adrien Lecharpentier): all those are good ideas. as Kris Stern said, I would like to keep as much of the GSoC projects idea as possible. So I would recommend not to implement any new probe until then.
+16/02/2023, 17:09:40 - Jagruti: I was thinking of adding these ideas in my GSoC proposal. As you told me that I should add my ideas to showcase my understanding of the project. 
+16/02/2023, 17:15:39 - Jagruti: Also in my proposal should I explain the logic of how I will build each probe? How it would be used? 
+16/02/2023, 17:17:14 - Jagruti: One more thing before starting my proposal do you want me to pick any other issue? For better understanding of the project? 
+17/02/2023, 10:12:45 - Jagruti: I did this configuration. How do I make sure git uses different email ids in different directory. 
+17/02/2023, 10:13:17 - Jagruti: I tried other links: 
+17/02/2023, 10:14:18 - alecharp (Adrien Lecharpentier): ok I didn't understand that. 
+17/02/2023, 10:16:04 - alecharp (Adrien Lecharpentier): the details of the implementation don't need to be part of the proposal but how you design it, how it would interact with other ones (needs to be executed before/after this probe), what value it offers and yes, how it could contribute to the score
+17/02/2023, 10:17:08 - alecharp (Adrien Lecharpentier): you don't need to work on any other issue for your proposal, but you are welcome to. be sure to not let that distract you from making your proposal that's all
+17/02/2023, 10:21:38 - Kris Stern: Jagruti: I agree with Adrien and think that it may be a good idea for you to start working on your proposal at this stage. 
+17/02/2023, 10:22:00 - Jagruti: Thank you alecharp (Adrien Lecharpentier) Kris Stern 
+17/02/2023, 15:53:42 - Jmm: As this is also a very active GSoC channel, I am cross-posting the announcement of the chosen GSoC Office Hours time (Thursdays at 16h00 UTC): https://community.jenkins.io/t/survey-for-most-suitable-time-for-gsoc-office-hours/5715/2
+19/02/2023, 11:29:29 - Jagruti: In [ScoreResult.java class](https://github.com/Jagrutiti/plugin-health-scoring/blob/05198a2af5ced21f610738aac60e89e85f6955af/src/main/java/io/jenkins/pluginhealth/scoring/model/ScoreResult.java) there are three fields: `key`, `value` and `coefficient`.
+19/02/2023, 11:39:09 - Jagruti: Also I have noticed, at times `value` is harcoded when passed on `ScoreResult`. 0 in case of failures and 1 other wise.
+19/02/2023, 11:43:24 - Jagruti: How do I understand the score calculation? 
+20/02/2023, 16:11:14 - Jagruti: Hey everyone,
+20/02/2023, 16:15:38 - Jagruti sent an image. (Media omitted)
+20/02/2023, 16:16:42 - Jagruti: is this explanation by ChatGPT about values and scores correct? 
+20/02/2023, 16:40:49 - Kris Stern: Hi Jagruti For learning React I recommend this fun free course from Scrimba: https://scrimba.com/learn/learnreact
+20/02/2023, 17:26:57 - Kris Stern: Maybe you can find more scoring computation info here: https://docs.google.com/document/d/1HTbcWh5C1KrCgEzgqeVEPyfr1H5fH5eTj8KpbWrWsSY/edit?usp=sharingv
+20/02/2023, 17:27:42 - Kris Stern: What you are looking for is in the Implementation section
+21/02/2023, 04:59:43 - Jagruti: This is an approximately 11 hours course. Would that be enough? 
+21/02/2023, 04:59:59 - Jagruti: Thank you for sharing I will look into this one. 
+21/02/2023, 05:11:35 - Kris Stern: You are welcome
+21/02/2023, 05:12:05 - Kris Stern: It would be a good start, but you will need to learn as you go as well
+21/02/2023, 06:38:17 - Dheeraj: I think it would be a good idea to give it a shot, because you know JavaScript and if you do couple of courses on ReactJS then you'd be at a better position to showcase yourself strongly in the proposal, and convince the evaluators that you can complete this project.
+21/02/2023, 06:52:02 - Jagruti: In my proposal  I have added some implementation details. But I am not sure if it is correct. The proposal in in-progress. 
+21/02/2023, 06:57:15 - Dheeraj: Yes please, it's always a good practice to share the draft proposal for review as we go.
+21/02/2023, 06:59:22 - Dheeraj: Wow, now that's smart.
+21/02/2023, 07:01:21 - Dheeraj: Message deleted
+21/02/2023, 07:03:12 - Jagruti: https://docs.google.com/document/d/14URAapu7svkj1pgw3yoCybwn766Net9SZ9coC4zx7yg/edit 
+21/02/2023, 07:14:09 - Dheeraj: (deleted my previous message by mistake, hence typing it again)
+21/02/2023, 07:16:49 - Dheeraj: For example, for the `jenkinsfile` probe, the probe results page (at `/probes/results`) informs us that from the total of 1913 Jenkins plugins, 1174 of them has a Jenkinsfile present in their repository.
+21/02/2023, 07:25:03 - Jagruti sent an image. (Media omitted)
+21/02/2023, 07:27:56 - Dheeraj: > How do I understand the score calculation?
+21/02/2023, 07:32:03 - Jagruti: In this table from dheerajodha (Dheeraj Singh Jodha) in the existing proposal I do not understand how are the values added in the Plugin 1, Plugin 2, Plugin 3 column for `Parent POM`, `Jenkinsfile` and other probes.
+21/02/2023, 07:39:23 - Dheeraj: The "probe values' can be either boolean (0 or 1, signifying the presence of absence of something) or discrete (measuring the exact value of the probe like for "No. of open issues" the value can NOT be boolean, it could be something like 5 or 10 or 23, etc).
+21/02/2023, 07:43:16 - Dheeraj: > What is the difference between value and coefficient.
+21/02/2023, 08:48:39 - Jagruti: Thank you so much. This was really helpful. 
+21/02/2023, 09:18:05 - Jagruti: I will make changes to the proposal based on this new understanding. 
+21/02/2023, 11:06:14 - Dheeraj: I would also wait for Adrien to correct me if I'm spreading straight up incorrect information.
+21/02/2023, 11:06:34 - alecharp (Adrien Lecharpentier): probe results are not like score value. they are just observation over the plugin setup. The message of the probe can carry value which are indication on the probe result. 
+21/02/2023, 11:08:53 - alecharp (Adrien Lecharpentier): probe result status can be error (meaning the project couldn't test the probe correctly), failure (meaning the plugin don't have the requirement to validate the probe) or success (meaning the probe could test the plugin)
+21/02/2023, 11:09:12 - alecharp (Adrien Lecharpentier): the scoring implementations take probe result and determine based on its status and "message" content is required if the plugin is healthy or not. 
+21/02/2023, 11:12:28 - alecharp (Adrien Lecharpentier): I'm not sure I'm answering the question Jagruti ..
+21/02/2023, 11:16:26 - alecharp (Adrien Lecharpentier): the score of a plugin is the average score of all the scoring implementation applied to a plugin. those are using probe result to evaluate a plugin
+21/02/2023, 11:42:15 - Jagruti: Hey alecharp (Adrien Lecharpentier) this is my draft proposal: https://docs.google.com/document/d/14URAapu7svkj1pgw3yoCybwn766Net9SZ9coC4zx7yg/edit#heading=h.3lp9fznrbf55
+21/02/2023, 11:42:58 - alecharp (Adrien Lecharpentier): it's in my todo list yes. I will have a look by the end of my day.
+21/02/2023, 11:43:09 - Jagruti: Thank you so much.
+21/02/2023, 13:59:13 - Jmm: I will have a look too
+21/02/2023, 13:59:26 - Dheeraj: Me too
+21/02/2023, 14:01:10 - Kris Stern: I will too, but later
+21/02/2023, 15:09:44 - Jagruti: Thank you Jmm dheerajodha (Dheeraj Singh Jodha) Kris Stern it would mean a lot to me. 
+21/02/2023, 15:36:12 - Jagruti: In my proposal I should have columns like: key, value, coefficient?
+21/02/2023, 16:07:04 - Dheeraj: Short answer:
+21/02/2023, 16:07:53 - dheerajodha (Dheeraj Singh Jodha) changed their display name to Dheeraj
+21/02/2023, 18:05:42 - Jagruti: To calculate score, each plugin is fetched from the database. Data like scm, release timestamp, version, plugin details are fetched from them.
+21/02/2023, 18:11:55 - Jagruti: Now, if I add `coefficient` and `score` column to  the table in `New additions to the existing probes`  section? Would that be sufficient implementation details based on Adrien comments? 
+22/02/2023, 09:58:49 - alecharp (Adrien Lecharpentier): > The Set\<ScoreResult> details type the jsonb data is fetched from the database.
+22/02/2023, 09:59:49 - alecharp (Adrien Lecharpentier): > is this understanding correct?
+22/02/2023, 10:02:26 - alecharp (Adrien Lecharpentier): you don't add a column for the scores. everything is done in the Java class `Score`. When you add a new detail, it recompute the value of the score based on the set of scoreresults
+22/02/2023, 10:04:00 - alecharp (Adrien Lecharpentier): the implementation details in the scoring implementation is basically "how important should this implementation be compared to others" "what probe should this scoring implementation rely on to evaluate a plugin"
+22/02/2023, 10:04:41 - alecharp (Adrien Lecharpentier): the entire "score / value" management is done in the `ScoreEngine` which you probably won't have to  touch
+22/02/2023, 10:22:22 - alecharp (Adrien Lecharpentier): MondalSayantan (Sayantan Mondal): do you want me to send you the test class I wrote for your pull request? 
+22/02/2023, 10:50:32 - Sayantan Mondal: I am trying to write the test cases myself and I'll only be able to work on them from next week as my exams are from tomorrow. But I would love to have a look. Thanks alecharp (Adrien Lecharpentier)
+22/02/2023, 10:51:42 - alecharp (Adrien Lecharpentier): Sayantan Mondal: please focus on your exams and on the proposal. I'll commit my test class in your pull request so that you can check it out when you have more time. good luck (for the exams)
+22/02/2023, 10:52:29 - Sayantan Mondal: Thank you 😀
+22/02/2023, 11:17:34 - Jagruti: Hey everyone,
+22/02/2023, 11:23:36 - MondalSayantan (Sayantan Mondal): alecharp (Adrien Lecharpentier)Dheeraj: In the GSoC project ideas, I can see two ideas for this project - adding probes to the "Plugin Health Score" and displaying Plugin Health Scores. I understand the kind of proposal that is expected from us for the former idea, but I am not sure about the latter one. I am more inclined towards the second idea as I have a solid understanding of Reactjs and other frontend technologies, which I can see are requirements for it.
+22/02/2023, 12:45:37 - Kris Stern: Sorry to barge in MondalSayantan (Sayantan Mondal) But acting as an org admin I just wanted to stress that you can have only one proposal for one project idea. 
+22/02/2023, 12:48:44 - MondalSayantan (Sayantan Mondal): Understood
+22/02/2023, 12:49:22 - Kris Stern: But you can of course submit two proposals for two project ideas
+22/02/2023, 12:50:51 - yashre-bh (Shreya Bhagat): hi Sayantan Mondal are you working on this proposal?
+22/02/2023, 12:51:31 - yashre-bh (Shreya Bhagat): I'm active again though
+22/02/2023, 13:11:10 - Kris Stern: Hi yashre-bh (Shreya Bhagat) I think we can have more than one potential contributors writing a GSoC proposal for the same project idea, so there is no conflict there and according to Google no collaboration is allowed in preparing your proposals. 
+22/02/2023, 13:11:46 - yashre-bh (Shreya Bhagat): great then!
+22/02/2023, 13:14:34 - yashre-bh (Shreya Bhagat): https://github.com/jenkins-infra/plugin-health-scoring/issues/193
+22/02/2023, 13:36:45 - yashre-bh (Shreya Bhagat): now, as far as the scores are concerned, from what I understand, they are being stored in a db.
+22/02/2023, 13:39:21 - yashre-bh (Shreya Bhagat): do tell me if I'm going the right way. 
+22/02/2023, 13:40:28 - alecharp (Adrien Lecharpentier): correct direction
+22/02/2023, 13:41:11 - alecharp (Adrien Lecharpentier): normally you shouldn't get 0/1889 on everything.
+22/02/2023, 13:41:41 - alecharp (Adrien Lecharpentier): have you configured your GitHub App correctly? Are you sure you provided the correct key file (converted one)? 
+22/02/2023, 13:42:02 - yashre-bh (Shreya Bhagat): okay!
+22/02/2023, 13:42:54 - yashre-bh (Shreya Bhagat): <@alecharp-57757416c2f0db084a20d26d:gitter.im "have you configured your GitHub ..."> afaik yes, but I'll check and if needed redo the process to be sure
+22/02/2023, 13:43:33 - alecharp (Adrien Lecharpentier): You should have to create a new class which should try to get all the scores for each plugins and delete the oldest ones
+22/02/2023, 13:44:02 - yashre-bh (Shreya Bhagat): understood. working on it
+22/02/2023, 13:44:28 - alecharp (Adrien Lecharpentier): please note that if you haven't been working with database for very long, this might not be as friendly as it should be
+22/02/2023, 13:46:08 - yashre-bh (Shreya Bhagat): I have worked with dbs before, idk if that is sufficient to get this going. But ig I'll try it, hope I'm able to get the task done.
+22/02/2023, 13:47:43 - alecharp (Adrien Lecharpentier): to try to answer the first questions Sayantan Mondal , the idea of this second project is to display the score of a plugin on its page in plugins.jenkins.io. the proposal should evaluate the state of the code in plugin health scoring project but also in https://github.com/jenkins-infra/plugin-site and https://github.com/jenkins-infra/plugin-site-api as the GSoC project will have to contribute to those repositories as well
+22/02/2023, 13:48:16 - alecharp (Adrien Lecharpentier): it should be. 
+22/02/2023, 13:48:34 - alecharp (Adrien Lecharpentier): let me know if you need more details
+22/02/2023, 13:49:14 - yashre-bh (Shreya Bhagat): sure!
+22/02/2023, 13:49:33 - alecharp (Adrien Lecharpentier): and as Kris Stern said, don't hesitate to propose something for both GSoC project. 
+22/02/2023, 17:02:57 - yashre-bh (Shreya Bhagat): I still get 0/1889 for all probes, I re-did the Github app creation process :(
+22/02/2023, 17:17:47 - yashre-bh (Shreya Bhagat): image.png (Media omitted)
+22/02/2023, 17:18:06 - yashre-bh (Shreya Bhagat): image.png (Media omitted)
+22/02/2023, 17:19:24 - yashre-bh (Shreya Bhagat): the 2 tables, `plugins` and `scores` in my postgres container look like this. `0/1889` shows up because my score table is empty right?
+22/02/2023, 17:22:49 - alecharp (Adrien Lecharpentier): scores != probe results.
+22/02/2023, 17:23:17 - yashre-bh (Shreya Bhagat): okay. so the scores table is supposed to be empty?
+22/02/2023, 17:23:26 - alecharp (Adrien Lecharpentier): the 0/1889 is because non of the 1889 plugins have a successful probe result for the probe in questions (all of them)
+22/02/2023, 17:23:54 - alecharp (Adrien Lecharpentier): this is probably because the SCMLinkValidationProbe was not successful (many others depends on that)
+22/02/2023, 17:24:48 - alecharp (Adrien Lecharpentier): if that is also the case of the DeprecatedPluginProbe, please check that the ProbeEngine (PROBE_ENGINE_CRON env variable) was setup such as it ran at least once
+22/02/2023, 17:26:59 - yashre-bh (Shreya Bhagat): I've set `PROBE_ENGINE_CRON= 0 */2 * * * *` , the ProbeEngine is supposed to fire in every 2 mins, I suppose it must have run at least once
+22/02/2023, 17:27:16 - yashre-bh (Shreya Bhagat): should I post my docker compose logs as a gist?
+22/02/2023, 17:28:13 - alecharp (Adrien Lecharpentier): can you visualize the column `details` on the plugins table? is it empty (aka `{}`) or is there any json object?
+22/02/2023, 17:28:53 - alecharp (Adrien Lecharpentier): if so, please run the SQL script
+22/02/2023, 17:29:35 - alecharp (Adrien Lecharpentier): this will remove the `scm` key from the details object in db so that the SCMLinkValidationProbe is ran again on the next try
+22/02/2023, 17:30:15 - alecharp (Adrien Lecharpentier): if still no `SUCCESS` status in the `details` object, then it means you haven't configured correctly the GitHubAPP
+22/02/2023, 17:30:21 - yashre-bh (Shreya Bhagat): details column has `{}` empty json for every plugin
+22/02/2023, 17:30:38 - alecharp (Adrien Lecharpentier): wait. you run everything in from the docker-compose?
+22/02/2023, 17:30:44 - yashre-bh (Shreya Bhagat): yes
+22/02/2023, 17:32:20 - yashre-bh (Shreya Bhagat): I just checked the logs: I get a `NoSuchFileException` for my converted key, although the path for .env file is correctly pointing to the converted file
+22/02/2023, 17:32:41 - alecharp (Adrien Lecharpentier): it is likely that the `.pem` file set in GITHUB_APP_PRIVATE_KEY_PATH is not in the docker container
+22/02/2023, 17:33:13 - yashre-bh (Shreya Bhagat): yes I suppose so
+22/02/2023, 17:33:21 - alecharp (Adrien Lecharpentier): so, you need to tweak the compose.yml file
+22/02/2023, 17:33:30 - yashre-bh (Shreya Bhagat): right
+22/02/2023, 17:34:29 - alecharp (Adrien Lecharpentier): add in the `app` service something like
+22/02/2023, 17:35:44 - yashre-bh (Shreya Bhagat): `/app/converted-github-app.pem:ro` this to be replaced with the actual path to the converted key on my system right?
+22/02/2023, 17:35:45 - alecharp (Adrien Lecharpentier): of course, change the first part of the volume (before the `:`) to match the local name of the file, and the second part of the volume to make the `GITHUB_APP_PRIVATE_KEY_PATH` env var
+22/02/2023, 17:36:03 - yashre-bh (Shreya Bhagat): got ot
+22/02/2023, 17:36:04 - yashre-bh (Shreya Bhagat): it*
+22/02/2023, 17:36:10 - alecharp (Adrien Lecharpentier): no the opposite. `local : container`
+22/02/2023, 17:37:49 - alecharp (Adrien Lecharpentier): you'll need to run the SQL script I posted before
+22/02/2023, 17:39:02 - yashre-bh (Shreya Bhagat): ```
+22/02/2023, 17:39:09 - yashre-bh (Shreya Bhagat): <@alecharp-57757416c2f0db084a20d26d:gitter.im "you'll need to run the SQL scrip..."> right
+22/02/2023, 17:39:51 - alecharp (Adrien Lecharpentier): yashre-bh (Shreya Bhagat): the first leg of the volume can be `./this-file-on-the-project-root-level`
+22/02/2023, 17:41:56 - Dheeraj: yashre-bh (Shreya Bhagat): I'm also curious about what you see on your console when you run `mvn spring-boot:run -Dskip.yarn -Dspring.profiles.active=dev`
+22/02/2023, 17:42:19 - yashre-bh (Shreya Bhagat): <@alecharp-57757416c2f0db084a20d26d:gitter.im "yashre-bh (Shreya Bhagat): the f..."> I didn't understand that completely. Should I move my converted key to the project root and then put this in the first leg of the volume?
+22/02/2023, 17:43:22 - alecharp (Adrien Lecharpentier): > I didn't understand that completely. Should I move my converted key to the project root and then put this in the first leg of the volume?
+22/02/2023, 17:43:43 - alecharp (Adrien Lecharpentier): personal choice. you do as you like on your computer 
+22/02/2023, 17:43:54 - yashre-bh (Shreya Bhagat): okay!
+22/02/2023, 17:45:17 - yashre-bh (Shreya Bhagat): running the sql script, and then `mvn spring-boot:run -Dskip.yarn -Dspring.profiles.active=dev`, I'll post the result
+22/02/2023, 17:46:34 - alecharp (Adrien Lecharpentier): be careful with the `mvn` command that the `.env` file is not used. so you need to manually `export POSTGRES_DB=xxx` for each variable
+22/02/2023, 17:47:02 - alecharp (Adrien Lecharpentier): and if you don't have a db running, you still need to run `docker compose up -d db` (that's what I do)
+22/02/2023, 17:47:50 - alecharp (Adrien Lecharpentier): ^ this method might not seem like the easiest, but it's quick to get feedback when you are implementing something new.
+22/02/2023, 17:51:53 - yashre-bh (Shreya Bhagat): okay, so I ran the sql script. I still get an empty json in the details column
+22/02/2023, 17:55:52 - yashre-bh (Shreya Bhagat): that is, I need to pass env varfiables in the command line itself?
+22/02/2023, 17:56:19 - alecharp (Adrien Lecharpentier): wait for the probe engine to ran again
+22/02/2023, 17:56:52 - alecharp (Adrien Lecharpentier): no you need to
+22/02/2023, 18:02:32 - yashre-bh (Shreya Bhagat): okay working on it'
+22/02/2023, 18:02:32 - yashre-bh (Shreya Bhagat): Message deleted
+22/02/2023, 18:09:36 - yashre-bh (Shreya Bhagat): running the mvn command after exporting all variales gives: https://gist.github.com/yashre-bh/2f6e09fac7c1e94a67f93de8d079b430
+22/02/2023, 18:10:17 - alecharp (Adrien Lecharpentier): seems like you are not running any database locally. 
+22/02/2023, 18:10:36 - alecharp (Adrien Lecharpentier): you can "borrow" the one from the docker compose by running `docker compose up -d db`
+22/02/2023, 18:16:11 - yashre-bh (Shreya Bhagat): okay now I'm able to run the app locally through CLI 
+22/02/2023, 18:16:34 - yashre-bh (Shreya Bhagat): I'll let it run for 5 mins, and see if the probe results change
+22/02/2023, 18:19:27 - alecharp (Adrien Lecharpentier):  normally (as per your PROBE_ENGINE_CRON) youo should see probe been executed now
+22/02/2023, 18:30:09 - yashre-bh (Shreya Bhagat): ```
+22/02/2023, 18:31:00 - Dheeraj: can you share full error message?
+22/02/2023, 18:31:48 - yashre-bh (Shreya Bhagat): https://gist.github.com/yashre-bh/2f6e09fac7c1e94a67f93de8d079b430
+22/02/2023, 18:39:10 - alecharp (Adrien Lecharpentier): I bet your GitHub user is not `plugin-health-scorer`
+22/02/2023, 18:40:53 - alecharp (Adrien Lecharpentier): `GITHUB_APP_INSTALLATION_NAME` is your GitHub username
+22/02/2023, 18:46:21 - yashre-bh (Shreya Bhagat): is it not the app name? 😬
+22/02/2023, 18:49:24 - yashre-bh (Shreya Bhagat): it works!
+22/02/2023, 18:49:45 - yashre-bh (Shreya Bhagat): thank you so much alecharp (Adrien Lecharpentier) !
+22/02/2023, 18:50:18 - yashre-bh (Shreya Bhagat): before starting to work on this issue, can I open a PR to update the readme, addressing all the errors I faced in my setup?
+22/02/2023, 18:50:27 - alecharp (Adrien Lecharpentier): https://github.com/jenkins-infra/plugin-health-scoring/blob/fcbb0ef220ffa2f879ec793cf1f0b17d64e5995f/docs/.env.example#L18
+22/02/2023, 18:50:57 - yashre-bh (Shreya Bhagat): so sorry, got misled by the name
+22/02/2023, 18:51:15 - alecharp (Adrien Lecharpentier): I'm working on a big re-work of the app architecture. I'll include some update their
+22/02/2023, 18:51:29 - Kris Stern: I have given it a preliminary review. Will come back later for more reviews. 
+22/02/2023, 18:52:22 - yashre-bh (Shreya Bhagat): okay! thanks so much
+22/02/2023, 18:52:39 - yashre-bh (Shreya Bhagat): <@yashre-bh-62485b2c6da037398493a758:gitter.im "before starting to work on this ..."> so i'll skip this, then
+22/02/2023, 18:53:34 - Kris Stern: Maybe it is a personal preference, but if the proposal is a lot more detailed / verbose it would be better. Because then there will be less margin of misunderstanding. Also, a mini-timeline for the different stages for the project progression would be ideal. 
+22/02/2023, 18:54:41 - Kris Stern: Even though an accurate timeline would be unrealistic, a complete and detailed timeline to be approximately followed would tell us how knowledgeable you are with the project idea and how well you will be able to self-manage the project. 
+23/02/2023, 05:38:51 - Jagruti: In my proposal,
+23/02/2023, 07:20:58 - Kris Stern: I used to do that when I was a potential contributor, it is more explanatory and I chose the more significant PR's to include. 
+23/02/2023, 09:30:13 - Dheeraj: Hi Everyone. Google has announced and published their mentoring orgs for GSoC 2023 https://summerofcode.withgoogle.com/programs/2023. Jenkins has been accepted!! yay!!  We will be hosting the first Jenkins in GSoC Office Hours tomorrow at 4pm UTC. Project idea overviews is on the agenda.  Call in info Topic: GSoC 2023 Office Hours
+23/02/2023, 09:32:02 - Dheeraj: I've forwarded the above message from the #jenkinsci_gsoc-sig:gitter.im channel, just in case somebody missed it.
+23/02/2023, 09:39:02 - Kris Stern: Thanks Dheeraj!
+23/02/2023, 13:01:04 - batman005 (Hrithik Goswami) changed their display name to Hrithik Goswami (batman005)
+23/02/2023, 15:13:18 - MondalSayantan (Sayantan Mondal): Message deleted
+23/02/2023, 15:32:52 - Jmm: Hi Jagruti 
+23/02/2023, 15:33:44 - Harsh Gupta: Dheeraj: what value we have to provide in `GET_CONTENT` env variable?
+23/02/2023, 15:33:53 - Jagruti: Thank you so much for your review jmMeessen (Jean-Marc MEESSEN) 
+23/02/2023, 15:54:05 - Dheeraj: Where did you see this env variable?
+23/02/2023, 15:58:40 - Harsh Gupta: while going through https://github.com/Harsh3341/plugin-site/blob/master/CONTRIBUTING.md i findTo aid with development mode, an environment variable of GET_CONTENT is needed to force gatsby to pull down the slow wiki/github content for each plugin
+23/02/2023, 16:10:37 - Dheeraj: oh, different project. I haven't tried building plugin-site, but I can figure that this var accepts a boolean input ("true" or "false"), where "true" value would fetch all the wiki/github related content of each plugin, and vice versa.
+23/02/2023, 16:29:23 - yashre-bh (Shreya Bhagat): are there any resources to understand what is the difference between a probe and a score?
+23/02/2023, 16:33:28 - Dheeraj: Related: https://github.com/jenkins-infra/plugin-health-scoring/blob/main/docs/ARCHITECTURE.adoc
+23/02/2023, 16:36:36 - Dheeraj: alecharp (Adrien Lecharpentier): I read your message somewhere on this channel where you mentioned that you're working on a big revamp of the documentation of this project. Can you please tell me more about what you're aiming to do?
+23/02/2023, 16:36:59 - alecharp (Adrien Lecharpentier): not just the documentation
+23/02/2023, 16:37:12 - alecharp (Adrien Lecharpentier): https://github.com/jenkins-infra/plugin-health-scoring/pull/206
+23/02/2023, 16:39:12 - yashre-bh (Shreya Bhagat): thanks!
+23/02/2023, 16:42:40 - Dheeraj: wow, big PR 🙂
+23/02/2023, 16:43:21 - alecharp (Adrien Lecharpentier): yes. 
+23/02/2023, 16:44:05 - alecharp (Adrien Lecharpentier): I'm adding a few things but because I'm breaking so many things, I'm waiting for the current active PR to be done because it let me handle the merge conflicts on my own
+23/02/2023, 16:48:28 - yashre-bh (Shreya Bhagat): hi, there's a thread just a few messages above, I was setting up the project myself, and adrian helped me out. that could be helpful
+23/02/2023, 16:50:33 - Kris Stern: Yeah Hrithik Goswami (batman005) Better to try the #jenkinsci_GSoC-Plugin_Health_Score:gitter.im channel
+23/02/2023, 16:51:02 - Kris Stern: No problem
+23/02/2023, 17:23:36 - alecharp (Adrien Lecharpentier): if you are just starting, I encourage you to look at the documentation in https://github.com/jenkins-infra/plugin-health-scoring/tree/main/docs
+23/02/2023, 17:26:22 - yashre-bh (Shreya Bhagat): https://github.com/jenkins-infra/plugin-health-scoring/issues/193
+23/02/2023, 17:28:36 - alecharp (Adrien Lecharpentier): so, I would encourage you to look into the PluginRepositoryIT class (in test) or the PluginServiceIT or the ScoreServiceIT classes. 
+23/02/2023, 17:29:54 - alecharp (Adrien Lecharpentier): my suggestion is to add manually scores into the database
+23/02/2023, 17:30:49 - alecharp (Adrien Lecharpentier): to be fair, the actual deletion shouldn't be in ScoreEngine but ScoreEngine method should call the method which I think should be in ScoreService
+23/02/2023, 17:37:12 - Shreya Bhagat: okay. Let me try it out after the jenkins gsoc meet
+23/02/2023, 17:43:13 - Jagruti: Well, switching or no is your choice.
+23/02/2023, 18:30:22 - alecharp (Adrien Lecharpentier): there is no environment requirement. just make sure you have Docker available
+23/02/2023, 19:40:19 - MondalSayantan (Sayantan Mondal): alecharp (Adrien Lecharpentier): I was going through both of the repos. I am not able to understand how the plugin site is using the plugin site api to get the data. On inspecting I can see that the data being fetched is coming from Algolia. Also, the API endpoint according to the URL given is plugins.jenkins.io/ which is also the URL for the frontend of the application. I am very confused
+24/02/2023, 05:41:22 - Kris Stern: Awesome Hrithik Goswami (batman005) 
+24/02/2023, 11:53:24 - alecharp (Adrien Lecharpentier): Shreya Bhagat: please note that the pull request template is here to help contributors follow some guidelines
+24/02/2023, 17:52:05 - Jagruti: Hey alecharp (Adrien Lecharpentier) 
+24/02/2023, 19:58:07 - pulkitchugh (Pulkit Chugh) changed their display name to Pulkit Chugh
+25/02/2023, 12:52:12 - Kris Stern: Hi Jagruti Please give it a bit of time, as most of us have full-time jobs and other obligations in life outside of open-source, and may take some time to get back to you. 
+25/02/2023, 15:33:46 - Jagruti: Hey Kris Stern 
+25/02/2023, 16:24:09 - Jmm: ❤️
+27/02/2023, 07:51:58 - Dheeraj: okay 👍️
+27/02/2023, 09:14:55 - Harsh Gupta: Dheeraj: in plugin-health-scoring repo are you storing data somewhere after the operation? Or it's calculated in realtime
+27/02/2023, 10:02:53 - alecharp (Adrien Lecharpentier): everything is stored in a PostgreSQL Database
+27/02/2023, 12:26:54 - Jmm: Please note that we will hold a dedicated on-line zoom session about the two Plugin Health Score project idea on Tuesday Feb 28 (16:00 UTC).
+27/02/2023, 12:52:46 - Harsh Gupta: Thanks i will look into it🙂
+27/02/2023, 15:50:53 - lzeee: Hi, everyone~ I am Shize Gong,  a SDE from China. You can call my Gong. I use Java and Python as my main working language. The idea of Displaying of Plugin Health Scores attracts me. And I'm planing to apply for that project~
+27/02/2023, 15:57:55 - alecharp (Adrien Lecharpentier): contributing to this project is not mandatory to submit a GSoC proposal. If you have other contribution to share, put links in your proposal.
+27/02/2023, 15:58:45 - alecharp (Adrien Lecharpentier): the content of the proposal and your ability to illustrate your strength (other public contribution) are key
+27/02/2023, 16:01:57 - lzeee: Ok, thanks for the guide, I think I can make some contributions in other communities.
+27/02/2023, 16:02:22 - lzeee: I just read the historical talk in this channel and found them very helpful
+27/02/2023, 16:03:32 - lzeee: Thanks again for all the guidance in this channel
+27/02/2023, 16:06:43 - lzeee: alecharp (Adrien Lecharpentier): It occurred to me that there is a detail in the CONTTIBUTING document that is not accurate enough. It took me a long time to understand the version of yarn when setting up the development environment. Can I fine-tune this part of the document?
+27/02/2023, 16:08:01 - alecharp (Adrien Lecharpentier): at this time in the process, it's better to focus on the proposal than on other contributions. the sooner you can share your proposal the better. 
+27/02/2023, 16:08:48 - lzeee: ok, thank you for your advice~
+27/02/2023, 16:14:16 - Dheeraj: Thanks for stepping up and welcome to the channel!
+27/02/2023, 16:19:06 - lzeee: Hi, I think the version number is a bit confusing for beginners like me, because when you install node.js, it comes with classic Yarn by default, and its version number is something like 1.11.20. In fact, the yarn used in this project refers to yarn berry, which is the second version of yarn. I tried to modify my version for several hours, and found that these are completely two sets of package manager.
+27/02/2023, 16:20:42 - lzeee: Of course, for those who already know more about javascript development, this is really not a big problem
+28/02/2023, 07:54:02 - Jagruti: Hey alecharp (Adrien Lecharpentier) 
+28/02/2023, 10:05:57 - Harsh Gupta: Hi, Dhee alecharp (Adrien Lecharpentier):    preparing my GSoC proposal for "Displaying Plugin Health Score" I figured out that Jenkins has a plugin site "[plugins.jenkins.io](http://plugins.jenkins.io/)" where we have to display the Health score of the plugin which will be fetched from the project “plugin health score” which you worked on last GSoC 2022.
+28/02/2023, 10:31:20 - Dheeraj: > As of my idea till now I have to fetch data from the “plugin health score” DB
+28/02/2023, 10:33:38 - Harsh Gupta: Got it means I have to update plugin site api to do that process and send it to the frontend?
+28/02/2023, 10:45:23 - alecharp (Adrien Lecharpentier): for 1., if you have idea, even something that is not clearly defined
+28/02/2023, 10:46:32 - alecharp (Adrien Lecharpentier): for 2.a. test cases is part of the implementation of the probes (and scoring processes), so they are not done until tested.
+28/02/2023, 10:48:18 - alecharp (Adrien Lecharpentier): 2.b. I don't need a probes per week ratio, but how confident you are to deliver X probes in the first part of the GSoC. would you reserve time for maintenance. how do you prioritize implementations. etc. 
+28/02/2023, 10:50:01 - alecharp (Adrien Lecharpentier): but also if you have moments (days or weeks) when you already know that you won't be available. again, this is not to control you, just so we are clear about time off. I won't be available for the 12weeks as I will take time off as well (but don't worry, someone will be there to mentor when I'm off)
+28/02/2023, 11:08:58 - alecharp (Adrien Lecharpentier): or you can argue in your proposal that this is not needed and the `plugin-site` project (reactjs) can reach directly the api of the plugin-health-scoring project to display the scores
+28/02/2023, 11:33:03 - Dheeraj: I'm sorry but I'm not sure what to suggest you here. For me, this didn't seem like a major problem...
+28/02/2023, 12:24:11 - Harsh Gupta: Thanks Dheeraj and Adrien🙂
+28/02/2023, 12:25:23 - Dheeraj: you're welcome!
+28/02/2023, 13:01:11 - lzeee: yes it's working correctly.
+28/02/2023, 13:01:52 - lzeee: In my opinion, it would be better to emphasize yarn berry or the second edition
+28/02/2023, 15:00:46 - Jagruti: Thank you. I will add the all the points you have mentioned to the proposal. 
+28/02/2023, 15:41:05 - Dheeraj: I'm curious to know what alecharp (Adrien Lecharpentier) thinks about this.
+28/02/2023, 16:54:21 - alecharp (Adrien Lecharpentier): to be fair, the version is specified on the contributing guide but knowing how to install that tool is not on the project responsibility imo. you can find resources online to guide you on how to install each tools. 
+28/02/2023, 16:54:50 - alecharp (Adrien Lecharpentier): it would be the same for Maven. The version is stated on the contributing guide, not how to install it.
