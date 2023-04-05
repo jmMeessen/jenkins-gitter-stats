@@ -1,0 +1,843 @@
+11/03/2021, 16:00:13 - @gitter-badger:gitter.im joined the room
+11/03/2021, 16:00:13 - @gitter-badger:gitter.im set the main address for this room to #jenkinsci_gitlab-plugin:gitter.im.
+11/03/2021, 16:00:13 - @gitter-badger:gitter.im made the room public to whoever knows the link.
+11/03/2021, 16:00:13 - @gitter-badger:gitter.im made future room history visible to all room members.
+11/03/2021, 16:00:13 - @gitter-badger:gitter.im changed the room name to jenkinsci/gitlab-plugin.
+11/03/2021, 16:00:14 - @gitter-badger:gitter.im changed the topic to "This plugin emulates Jenkins as a Gitlab CI Web Service".
+11/03/2021, 16:00:15 - @gitter-badger:gitter.im made future room history visible to anyone.
+11/03/2021, 16:00:18 - @gitter-badger:gitter.im changed the room avatar.
+11/03/2021, 16:00:20 - @bcopy-55bb68e90fc9f982beabaa0d:gitter.im joined the room
+11/03/2021, 16:00:21 - @bcopy-55bb68e90fc9f982beabaa0d:gitter.im: Hi Jameel, this plugin can scan your gitlab groups / projects / branches in search of Jenkinsfile and automatically create corresponding folder hierarchies in Jenkins, as well as configure Gitlab webhooks (so Jenkins replaces seamlessly Gitlab CI) - it is very handy as a replacement for Gitlab CI
+04/04/2021, 21:08:08 - @djviking:matrix.org joined the room
+05/04/2021, 18:53:56 - DJViking (Sverre Moe) changed their display name to DJViking
+05/04/2021, 18:57:42 - DJViking changed their display name to DJViking (Sverre Moe)
+07/05/2021, 07:34:22 - gitter-badger (The Gitter Badger) changed their display name to matrixbot (matrixbot)
+18/05/2021, 08:36:11 - matrixbot (matrixbot) changed their display name to gitter-badger (The Gitter Badger)
+28/09/2021, 14:14:45 - @hu-tmx-5b8e71ddd73408ce4fa6da8f:gitter.im joined the room
+28/09/2021, 14:14:46 - @hu-tmx-5b8e71ddd73408ce4fa6da8f:gitter.im: Hi All! I'd like to ask for some help regarding plugin development. I need to know which direction I have to look. Specifically, I would like to add a button "View branch on SCM" on a WorkflowJob (branch level view of a multibranch pipeline). For that I created an implemetation of hudson.model.Action where I "inject" the WorkflowJob in question. Now, for the URL I would need to read the configuration value of "Repository browser" in the project view, and after some String concatenation return that in getUrlName. In this example, it is still just GitLab, I might generify it later on.
+```
+public class JumpToBranchAction implements Action {
+
+    private WorkflowJob workflowJob;
+
+    public JumpToBranchAction(WorkflowJob workflowJob) {
+        this.workflowJob = workflowJob;
+    }
+
+    @Override
+    public String getIconFileName() {
+        return "computer.png";
+    }
+
+    @Override
+    public String getDisplayName() {
+        return "Jump to branch @ Gitlab";
+    }
+
+    @Override
+    public String getUrlName() {
+        return "branch-on-gitlab";
+    }
+
+    @Extension
+    public static class Factory extends TransientActionFactory<WorkflowJob> {
+
+        @Override
+        public Class<WorkflowJob> type() {
+            return WorkflowJob.class;
+        }
+
+        @Override
+        public Collection<? extends Action> createFor(WorkflowJob target) {
+            return Collections.singleton(new JumpToBranchAction(target));
+        }
+    }
+
+}
+```
+Question: How can I access the "repository browser" configuration of the current WorkflowJob ?
+11/10/2021, 08:35:22 - @suk3chi-6163da9f6da037398487a010:gitter.im joined the room
+11/10/2021, 08:35:22 - @suk3chi-6163da9f6da037398487a010:gitter.im: hi i want to learn jenkins so i need to instal jenkins in my laptop-windows 10 .when I try to install localhost :8080 was not open .can any one guideme
+11/10/2021, 10:18:26 - @suk3chi-6163da9f6da037398487a010:gitter.im: @suk3chi anyone guide me for jenkins installation in win 10
+07/11/2021, 14:54:41 - @joeyliu7975-6187da556da03739848a02cd:gitter.im joined the room
+07/11/2021, 14:54:41 - @joeyliu7975-6187da556da03739848a02cd:gitter.im: hello guys
+07/11/2021, 18:24:54 - @stephaneerard-55c9c6d10fc9f982beacf9a8:gitter.im joined the room
+07/11/2021, 18:24:54 - @stephaneerard-55c9c6d10fc9f982beacf9a8:gitter.im: @suk3chi install Docker Desktop for win10 and use it to run a jenkins2 container. 
+13/11/2021, 20:00:59 - @geekyprogrammer:matrix.org joined the room
+21/02/2022, 14:05:45 - @djviking-5adaf220d73408ce4f9684c3:gitter.im joined the room
+21/02/2022, 14:05:46 - @djviking-5adaf220d73408ce4f9684c3:gitter.im: I reported a bug with the gitlab plugin:
+https://issues.jenkins.io/browse/JENKINS-67861
+The plugin should send the ref attribute. As in our case with two branches that contains same commit, only one (the first) branch will get a gitlab pipeline.
+19/04/2022, 22:07:24 - @wybpip:matrix.org joined the room
+19/04/2022, 22:07:24 - @wybpip:matrix.org left the room
+03/05/2022, 17:53:34 - @wybpip:matrix.org joined the room
+03/05/2022, 17:53:35 - @wybpip:matrix.org left the room
+20/05/2022, 13:57:12 - @4ern-628781636da037398496cc46:gitter.im joined the room
+20/05/2022, 13:57:12 - @4ern-628781636da037398496cc46:gitter.im: Hello I am relatively new to jenkins. Can anyone tell me how to access gitlab variables in pipeline? This doesn't work 😕 `echo $gitlabMergeRequestState`
+08/06/2022, 13:10:34 - @msd7mahi-62a0831e6da0373984982b1d:gitter.im joined the room
+08/06/2022, 13:10:35 - @msd7mahi-62a0831e6da0373984982b1d:gitter.im: hey guys how to integrate cloudrun credentials with pipeline
+29/06/2022, 12:57:36 - @hu-tmx-5b8e71ddd73408ce4fa6da8f:gitter.im: @4ern AFAIK some info are injected as env variables. you could do  a sh "printenv" to see all vars. See https://plugins.jenkins.io/gitlab-plugin/ for available options.  Please note that some vars might be only available if build is triggered directly by GitLab, and not started manually. 
+19/07/2022, 21:36:38 - @tonyobanon-591bff8ed73408ce4f60207c:gitter.im joined the room
+19/07/2022, 21:36:39 - @tonyobanon-591bff8ed73408ce4f60207c:gitter.im: Message deleted
+25/07/2022, 07:38:24 - @better_sleeping:converser.eu joined the room
+25/07/2022, 07:38:29 - @better_sleeping:converser.eu left the room
+07/09/2022, 23:20:33 - @m_algery:leohoo.xyz joined the room
+07/09/2022, 23:20:34 - @m_algery:leohoo.xyz left the room
+02/11/2022, 11:10:50 - @adarsha45-6362415e6da03739849ec93c:gitter.im joined the room
+02/11/2022, 11:10:51 - @adarsha45-6362415e6da03739849ec93c:gitter.im: is there any ways to run the previous build in jenkis pipeline ..for instance , my current build is 50 but i want to run the 40 number  build ,but i have updated the pipeline in build no 45 ..so i want to run 40 with the same previous pipeline
+02/11/2022, 11:10:54 - @adarsha45-6362415e6da03739849ec93c:gitter.im: ??
+
+03/12/2022, 14:47:32 - @gitter-badger:gitter.im changed the power level of @moderation:gitter.im from Default to Admin.
+09/12/2022, 00:06:17 - @gthosani1-630904646da03739849bd16d:gitter.im joined the room
+09/12/2022, 00:06:17 - @gthosani1-630904646da03739849bd16d:gitter.im: There is no easy way to do that, however restoring your pipeline setting difference since build 40 and then rebuild/ retry build 40 
+09/12/2022, 19:20:46 - @gthosani1-630904646da03739849bd16d:gitter.im: Message deleted
+17/01/2023, 05:51:08 - @adarsha45-6362415e6da03739849ec93c:gitter.im: @adarsha45
+hello everyone , is there any to set up i can set up jenkins global environment variable (ie global properties) using jenkins scripted pipeline ,so that it can be used from any job  ???
+important !!!!
+29/01/2023, 14:57:13 - Kris Stern joined the room
+29/01/2023, 23:49:26 - @jkhe:matrix.org joined the room
+29/01/2023, 23:58:17 - Jiakuang He changed their display name to Jiakuang He (Sam)
+31/01/2023, 15:19:21 - Kris Stern: Hi everyone, 
+I have done some merging of previously outstanding pull requests for the plugin, am pending to wait for responses and further review on remaining two. Some of the older PR's I plan to close if they are too old to merge. I will cut a new release over the next few days. 
+02/02/2023, 13:03:05 - Kris Stern: Version 1.7 is out
+02/02/2023, 19:41:09 - @bassrock-535703965e986b0712f03d7c:gitter.im joined the room
+02/02/2023, 19:41:10 - @xaniasd-53a1d15ca9176b500d1ce74c:gitter.im joined the room
+02/02/2023, 19:41:10 - @eugmill-530754be5e986b0712ef9e4a:gitter.im joined the room
+02/02/2023, 19:41:11 - @alheim-5401ac71163965c9bc20168b:gitter.im joined the room
+02/02/2023, 19:41:11 - @loa-53064e705e986b0712ef954a:gitter.im joined the room
+02/02/2023, 19:41:12 - @twk3-53f62c86163965c9bc1ff921:gitter.im joined the room
+02/02/2023, 19:41:12 - @personias-54593248db8155e6700d11ca:gitter.im joined the room
+02/02/2023, 19:41:13 - @beryju-529c6bf6ed5ab0b3bf04d79f:gitter.im joined the room
+02/02/2023, 19:41:14 - @nephos-5464c3f9db8155e6700d4444:gitter.im joined the room
+02/02/2023, 19:41:14 - @dedxoxo-54784bc9db8155e6700d8f81:gitter.im joined the room
+02/02/2023, 19:41:15 - @stanhu-54893c97db8155e6700ddfc6:gitter.im joined the room
+02/02/2023, 19:41:16 - @stawny-54918f4fdb8155e6700e02cc:gitter.im joined the room
+02/02/2023, 19:41:16 - @hellboy81-5463933ddb8155e6700d3f36:gitter.im joined the room
+02/02/2023, 19:41:16 - @thoys-5330cbcb5e986b0712effadd:gitter.im joined the room
+02/02/2023, 19:41:17 - @zzip-54a29e27db8155e6700e4063:gitter.im joined the room
+02/02/2023, 19:41:20 - @greekfellows-54af8893db8155e6700e7d92:gitter.im joined the room
+02/02/2023, 19:41:21 - @pmalek-54c0e047db8155e6700ef01c:gitter.im joined the room
+02/02/2023, 19:41:22 - @tobiashochguertel-54c53c24db8155e6700f11bd:gitter.im joined the room
+02/02/2023, 19:41:22 - @jakeclarke-54c79044db8155e6700f2238:gitter.im joined the room
+02/02/2023, 19:41:23 - @zipleen-54d0c6eddb8155e6700f6452:gitter.im joined the room
+02/02/2023, 19:41:24 - @matt-imgd-54d4b5d1db8155e6700f85d1:gitter.im joined the room
+02/02/2023, 19:41:24 - @pythonhacker-54c87438db8155e6700f29d9:gitter.im joined the room
+02/02/2023, 19:41:25 - @jnakatsui-54e3e17e15522ed4b3dc220a:gitter.im joined the room
+02/02/2023, 19:41:28 - @hgomez-54b54d07db8155e6700e9c9b:gitter.im joined the room
+02/02/2023, 19:41:29 - @laoarchangel-54ece49815522ed4b3dc6d33:gitter.im joined the room
+02/02/2023, 19:41:29 - @grokzen-529c6e07ed5ab0b3bf04dd57:gitter.im joined the room
+02/02/2023, 19:41:30 - @ahappyforest-55080c5e15522ed4b3dd6168:gitter.im joined the room
+02/02/2023, 19:41:30 - @yogi81-551aa68915522ed4b3de1809:gitter.im joined the room
+02/02/2023, 19:41:31 - @bhaku-551cf18f15522ed4b3de3cbd:gitter.im joined the room
+02/02/2023, 19:41:31 - @itsamenathan-53065da65e986b0712ef964d:gitter.im joined the room
+02/02/2023, 19:41:32 - @wharfedale01-5540832815522ed4b3dfab2a:gitter.im joined the room
+02/02/2023, 19:41:32 - @jhaldiman-5540cace15522ed4b3dfae45:gitter.im joined the room
+02/02/2023, 19:41:33 - @cdaigle-55460b6f15522ed4b3dfdd03:gitter.im joined the room
+02/02/2023, 19:41:34 - @andytime-551f13f615522ed4b3de545f:gitter.im joined the room
+02/02/2023, 19:41:34 - @disengaged-55640aa715522ed4b3e0f05d:gitter.im joined the room
+02/02/2023, 19:41:34 - @tylersmith34-556f800a15522ed4b3e16267:gitter.im joined the room
+02/02/2023, 19:41:35 - @prothon-55145a4d15522ed4b3dde161:gitter.im joined the room
+02/02/2023, 19:41:36 - @ena-55786df715522ed4b3e1b89d:gitter.im joined the room
+02/02/2023, 19:41:36 - @adambrousseau-5579f4fe15522ed4b3e1c996:gitter.im joined the room
+02/02/2023, 19:41:37 - @thatarchguy-54eac9f815522ed4b3dc5813:gitter.im joined the room
+02/02/2023, 19:41:38 - @davidwtg-55979fd115522ed4b3e359da:gitter.im joined the room
+02/02/2023, 19:41:38 - @davidmtm-559800c615522ed4b3e35cd8:gitter.im joined the room
+02/02/2023, 19:41:39 - @diogolg-559bbf5e15522ed4b3e38d2a:gitter.im joined the room
+02/02/2023, 19:41:39 - @aldarone-5556108d15522ed4b3e074d4:gitter.im joined the room
+02/02/2023, 19:41:40 - @3rdcycle-533a88675e986b0712f00b68:gitter.im joined the room
+02/02/2023, 19:41:41 - @dexterddit-55a8e8478a7b72f55c3fae61:gitter.im joined the room
+02/02/2023, 19:41:41 - @fsjack-55d58d0d0fc9f982beae0349:gitter.im joined the room
+02/02/2023, 19:41:42 - @dave1704-55dc47240fc9f982beae8563:gitter.im joined the room
+02/02/2023, 19:41:42 - @binarious-55e96e720fc9f982beafa2f3:gitter.im joined the room
+02/02/2023, 19:41:43 - @bazsee85-560d380bd33f749381a7efa9:gitter.im joined the room
+02/02/2023, 19:41:44 - @rhlowery-5613d82ad33f749381a87353:gitter.im joined the room
+02/02/2023, 19:41:44 - @jutting-561e1b8dd33f749381a94ed8:gitter.im joined the room
+02/02/2023, 19:41:45 - @cscawley-5621231016b6c7089cb741ac:gitter.im joined the room
+02/02/2023, 19:41:46 - @scastelein-5624d4a816b6c7089cb77e32:gitter.im joined the room
+02/02/2023, 19:41:46 - @illay1994-562cf46816b6c7089cb83015:gitter.im joined the room
+02/02/2023, 19:41:47 - @desper-5649a71a16b6c7089cbadf69:gitter.im joined the room
+02/02/2023, 19:41:47 - @spritzel-563b20cd16b6c7089cb98f2e:gitter.im joined the room
+02/02/2023, 19:41:48 - @gbyukg-566054f016b6c7089cbd3a0b:gitter.im joined the room
+02/02/2023, 19:41:48 - @radriaanse-55e4803f0fc9f982beaf2f5e:gitter.im joined the room
+02/02/2023, 19:41:49 - @mainframer-55618c5415522ed4b3e0df46:gitter.im joined the room
+02/02/2023, 19:41:49 - @jdiasamaro-5680348016b6c7089cc04e99:gitter.im joined the room
+02/02/2023, 19:41:50 - @mmarseglia-553ff38b15522ed4b3dfa6ea:gitter.im joined the room
+02/02/2023, 19:41:51 - @bennynis-56beca48e610378809c139ff:gitter.im joined the room
+02/02/2023, 19:41:51 - @kevindashgit-551b24b915522ed4b3de2259:gitter.im joined the room
+02/02/2023, 19:41:52 - @zhutoulala-570dd942187bb6f0eadf3219:gitter.im joined the room
+02/02/2023, 19:41:53 - @hsingh-5510115f15522ed4b3ddad47:gitter.im joined the room
+02/02/2023, 19:41:53 - @bsninh78-570f6006187bb6f0eadf6534:gitter.im joined the room
+02/02/2023, 19:41:54 - @nartamonov-55d1c27e0fc9f982beada2e1:gitter.im joined the room
+02/02/2023, 19:41:55 - @chevectra87-572d159ac43b8c6019718d4f:gitter.im joined the room
+02/02/2023, 19:41:55 - @wazmigs2902_twitter-5727070a659847a7aff57d2a:gitter.im joined the room
+02/02/2023, 19:41:55 - @pk-gupta-56cc23c7e610378809c2f677:gitter.im joined the room
+02/02/2023, 19:41:56 - @aidenrcd-55ff74bc0fc9f982beb1497c:gitter.im joined the room
+02/02/2023, 19:41:57 - @mysterytree-57205731659847a7aff4b5cf:gitter.im joined the room
+02/02/2023, 19:41:57 - @virtuacreative-573fe0f1c43b8c6019741d36:gitter.im joined the room
+02/02/2023, 19:41:58 - @amandapetersn_twitter-5747793cc43b8c6019752977:gitter.im joined the room
+02/02/2023, 19:41:59 - @zerocoolback-57496a1ec43b8c6019756d3f:gitter.im joined the room
+02/02/2023, 19:41:59 - @ajit-jadhav-54daf2b115522ed4b3dbdffb:gitter.im joined the room
+02/02/2023, 19:42:00 - @rosswilliams-56c6318ee610378809c22920:gitter.im joined the room
+02/02/2023, 19:42:00 - @wiget-555f8ac315522ed4b3e0cfbe:gitter.im joined the room
+02/02/2023, 19:42:01 - @gimnguyen-55ee5f290fc9f982beaff7bc:gitter.im joined the room
+02/02/2023, 19:42:02 - @evsward-57678aabc2f0db084a1ed6b0:gitter.im joined the room
+02/02/2023, 19:42:02 - @amnacog-55b205450fc9f982beaad102:gitter.im joined the room
+02/02/2023, 19:42:03 - @sekhar842-577a344ac2f0db084a21522d:gitter.im joined the room
+02/02/2023, 19:42:03 - @petulko391-565d753516b6c7089cbcdb79:gitter.im joined the room
+02/02/2023, 19:42:04 - @soniacepedano-544e42fcdb8155e6700cec7e:gitter.im joined the room
+02/02/2023, 19:42:05 - @fmeghouc-578f2beec2f0db084a23cdb1:gitter.im joined the room
+02/02/2023, 19:42:05 - @supaket-54416ecedb8155e6700cc7ee:gitter.im joined the room
+02/02/2023, 19:42:06 - @ehaselwanter-54417ca5db8155e6700cc82a:gitter.im joined the room
+02/02/2023, 19:42:06 - @ruebenramirez-55ec8dd30fc9f982beafd500:gitter.im joined the room
+02/02/2023, 19:42:07 - @duncau1234-577b75f6c2f0db084a217c28:gitter.im joined the room
+02/02/2023, 19:42:07 - @sunil-k1-57a7943140f3a6eec05e59b7:gitter.im joined the room
+02/02/2023, 19:42:08 - @mrsathish05-57bd349040f3a6eec061097e:gitter.im joined the room
+02/02/2023, 19:42:09 - @medvedevden1s-57adc68140f3a6eec05f21ed:gitter.im joined the room
+02/02/2023, 19:42:09 - @aaron81-57c7073140f3a6eec0626e69:gitter.im joined the room
+02/02/2023, 19:42:10 - @prempp-571745ea187bb6f0eae05977:gitter.im joined the room
+02/02/2023, 19:42:10 - @maibarra-57d0b14340f3a6eec064199f:gitter.im joined the room
+02/02/2023, 19:42:11 - @avinash2888-57b57dc140f3a6eec06015e4:gitter.im joined the room
+02/02/2023, 19:42:12 - @xmavrck-58098ee4d73408ce4f2fc0d1:gitter.im joined the room
+02/02/2023, 19:42:12 - @jmarcelo-580d8bb7d73408ce4f305728:gitter.im joined the room
+02/02/2023, 19:42:13 - @saicrazyfire-580f08cfd73408ce4f30a64d:gitter.im joined the room
+02/02/2023, 19:42:14 - @rajeshreddy457-57f13c0bd73408ce4f2b1b8b:gitter.im joined the room
+02/02/2023, 19:42:14 - @emna24-5710af61187bb6f0eadf92f1:gitter.im joined the room
+02/02/2023, 19:42:14 - @hcalmur1-570e7d99187bb6f0eadf4a4a:gitter.im joined the room
+02/02/2023, 19:42:15 - @jaydeland-582dccb1d73408ce4f3696bc:gitter.im joined the room
+02/02/2023, 19:42:16 - @arraiscastro-584ebd25d73408ce4f3c8550:gitter.im joined the room
+02/02/2023, 19:42:16 - @spathare21-58414eb0d73408ce4f3a368b:gitter.im joined the room
+02/02/2023, 19:42:17 - @tommego-586c6a0ad73408ce4f410f52:gitter.im joined the room
+02/02/2023, 19:42:18 - @chaitanyapochampally-586e7a25d73408ce4f41757b:gitter.im joined the room
+02/02/2023, 19:42:18 - @andporfirio-5876706ed73408ce4f42d749:gitter.im joined the room
+02/02/2023, 19:42:19 - @stchar-5668438516b6c7089cbe0f26:gitter.im joined the room
+02/02/2023, 19:42:19 - @atul1989-5837d856d73408ce4f3880b9:gitter.im joined the room
+02/02/2023, 19:42:20 - @tonifc007-588d6907d73408ce4f46b3b9:gitter.im joined the room
+02/02/2023, 19:42:20 - @zengskie-588360b1d73408ce4f45099a:gitter.im joined the room
+02/02/2023, 19:42:21 - @manish-patelmhe-589b3d15d73408ce4f48f68f:gitter.im joined the room
+02/02/2023, 19:42:21 - @rishikksh20-5764c16cc2f0db084a1e8c38:gitter.im joined the room
+02/02/2023, 19:42:22 - @ab-a-58b73b89d73408ce4f4dc76f:gitter.im joined the room
+02/02/2023, 19:42:22 - @ellanosb-58c7054fd73408ce4f506067:gitter.im joined the room
+02/02/2023, 19:42:23 - @afdevries-5686810716b6c7089cc0c66d:gitter.im joined the room
+02/02/2023, 19:42:24 - @gt-28-58cb64d3d73408ce4f5176d9:gitter.im joined the room
+02/02/2023, 19:42:24 - @napster11-587f15dfd73408ce4f444bb9:gitter.im joined the room
+02/02/2023, 19:42:25 - @nagillavenkatesh-57e38a3840f3a6eec066a2cf:gitter.im joined the room
+02/02/2023, 19:42:26 - @elvisfinol-58ab5c42d73408ce4f4bb4bd:gitter.im joined the room
+02/02/2023, 19:42:26 - @johanmoreau-5802864fd73408ce4f2e7b10:gitter.im joined the room
+02/02/2023, 19:42:27 - @thisiz_a_twitter-58e72f06d73408ce4f56b7ac:gitter.im joined the room
+02/02/2023, 19:42:27 - @alexxnica-575b6589c2f0db084a1d4392:gitter.im joined the room
+02/02/2023, 19:42:27 - @thismahbub-57a38c4c40f3a6eec05df6be:gitter.im joined the room
+02/02/2023, 19:42:28 - @minervaashraj-58f9f406d73408ce4f59fa51:gitter.im joined the room
+02/02/2023, 19:42:28 - @gorops-5906fa36d73408ce4f5c21c3:gitter.im joined the room
+02/02/2023, 19:42:29 - @pydevops-58f513ebd73408ce4f5907d5:gitter.im joined the room
+02/02/2023, 19:42:31 - @jaredballou-5917370ed73408ce4f5f4b2a:gitter.im joined the room
+02/02/2023, 19:42:32 - @punitaojha-56ed9a8885d51f252ab9b33f:gitter.im joined the room
+02/02/2023, 19:42:32 - @jgeorgeson-588b4900d73408ce4f466bad:gitter.im joined the room
+02/02/2023, 19:42:33 - @mighty_1989_twitter-590b6083d73408ce4f5cf663:gitter.im joined the room
+02/02/2023, 19:42:34 - @bchuang-591d4167d73408ce4f606413:gitter.im joined the room
+02/02/2023, 19:42:34 - @tsbxmw-5927fa72d73408ce4f627234:gitter.im joined the room
+02/02/2023, 19:42:35 - @freefunctors-592c9b25d73408ce4f632f2e:gitter.im joined the room
+02/02/2023, 19:42:35 - @praveenchandran-5937051fd73408ce4f652cdd:gitter.im joined the room
+02/02/2023, 19:42:36 - @michelledai2020-582a29d4d73408ce4f35dda3:gitter.im joined the room
+02/02/2023, 19:42:36 - @varriola-576a2ee7c2f0db084a1f42a3:gitter.im joined the room
+02/02/2023, 19:42:37 - @tedmax100-586b7b6cd73408ce4f40db0e:gitter.im joined the room
+02/02/2023, 19:42:37 - @mailtospu-594399f6d73408ce4f67bdc9:gitter.im joined the room
+02/02/2023, 19:42:38 - @lyonmandis-58b35a7dd73408ce4f4d0f22:gitter.im joined the room
+02/02/2023, 19:42:38 - @mariamelm2-571e7c86659847a7aff47954:gitter.im joined the room
+02/02/2023, 19:42:39 - @diegoparra-5956c0afd73408ce4f6b11f6:gitter.im joined the room
+02/02/2023, 19:42:39 - @tanliyuan-595aeb5ad73408ce4f6b6be0:gitter.im joined the room
+02/02/2023, 19:42:40 - @mirzaabazovic-54c6b1e3db8155e6700f1bf8:gitter.im joined the room
+02/02/2023, 19:42:40 - @kedarsawant_twitter-59493857d73408ce4f68c053:gitter.im joined the room
+02/02/2023, 19:42:41 - @xshellz-5967d131d73408ce4f6d0c46:gitter.im joined the room
+02/02/2023, 19:42:41 - @houmanghazi-596eff43d73408ce4f6dcbb0:gitter.im joined the room
+02/02/2023, 19:42:42 - @scalawilliam-54d7c8bf15522ed4b3dbc0df:gitter.im joined the room
+02/02/2023, 19:42:43 - @clausewitz45-597888d0d73408ce4f6ed777:gitter.im joined the room
+02/02/2023, 19:42:43 - @will-garrett-59a4fd2ad73408ce4f7360d1:gitter.im joined the room
+02/02/2023, 19:42:44 - @venkateshkolisetty-5876212ed73408ce4f42c59b:gitter.im joined the room
+02/02/2023, 19:42:45 - @lukeab-5859874cd73408ce4f3e55bc:gitter.im joined the room
+02/02/2023, 19:42:45 - @dashon-hawkins-579c58af40f3a6eec05d27e1:gitter.im joined the room
+02/02/2023, 19:42:45 - @vinni389-59a5f733d73408ce4f73815c:gitter.im joined the room
+02/02/2023, 19:42:46 - @im2f1-5811544ed73408ce4f311c32:gitter.im joined the room
+02/02/2023, 19:42:46 - @wangshifeng-57246735659847a7aff5417c:gitter.im joined the room
+02/02/2023, 19:42:47 - @srikanth9000093071-5882e594d73408ce4f44fc34:gitter.im joined the room
+02/02/2023, 19:42:48 - @peterhon-575697fcc43b8c6019784a2c:gitter.im joined the room
+02/02/2023, 19:42:48 - @caophamtruongson-5921ac4bd73408ce4f612645:gitter.im joined the room
+02/02/2023, 19:42:49 - @mhcelso-59d07758d73408ce4f78196f:gitter.im joined the room
+02/02/2023, 19:42:50 - @duvangil-59d258bdd73408ce4f784656:gitter.im joined the room
+02/02/2023, 19:42:50 - @govardhankanala-59ddae2fd73408ce4f798034:gitter.im joined the room
+02/02/2023, 19:42:51 - @syourt-57225281659847a7aff5028e:gitter.im joined the room
+02/02/2023, 19:42:51 - @mohanmocse_twitter-5a1123e5d73408ce4f7f3f30:gitter.im joined the room
+02/02/2023, 19:42:52 - @koval4uk-5a22f33dd73408ce4f81631c:gitter.im joined the room
+02/02/2023, 19:42:52 - @giorgioazzinnaro-5a23bafbd73408ce4f8173ab:gitter.im joined the room
+02/02/2023, 19:42:53 - @josecage-58d90e01d73408ce4f5401bf:gitter.im joined the room
+02/02/2023, 19:42:53 - @zemmali-58b49ddad73408ce4f4d4aff:gitter.im joined the room
+02/02/2023, 19:42:54 - @tekestmy-5a5900c7d73408ce4f87e2b5:gitter.im joined the room
+02/02/2023, 19:42:55 - @zunairah-573da910c43b8c601973cc24:gitter.im joined the room
+02/02/2023, 19:42:55 - @vhsantos26-58d3febcd73408ce4f5322d4:gitter.im joined the room
+02/02/2023, 19:42:56 - @pawaanv-5a7469abd73408ce4f8b6359:gitter.im joined the room
+02/02/2023, 19:42:56 - @theja-vanka-5a3efb65d73408ce4f84a267:gitter.im joined the room
+02/02/2023, 19:42:57 - @gamaiva-58cbb59fd73408ce4f518847:gitter.im joined the room
+02/02/2023, 19:42:58 - @one-luffy-5a67e0e2d73408ce4f89d258:gitter.im joined the room
+02/02/2023, 19:42:58 - @rbosneag-56b8af5ce610378809c06e50:gitter.im joined the room
+02/02/2023, 19:42:59 - @ciprianbeldean-5a7cdeb1d73408ce4f8c558f:gitter.im joined the room
+02/02/2023, 19:42:59 - @skhondre-5a97e30fd73408ce4f8f65b0:gitter.im joined the room
+02/02/2023, 19:43:00 - @sunilvalmiki-5a714467d73408ce4f8af308:gitter.im joined the room
+02/02/2023, 19:43:01 - @pwera-5a9d4db9d73408ce4f8fef28:gitter.im joined the room
+02/02/2023, 19:43:01 - @indianwebdevil_twitter-5a0e9ab0d73408ce4f7eff1c:gitter.im joined the room
+02/02/2023, 19:43:02 - @bigdamhero-5acbd709d73408ce4f9500c0:gitter.im joined the room
+02/02/2023, 19:43:03 - @eslam-naser-5ace5d5dd73408ce4f954ab0:gitter.im joined the room
+02/02/2023, 19:43:03 - @mithunholi-5ad6ec49d73408ce4f961835:gitter.im joined the room
+02/02/2023, 19:43:04 - @baneeishaque-5a66d3cbd73408ce4f89a998:gitter.im joined the room
+02/02/2023, 19:43:04 - @viswa88-5adc0683d73408ce4f96975c:gitter.im joined the room
+02/02/2023, 19:43:05 - @vamsc0801_twitter-5ae018a6d73408ce4f96fb91:gitter.im joined the room
+02/02/2023, 19:43:05 - @rezaprimasatya-550eb3e715522ed4b3dda102:gitter.im joined the room
+02/02/2023, 19:43:06 - @zhangzhenhuajack-57b1c1cb40f3a6eec05f8cfa:gitter.im joined the room
+02/02/2023, 19:43:06 - @hathagat-5909c1c3d73408ce4f5ca1f4:gitter.im joined the room
+02/02/2023, 19:43:07 - @daftengineer-5a58984cd73408ce4f87cbad:gitter.im joined the room
+02/02/2023, 19:43:07 - @khaile-5607561c0fc9f982beb1f573:gitter.im joined the room
+02/02/2023, 19:43:08 - @mvk-59b857f8d73408ce4f757e0a:gitter.im joined the room
+02/02/2023, 19:43:09 - @dominiclawson-5b336bbcd73408ce4f9ec80b:gitter.im joined the room
+02/02/2023, 19:43:09 - @nguyenhongphi19823-5b432317d73408ce4fa01d8d:gitter.im joined the room
+02/02/2023, 19:43:10 - @devops.vikas_gitlab-5b4c052bd73408ce4fa0fc0f:gitter.im joined the room
+02/02/2023, 19:43:11 - @pradeepyadav1788-5b56124bd73408ce4fa201bf:gitter.im joined the room
+02/02/2023, 19:43:11 - @zeroingsu-5b57e713d73408ce4fa2311f:gitter.im joined the room
+02/02/2023, 19:43:12 - @ryttuo-5b65ac6bd73408ce4fa37cc5:gitter.im joined the room
+02/02/2023, 19:43:12 - @wappoint-5912c6a6d73408ce4f5e62bd:gitter.im joined the room
+02/02/2023, 19:43:13 - @sudhanshu7348-5b71b1abd73408ce4fa47601:gitter.im joined the room
+02/02/2023, 19:43:13 - @arunsanna-5915ae64d73408ce4f5f0897:gitter.im joined the room
+02/02/2023, 19:43:14 - @lexx1st-5aca231fd73408ce4f94d351:gitter.im joined the room
+02/02/2023, 19:43:15 - @mrromanosays-591ef796d73408ce4f60be96:gitter.im joined the room
+02/02/2023, 19:43:15 - @rajasekharponakala-595f7c37d73408ce4f6c1354:gitter.im joined the room
+02/02/2023, 19:43:16 - @deepy-5ac09366d73408ce4f93f01b:gitter.im joined the room
+02/02/2023, 19:43:16 - @ishaan28malik-5b52e812d73408ce4fa1c2c2:gitter.im joined the room
+02/02/2023, 19:43:17 - @vinisiva-5b0278c6d73408ce4f9a1627:gitter.im joined the room
+02/02/2023, 19:43:18 - @professorcoal-588f994cd73408ce4f470497:gitter.im joined the room
+02/02/2023, 19:43:18 - @stipec502m_twitter-5ba7e45fd73408ce4fa91cc0:gitter.im joined the room
+02/02/2023, 19:43:19 - @babajidemm-5bab4706d73408ce4fa96a8d:gitter.im joined the room
+02/02/2023, 19:43:19 - @tradingbills-5b3f732cd73408ce4f9fda72:gitter.im joined the room
+02/02/2023, 19:43:20 - @mrdo5-5babf320d73408ce4fa97f9a:gitter.im joined the room
+02/02/2023, 19:43:20 - @ronakjain2012-5bb52503d73408ce4faa4453:gitter.im joined the room
+02/02/2023, 19:43:21 - @nurhannankhairi-5ba898b9d73408ce4fa92684:gitter.im joined the room
+02/02/2023, 19:43:22 - @devmonkey87-5b4718f0d73408ce4fa0904e:gitter.im joined the room
+02/02/2023, 19:43:23 - @collisiondetection-5bbf1d69d73408ce4fab162d:gitter.im joined the room
+02/02/2023, 19:43:23 - @daniellecandid-5be20e8bd73408ce4fae1398:gitter.im joined the room
+02/02/2023, 19:43:24 - @vinayak-prime-5a1c04e4d73408ce4f807665:gitter.im joined the room
+02/02/2023, 19:43:24 - @srini555-5b3284c7d73408ce4f9eb304:gitter.im joined the room
+02/02/2023, 19:43:25 - @micedre-5bed2543d73408ce4faefc5a:gitter.im joined the room
+02/02/2023, 19:43:26 - @stuartrowe-5ac010d3d73408ce4f93e9a9:gitter.im joined the room
+02/02/2023, 19:43:26 - @gopi78999-5bbf142ad73408ce4fab14a3:gitter.im joined the room
+02/02/2023, 19:43:27 - @lnorr-5aa57fd4d73408ce4f90e39f:gitter.im joined the room
+02/02/2023, 19:43:28 - @markoshiva-5993167ad73408ce4f71796d:gitter.im joined the room
+02/02/2023, 19:43:28 - @rt-devops_gitlab-5c087caed73408ce4fb11744:gitter.im joined the room
+02/02/2023, 19:43:29 - @seriouszyx-5b69471cd73408ce4fa3be71:gitter.im joined the room
+02/02/2023, 19:43:29 - @kruczku-5c0cee74d73408ce4fb161a3:gitter.im joined the room
+02/02/2023, 19:43:30 - @anshbhushan-57501c47c43b8c60197653d1:gitter.im joined the room
+02/02/2023, 19:43:30 - @aymenbraiek-5b47206cd73408ce4fa09153:gitter.im joined the room
+02/02/2023, 19:43:31 - @luke7oaks-58cb7077d73408ce4f5178e0:gitter.im joined the room
+02/02/2023, 19:43:31 - @motethansen_twitter-5a4642b4d73408ce4f8548d8:gitter.im joined the room
+02/02/2023, 19:43:35 - @zava2012-5c22a77fd73408ce4fb2de90:gitter.im joined the room
+02/02/2023, 19:43:35 - @nagaraju02-58f271b4d73408ce4f58a317:gitter.im joined the room
+02/02/2023, 19:43:36 - @sheerintaj-5be2fd4ed73408ce4fae2886:gitter.im joined the room
+02/02/2023, 19:43:36 - @jabbarhung_gitlab-5c2f05f1d73408ce4fb399a6:gitter.im joined the room
+02/02/2023, 19:43:37 - @raamc21-5c3cc93fd73408ce4fb4a911:gitter.im joined the room
+02/02/2023, 19:43:38 - @hemanth22-5a11769cd73408ce4f7f45a7:gitter.im joined the room
+02/02/2023, 19:43:38 - @tdjordan_gitlab-5c40bf56d73408ce4fb51c33:gitter.im joined the room
+02/02/2023, 19:43:39 - @clusterer-5c49a146d73408ce4fb5ca65:gitter.im joined the room
+02/02/2023, 19:43:40 - @daljitsinz-5c3e243ad73408ce4fb4d556:gitter.im joined the room
+02/02/2023, 19:43:42 - @lamas_alberto_twitter-5c3896bed73408ce4fb4588e:gitter.im joined the room
+02/02/2023, 19:43:43 - @sshahrier-58110483d73408ce4f310ed0:gitter.im joined the room
+02/02/2023, 19:43:44 - @r4d1um-5c58452fd73408ce4fb6d5ac:gitter.im joined the room
+02/02/2023, 19:43:44 - @younesezzarouali-5c652b7cd73408ce4fb7c522:gitter.im joined the room
+02/02/2023, 19:43:45 - @mluyo3414-596ce8bdd73408ce4f6d8a8b:gitter.im joined the room
+02/02/2023, 19:43:46 - @puritanic-58849f1bd73408ce4f453215:gitter.im joined the room
+02/02/2023, 19:43:46 - @hho-577cf662c2f0db084a21b409:gitter.im joined the room
+02/02/2023, 19:43:47 - @prashant1k99-5c78bfa6d73408ce4fb94905:gitter.im joined the room
+02/02/2023, 19:43:48 - @rks2827-5c7d8fe6d73408ce4fb99eee:gitter.im joined the room
+02/02/2023, 19:43:48 - @surfur257-5c870822d73408ce4fba56fa:gitter.im joined the room
+02/02/2023, 19:43:49 - @bkhouri-5c1d506ad73408ce4fb2a1db:gitter.im joined the room
+02/02/2023, 19:43:49 - @dyslexictech-57095d62187bb6f0eadea890:gitter.im joined the room
+02/02/2023, 19:43:50 - @sriniva63328880_twitter-5ca0fa2fd73408ce4fbc5dcd:gitter.im joined the room
+02/02/2023, 19:43:51 - @rageshchalil-5a744a96d73408ce4f8b5f88:gitter.im joined the room
+02/02/2023, 19:43:51 - @qecelab-5cb4ee53d73408ce4fbdcbf7:gitter.im joined the room
+02/02/2023, 19:43:52 - @mat1e-5ca7173fd73408ce4fbcdfff:gitter.im joined the room
+02/02/2023, 19:43:52 - @szczepix-599d7a7dd73408ce4f72a1a6:gitter.im joined the room
+02/02/2023, 19:43:53 - @prabhatkjena-5cda5631d73408ce4fc032da:gitter.im joined the room
+02/02/2023, 19:43:54 - @nathantran-zl-5ab90582d73408ce4f932e24:gitter.im joined the room
+02/02/2023, 19:43:54 - @reedhhw-5c504e5ad73408ce4fb64121:gitter.im joined the room
+02/02/2023, 19:43:55 - @brentjweaver-5b3a8b89d73408ce4f9f6066:gitter.im joined the room
+02/02/2023, 19:43:55 - @dharif23-5cf9a395d73408ce4fc2666a:gitter.im joined the room
+02/02/2023, 19:43:56 - @yanganggao_twitter-5d0b2d1dd73408ce4fc405ba:gitter.im joined the room
+02/02/2023, 19:43:57 - @ricotoothless-5bd5a1c3d73408ce4fad070d:gitter.im joined the room
+02/02/2023, 19:43:57 - @johnnygladwin1991-5c767e78d73408ce4fb91791:gitter.im joined the room
+02/02/2023, 19:43:58 - @lemesvinicius-5cddca89d73408ce4fc07f11:gitter.im joined the room
+02/02/2023, 19:43:59 - @runzexia-5a20b9d8d73408ce4f81228b:gitter.im joined the room
+02/02/2023, 19:43:59 - @honorarac-5d2a56c7d73408ce4fc5fd05:gitter.im joined the room
+02/02/2023, 19:44:00 - @sheeeng-5c7fc1a2d73408ce4fb9cf4c:gitter.im joined the room
+02/02/2023, 19:44:00 - @avikhazra-5bef3a0dd73408ce4faf36e6:gitter.im joined the room
+02/02/2023, 19:44:01 - @fossjoseph_gitlab-5d41bc2dd73408ce4fc76b0f:gitter.im joined the room
+02/02/2023, 19:44:02 - @ite-klass-5d49589cd73408ce4fc7d1b7:gitter.im joined the room
+02/02/2023, 19:44:02 - @malipramod-5d513c87d73408ce4fc83d02:gitter.im joined the room
+02/02/2023, 19:44:03 - @asingh1989-5d538ce0d73408ce4fc862e5:gitter.im joined the room
+02/02/2023, 19:44:04 - @bsingarayan-5c90144ed73408ce4fbb0dcb:gitter.im joined the room
+02/02/2023, 19:44:04 - @zapkto_twitter-59ad9f75d73408ce4f7448f3:gitter.im joined the room
+02/02/2023, 19:44:05 - @ridinershylee-5d635f9dd73408ce4fc93bad:gitter.im joined the room
+02/02/2023, 19:44:06 - @udaykumar1995-5c9cf6b5d73408ce4fbc1fb1:gitter.im joined the room
+02/02/2023, 19:44:06 - @omehegan-5a97439ad73408ce4f8f521b:gitter.im joined the room
+02/02/2023, 19:44:07 - @ludge-56a7fcdce610378809be5bd3:gitter.im joined the room
+02/02/2023, 19:44:08 - @sothylorn_gitlab-5d708bd8d73408ce4fca0c18:gitter.im joined the room
+02/02/2023, 19:44:08 - @skrish58-5c8d0f36d73408ce4fbadcd8:gitter.im joined the room
+02/02/2023, 19:44:09 - @e-mt_gitlab-5d82a168d73408ce4fcb678c:gitter.im joined the room
+02/02/2023, 19:44:09 - @artdodger-582d82c9d73408ce4f36808f:gitter.im joined the room
+02/02/2023, 19:44:10 - @baranikannan-5cefc9cbd73408ce4fc1c042:gitter.im joined the room
+02/02/2023, 19:44:11 - @jamal_chaouqi_twitter-5d93b422d73408ce4fcc9bac:gitter.im joined the room
+02/02/2023, 19:44:11 - @akemoah-5d8c735dd73408ce4fcc16f3:gitter.im joined the room
+02/02/2023, 19:44:12 - @kaustubh-seachange-5d96dd5ad73408ce4fccdae0:gitter.im joined the room
+02/02/2023, 19:44:13 - @ukuko-5da56c88d73408ce4fcdd9eb:gitter.im joined the room
+02/02/2023, 19:44:13 - @akbaruddin-5955ee4bd73408ce4f6af47c:gitter.im joined the room
+02/02/2023, 19:44:14 - @takan86000273_twitter-5dbdaf75d73408ce4fcfc30d:gitter.im joined the room
+02/02/2023, 19:44:15 - @ljdoe_gitlab-5dbfbfd1d73408ce4fcfdd9a:gitter.im joined the room
+02/02/2023, 19:44:15 - @kevinelectronics-5dc9dcf3d73408ce4fd0b21b:gitter.im joined the room
+02/02/2023, 19:44:16 - @samuelbernardo-5cb5f8e7d73408ce4fbde2f9:gitter.im joined the room
+02/02/2023, 19:44:17 - @mhmmderen3-5d8089cad73408ce4fcb2b7a:gitter.im joined the room
+02/02/2023, 19:44:17 - @puneetjindal30802-5dde20edd73408ce4fd2410d:gitter.im joined the room
+02/02/2023, 19:44:18 - @sridhar514-5de7e7c2d73408ce4fd314aa:gitter.im joined the room
+02/02/2023, 19:44:18 - @vass.software_gitlab-5df171cbd73408ce4fd3ceef:gitter.im joined the room
+02/02/2023, 19:44:19 - @suarez677-5be05ef3d73408ce4fadeb95:gitter.im joined the room
+02/02/2023, 19:44:20 - @kmrnitish-5e1ec49fd73408ce4fd6b614:gitter.im joined the room
+02/02/2023, 19:44:21 - @lper1582-5e14f834d73408ce4fd5fee2:gitter.im joined the room
+02/02/2023, 19:44:21 - @alina-damoc-57a5f1d740f3a6eec05e3798:gitter.im joined the room
+02/02/2023, 19:44:22 - @jmeisele-5d384543d73408ce4fc6d70b:gitter.im joined the room
+02/02/2023, 19:44:23 - @sivasankaramalan-5bb5dca6d73408ce4faa5220:gitter.im joined the room
+02/02/2023, 19:44:23 - @vrssun84-5e596dbad73408ce4fdb16b8:gitter.im joined the room
+02/02/2023, 19:44:24 - @kathir7893-5e5df0ccd73408ce4fdb64ac:gitter.im joined the room
+02/02/2023, 19:44:25 - @rodscaloppe-5c2fc138d73408ce4fb3ac27:gitter.im joined the room
+02/02/2023, 19:44:25 - @jokerdevops-5cf8b119d73408ce4fc25070:gitter.im joined the room
+02/02/2023, 19:44:26 - @blasan-5e4da377d73408ce4fda1f81:gitter.im joined the room
+02/02/2023, 19:44:27 - @meganangelinaam_twitter-5b9cbed7d73408ce4fa8408a:gitter.im joined the room
+02/02/2023, 19:44:27 - @satyamk328-5e901335d73408ce4fdfedd5:gitter.im joined the room
+02/02/2023, 19:44:28 - @vishnupersonal-5d9362ecd73408ce4fcc93e2:gitter.im joined the room
+02/02/2023, 19:44:28 - @juanelopezm-5ea1da5dd73408ce4fe17b91:gitter.im joined the room
+02/02/2023, 19:44:29 - @clarephang-5d69d099d73408ce4fc9acc0:gitter.im joined the room
+02/02/2023, 19:44:29 - @user030276-5ec3e9a0d73408ce4fe43b73:gitter.im joined the room
+02/02/2023, 19:44:30 - @rajkumargh-5ec28eaed73408ce4fe41c73:gitter.im joined the room
+02/02/2023, 19:44:31 - @bnlambert-57331643c43b8c6019723f51:gitter.im joined the room
+02/02/2023, 19:44:31 - @ljackiewicz-5ee5712ad73408ce4fe6d231:gitter.im joined the room
+02/02/2023, 19:44:32 - @vphacker-5ef23bdbd73408ce4fe7b593:gitter.im joined the room
+02/02/2023, 19:44:32 - @skundrik-5ea1e978d73408ce4fe17d04:gitter.im joined the room
+02/02/2023, 19:44:33 - @daxgames-5a2f4974d73408ce4f82e0ef:gitter.im joined the room
+02/02/2023, 19:44:33 - @jmkuik_gitlab-5ee8b325d73408ce4fe70818:gitter.im joined the room
+02/02/2023, 19:44:34 - @masber-56a1a1c9e610378809bd9616:gitter.im joined the room
+02/02/2023, 19:44:35 - @lishilin4510-5f476dbbd73408ce4fed4e56:gitter.im joined the room
+02/02/2023, 19:44:35 - @mouador-5e667696d73408ce4fdc27a6:gitter.im joined the room
+02/02/2023, 19:44:36 - @jwnmulder-5f6afc69d73408ce4fefa3fd:gitter.im joined the room
+02/02/2023, 19:44:37 - @duongdinhhoa-5f8517ddd73408ce4ff1613f:gitter.im joined the room
+02/02/2023, 19:44:37 - @prakashkushtagi-5e4e154dd73408ce4fda256c:gitter.im joined the room
+02/02/2023, 19:44:38 - @chinnusujitha-5aeffa1ad73408ce4f9859d4:gitter.im joined the room
+02/02/2023, 19:44:39 - @rjit_gitlab-5f9a3228d73408ce4ff2bcf6:gitter.im joined the room
+02/02/2023, 19:44:39 - @klassmarketing-5f9b9ca9d73408ce4ff2d7c7:gitter.im joined the room
+02/02/2023, 19:44:40 - @luisbenavideswhiz_gitlab-5fa58b66d73408ce4ff372fa:gitter.im joined the room
+02/02/2023, 19:44:41 - @voxis_gitlab-5fa5d2c3d73408ce4ff376d3:gitter.im joined the room
+02/02/2023, 19:44:41 - @rubix982-5da2a33dd73408ce4fcdacee:gitter.im joined the room
+02/02/2023, 19:44:42 - @dm_try_twitter-5fb4041dd73408ce4ff445f6:gitter.im joined the room
+02/02/2023, 19:44:42 - @faisal_bester_gitlab-5fb66020d73408ce4ff4701a:gitter.im joined the room
+02/02/2023, 19:44:43 - @jalaziz-529c69efed5ab0b3bf04d1f5:gitter.im joined the room
+02/02/2023, 19:44:44 - @sc188-5fc01b18d73408ce4ff50bec:gitter.im joined the room
+02/02/2023, 19:44:46 - @b18050-5c11367fd73408ce4fb1bc88:gitter.im joined the room
+02/02/2023, 19:44:47 - @satty172222-5fdc3648d73408ce4ff6d1f7:gitter.im joined the room
+02/02/2023, 19:44:48 - @64bitf00-5f371786d73408ce4fec487e:gitter.im joined the room
+02/02/2023, 19:44:48 - @vicyork-55eca9df0fc9f982beafd6e2:gitter.im joined the room
+02/02/2023, 19:44:49 - @leoniscsem-5a6c2353d73408ce4f8a5cc9:gitter.im joined the room
+02/02/2023, 19:44:49 - @sharmapulkit04-5f86dcb5d73408ce4ff18086:gitter.im joined the room
+02/02/2023, 19:44:50 - @jarson2014-6049aea96da03739846827c0:gitter.im joined the room
+02/02/2023, 19:44:51 - @tohrongquan_twitter-604b1f556da037398468d6cb:gitter.im joined the room
+02/02/2023, 19:44:51 - @viviyorg_twitter-604f356f6da03739846c28f7:gitter.im joined the room
+02/02/2023, 19:44:52 - @mtjolzhufeng-6052c7d46da03739846ed2e6:gitter.im joined the room
+02/02/2023, 19:44:53 - @ugur99-605c3e496da0373984773cc4:gitter.im joined the room
+02/02/2023, 19:44:53 - @chintan-synapse-606ba7156da0373984795e24:gitter.im joined the room
+02/02/2023, 19:44:54 - @shyamtsr-5f433da0d73408ce4fecfae3:gitter.im joined the room
+02/02/2023, 19:44:55 - @tupham1508-6077afd06da03739847a2e5f:gitter.im joined the room
+02/02/2023, 19:44:55 - @nishigami-0-60a65c236da03739847d07a1:gitter.im joined the room
+02/02/2023, 19:44:56 - @shishuchao-60a6fcac6da03739847d1214:gitter.im joined the room
+02/02/2023, 19:44:57 - @siriplanet_twitter-60700db16da037398479b866:gitter.im joined the room
+02/02/2023, 19:44:57 - @kubendra-60cd12f86da03739847f32f4:gitter.im joined the room
+02/02/2023, 19:44:58 - @montako-574ba4e3c43b8c601975a34e:gitter.im joined the room
+02/02/2023, 19:44:58 - @nbhirud-58aead72d73408ce4f4c5931:gitter.im joined the room
+02/02/2023, 19:44:59 - @birane012-61394c8b6da0373984851729:gitter.im joined the room
+02/02/2023, 19:44:59 - @buzz-dee-5e42e880d73408ce4fd95ae0:gitter.im joined the room
+02/02/2023, 19:45:00 - @sairambas-61d548d76da03739848da65d:gitter.im joined the room
+02/02/2023, 19:45:01 - @kamuridesu-61dc3e346da03739848dfbc6:gitter.im joined the room
+02/02/2023, 19:45:01 - @jdpinedac-620d0c646da037398490756a:gitter.im joined the room
+02/02/2023, 19:45:02 - @moe-a-m_gitlab-620d82956da0373984907b38:gitter.im joined the room
+02/02/2023, 19:45:03 - @neilajt-6228b3d36da037398491e33c:gitter.im joined the room
+02/02/2023, 19:45:03 - @rctr_gitlab-628eb4946da03739849749b3:gitter.im joined the room
+02/02/2023, 19:45:04 - @benzengin-620f785f6da0373984909330:gitter.im joined the room
+02/02/2023, 19:45:04 - @hemanthmarella-62ce5f636da037398499f89c:gitter.im joined the room
+02/02/2023, 19:45:05 - @mkanoune_gitlab-631cdff96da03739849c82f3:gitter.im joined the room
+02/02/2023, 19:45:05 - @subzer0570-635123a46da03739849e1765:gitter.im joined the room
+02/02/2023, 19:45:06 - @saileshkhadka-63624c5b6da03739849ec9a4:gitter.im joined the room
+02/02/2023, 19:45:07 - @samycolen-636bb72d6da03739849f4000:gitter.im joined the room
+02/02/2023, 19:45:07 - @msglog-5e95fb4bd73408ce4fe06c84:gitter.im joined the room
+02/02/2023, 19:45:08 - @batman005-62a0697b6da03739849829a2:gitter.im joined the room
+02/02/2023, 19:45:08 - @harsh3341_gitlab-63d7dc4c6da0373984bda2b1:gitter.im joined the room
+04/02/2023, 08:20:32 - Kris Stern: It's so strange, I did not change the Jenkins version but somehow it was changed to 2.375.2... Am reverting this change now
+08/02/2023, 17:17:42 - @impact-maker-61dfead16da03739848e3bc0:gitter.im joined the room
+08/02/2023, 17:17:43 - @impact-maker-61dfead16da03739848e3bc0:gitter.im: Hi, Is there any instructions to build the gitlab-plugin code. I tried to build the code on my local but failing to due so.
+08/02/2023, 17:18:52 - Kris Stern: Hi impact-maker (impact-maker) What operating system are you using?
+08/02/2023, 22:49:43 - @aagutu-63e2154f6da0373984be0f25:gitter.im joined the room
+08/02/2023, 22:49:44 - @pjflux2001-63dac5986da0373984bdc689:gitter.im joined the room
+09/02/2023, 06:19:34 - @impact-maker-61dfead16da03739848e3bc0:gitter.im: hi, I am using linux operating system
+09/02/2023, 07:15:36 - Kris Stern: Do you have the stack trace for your failed build?
+09/02/2023, 07:16:48 - Kris Stern: Also, would be great if you could provide the steps so we could check the issue for you
+09/02/2023, 09:26:54 - @impact-maker-61dfead16da03739848e3bc0:gitter.im: Hi kris I tried to build the code in intellij and I am getting the following error /home/mandeep/Desktop/Jenkins-Projects/gitlab-plugin/src/main/java/com/dabsquared/gitlabjenkins/trigger/branch/ProjectBranchesProvider.java:3:36
+java: cannot find symbol
+  symbol:   class Messages
+  location: package com.dabsquared.gitlabjenkins
+09/02/2023, 15:54:36 - @baneeishaque:matrix.org joined the room
+14/02/2023, 11:27:26 - @notmyfault1:matrix.org joined the room
+14/02/2023, 12:20:28 - @notmyfault1:matrix.org left the room
+14/02/2023, 13:56:12 - MarkEWaite (Mark Waite) joined the room
+14/02/2023, 14:28:17 - Harsh3341_gitlab (Harsh Gupta) changed their display name to Harsh3341 (Harsh Gupta)
+15/02/2023, 17:00:15 - @harsh3341:matrix.org joined the room
+17/02/2023, 20:25:57 - Kris Stern: Hi impact-maker (impact-maker) My apologies for having missed your last message
+17/02/2023, 20:26:54 - Kris Stern: So did you check all the required maven dependencies are available in IntelliJ?
+17/02/2023, 20:27:51 - Kris Stern: Screenshot 2023-02-18 at 3.27.24 AM.png (Media omitted)
+17/02/2023, 20:28:57 - Kris Stern: So you could find such mvn dependencies via the "Maven" tab which is usually on the right margin of the IDE. You can refresh if not all dependencies are "resolved". 
+23/02/2023, 13:01:03 - batman005 (Hrithik Goswami) changed their display name to Hrithik Goswami (batman005)
+25/02/2023, 08:53:31 - @lper1582-5e14f834d73408ce4fd5fee2:gitter.im changed their profile picture
+09/03/2023, 05:09:53 - harsh-ps-2003 (Harsh Pratap Singh) joined the room
+09/03/2023, 05:14:16 - harsh-ps-2003 (Harsh Pratap Singh): Kris Stern: I just came to know about this channel. Can we discuss the GSoC project related stuff here instead of main channel?
+09/03/2023, 10:06:47 - Kris Stern: Sure
+09/03/2023, 10:48:19 - harsh-ps-2003 (Harsh Pratap Singh): Kris Stern: all the issues listed in the good first issues label are based on exception handling. can I try some harder issues to deepen my understanding. can you suggest some issue through which I could learn more. its really no use to just solve issues that are based on try-catch🙁
+09/03/2023, 11:05:56 - harsh-ps-2003 (Harsh Pratap Singh): Kris Stern: and btw, i was trying to use intellij debugger to understand the flow of the program in the codebase better. i ran jenkins in debug mode and and tried running the remote debugging and go this successfully `Connected to the target VM, address: 'localhost:8000', transport: 'socket'`. i think i should send a get request to an endpoint to the server listening on 8000. can i get a bit of help in this. 
+09/03/2023, 11:25:09 - harsh-ps-2003 (Harsh Pratap Singh): Kris Stern: sorry but I have one more doubt. gitlab4j provides its own set of models to use, thus we will need to replace the already used models with the newer models. but I am not able to find similar enums in gitlab4j for replacement. so are we going to use the same enums that are present currently in the codebase or am I missing something!
+09/03/2023, 21:35:21 - Kris Stern: Hi harsh-ps-2003 (Harsh Pratap Singh) As your questions will take some time to prepare answers for, I will get back to you later for these. 
+11/03/2023, 02:18:19 - harsh-ps-2003 (Harsh Pratap Singh): Kris Stern: is the reason of this bug in the gitlab plugin codebase - [#1171](https://github.com/jenkinsci/gitlab-plugin/issues/1171). I havent seen code related to custom workspaces in the codebase. what am I missing?
+11/03/2023, 03:07:32 - Kris Stern: Yes, that's correct
+11/03/2023, 03:09:54 - harsh-ps-2003 (Harsh Pratap Singh): <@krisstern:matrix.org "Yes, that's correct"> sorry but whats correct! I am not able to find relevant code🥲
+11/03/2023, 03:10:37 - Kris Stern: It is correct that the problem has to do with custom workspace
+11/03/2023, 03:12:04 - harsh-ps-2003 (Harsh Pratap Singh): I am able to reproduce this issue.
+11/03/2023, 03:12:34 - Kris Stern: I think the enums you will need to use the replace the existing ones are at the bottom of this page: https://javadoc.io/doc/org.gitlab4j/gitlab4j-api/latest/org/gitlab4j/api/models/package-summary.html
+11/03/2023, 03:13:46 - Kris Stern: The modernisation project is non-trivial so will require some rewrite
+11/03/2023, 03:15:06 - Kris Stern: The next natural step would be to figure out what are the relevant parts of the codebases are involved for this bug, and make changes accordingly. 
+11/03/2023, 03:15:43 - harsh-ps-2003 (Harsh Pratap Singh): <@krisstern:matrix.org "I think the enums you will need ..."> the names of the enums were not matching. thats why asked
+11/03/2023, 03:15:55 - Kris Stern: Hi harsh-ps-2003 (Harsh Pratap Singh) What exactly is that you are trying to do?
+11/03/2023, 03:16:17 - Kris Stern: They don't have to match
+11/03/2023, 03:16:30 - Kris Stern: Hence a lot more work will be required
+11/03/2023, 03:16:34 - harsh-ps-2003 (Harsh Pratap Singh): <@krisstern:matrix.org "The next natural step would be t..."> thats what I was doing. was not able to pinpoint where the plugin is handling custom workspaces. 
+11/03/2023, 03:16:58 - Kris Stern: That part is not necessarily in the plugin
+11/03/2023, 03:17:13 - harsh-ps-2003 (Harsh Pratap Singh): <@krisstern:matrix.org "Hence a lot more work will be re..."> nice! I will look into them a bit more.
+11/03/2023, 03:17:44 - Kris Stern: You could mention this in your proposal as well
+11/03/2023, 03:18:12 - harsh-ps-2003 (Harsh Pratap Singh): so is jenkins handling custom workspaces part?
+11/03/2023, 03:19:05 - Kris Stern: Think so, but somehow the custom directory detail has not been cached or stored somewhere from the look of things
+11/03/2023, 03:19:34 - harsh-ps-2003 (Harsh Pratap Singh): <@krisstern:matrix.org "You could mention this in your p..."> oh! I will after some reasearch. thanks a ton. btw have you seen the changes I made to my proposal. if you have time please point out more scope of improvement 
+11/03/2023, 03:20:07 - Kris Stern: I will have some time later today to have a look
+11/03/2023, 03:21:42 - harsh-ps-2003 (Harsh Pratap Singh): <@krisstern:matrix.org "Think so, but somehow the custom..."> I came up with 2 possible reasons, either gitlab plugin is overwriting to the default value or there is a caching issue with jenkins
+11/03/2023, 03:23:14 - harsh-ps-2003 (Harsh Pratap Singh): use intellijs debugger to understand the flow of program 
+11/03/2023, 03:24:08 - harsh-ps-2003 (Harsh Pratap Singh): its a pretty basic skill to know how to debug without logs, thus wanted to learn how to use the debugger. I find it cool
+11/03/2023, 03:26:14 - harsh-ps-2003 (Harsh Pratap Singh): <@krisstern:matrix.org "They don't have to match"> atleast the model classes match. 
+11/03/2023, 03:42:11 - Kris Stern: Maybe try and come up with a fix for this issue
+11/03/2023, 04:13:31 - harsh-ps-2003 (Harsh Pratap Singh): in college class right now. will try my hands on this issue. I am sure I will learn something new
+11/03/2023, 04:16:19 - Kris Stern: Cool 😎
+11/03/2023, 09:19:41 - harsh-ps-2003 (Harsh Pratap Singh): <@krisstern:matrix.org "Hi harsh-ps-2003 (Harsh Pratap S..."> remote debugging the jenkins instance 
+11/03/2023, 11:28:12 - Kris Stern: So do you mean you are using Gitpod for launching the Jenkins instance?
+11/03/2023, 11:28:44 - Kris Stern: Sure!
+11/03/2023, 12:27:07 - harsh-ps-2003 (Harsh Pratap Singh): no man! jenkins container
+11/03/2023, 12:28:19 - Kris Stern: I see
+11/03/2023, 12:43:55 - harsh-ps-2003 (Harsh Pratap Singh): remote debugging has to be done as Jenkins is running inside a container. when I will be able to connect to it using IntelliJ, I will use gitlab's webhook to trigger a build in Jenkins and that how I will be able to understand the code better.
+11/03/2023, 12:56:00 - harsh-ps-2003 (Harsh Pratap Singh): debugging is necessary for me to try to solve #1171. I will be able to pin point the cause of the bug with the help of debugging 
+11/03/2023, 13:04:24 - Kris Stern: Hopefully I am understanding your issue accurately, but can we not add a testing stage as they describe in here at https://www.jenkins.io/doc/tutorials/build-a-java-app-with-maven/#add-a-test-stage-to-your-pipeline once we have added the tests needed?
+11/03/2023, 13:09:49 - Kris Stern: But to answer your original question, have you not tried using `curl` as in `curl -v http://localhost:8000/` or maybe even `curl -v http://jenkins:8080/`?
+11/03/2023, 13:12:56 - Kris Stern: Since you are accessing Jenkins from within another container you have to use the port 8080 because this port is exposed within the network by default
+11/03/2023, 13:16:49 - harsh-ps-2003 (Harsh Pratap Singh): <@krisstern:matrix.org "Since you are accessing Jenkins ..."> I am using `-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:8080` to connect to jenkins container, but jenkins is not able to establish connection. I am trying to find out why
+11/03/2023, 13:17:48 - Kris Stern: I see... How about curling to port 8000? 
+11/03/2023, 13:22:33 - harsh-ps-2003 (Harsh Pratap Singh): I think we need to get on same page, what you are trying to do is run jenkins on debug mode and then use curl to make http get request. but this approach will not help me debug the gitlab-plugin as for debugging the plugin webhook has to trigger jenkins job, which can happen if Jvm remote debugger is connected to jenkins inside container using port 8080 and then I can use gitlab to trigger jenkins. 
+11/03/2023, 13:27:13 - Kris Stern: <@harsh-ps-2003-63ce2d0d6da0373984bd6022:gitter.im "remote debugging has to be done ..."> I see, sorry about the confusion as I am not sure which step you still have issue(s) with. 
+11/03/2023, 13:30:17 - Kris Stern: I think the best way to test this would be via some test case which we can automate (reference: https://www.jenkins.io/doc/developer/testing/). Anyway this is a goal that may or may not be possible to achieve, which we could look into later. 
+11/03/2023, 13:31:49 - Kris Stern: I think the most relevant section in the testing doc for us is the section at https://www.jenkins.io/doc/developer/testing/#configuration-round-trip-testing
+11/03/2023, 13:31:51 - harsh-ps-2003 (Harsh Pratap Singh): <@krisstern:matrix.org "I see, sorry about the confusion..."> okay! I will share a video with you for better communication.
+11/03/2023, 13:32:25 - Kris Stern: Sure
+11/03/2023, 14:30:54 - harsh-ps-2003 (Harsh Pratap Singh): Kris Stern: couldn't really understand what you said -If it helps, code snippets would not be a bad idea to share what you have tried and worked previously. - what I was trying to say was, should I try to migrate any random class out of the codebase and add that in my proposal? I have already tried to explain the process of updating api calls briefly and I already added a code snippet of using gitlab4j to Get a list of projects to show what a glimpse of migration will be. but I have not tried migrating on my own yet. what do you exactly want to see in my proposal?
+11/03/2023, 14:32:38 - Kris Stern: I think your proposal looks good enough as it stands. Maybe MarkEWaite (Mark Waite) the proposed lead mentor will have time to review it later once he is available. 
+11/03/2023, 14:34:18 - harsh-ps-2003 (Harsh Pratap Singh):  Kris Stern but I think mark has already reviewed it
+11/03/2023, 14:41:40 - Kris Stern: I just checked, I don't think you will need to add code snippets for that particular section concerned 
+11/03/2023, 14:43:12 - harsh-ps-2003 (Harsh Pratap Singh): <@krisstern:matrix.org "I just checked, I don't think yo..."> so its fine right! any other improvements?
+11/03/2023, 14:44:02 - Kris Stern: I would like to come back to your proposal after a few days to see if there is anything else I think you could edit it to improve it
+11/03/2023, 14:44:50 - harsh-ps-2003 (Harsh Pratap Singh): fine thanks a ton! till then I will try setting up the debugger. 
+11/03/2023, 14:47:05 - Kris Stern: Okay
+11/03/2023, 14:47:52 - Kris Stern: But do you mean to test with the debugger? 
+11/03/2023, 14:49:58 - harsh-ps-2003 (Harsh Pratap Singh): <@krisstern:matrix.org "But do you mean to test with the..."> no! I want to understand the gitlab-plugins program flow with the help of debugger. I wanted to see exactly why custom workspace is behaving like this
+11/03/2023, 14:50:12 - Kris Stern: I see
+11/03/2023, 15:05:21 - harsh-ps-2003 (Harsh Pratap Singh): 2023-03-11 19-28-30.mp4 (Media omitted)
+11/03/2023, 15:06:10 - harsh-ps-2003 (Harsh Pratap Singh): <@harsh-ps-2003-63ce2d0d6da0373984bd6022:gitter.im "sent a video."> are you able to understand the problem now Kris Stern?
+11/03/2023, 15:11:04 - Kris Stern: <@harsh-ps-2003-63ce2d0d6da0373984bd6022:gitter.im "Kris Stern: and btw, i was tryin..."> Actually I was trying to see what you meant by this when I was suggesting you to use `curl`. But you never really specified a question so I was not sure what you were doing.
+11/03/2023, 15:12:08 - Kris Stern: I was talking about testing because you mentioned you wanted to solve #1171. 
+11/03/2023, 15:12:36 - Kris Stern: I am not sure if using a debugger will help though, but having a test might
+11/03/2023, 15:15:06 - Kris Stern: So did you do this?: https://www.jetbrains.com/help/idea/debug-a-java-application-using-a-dockerfile.html#create-remote-debug-config
+11/03/2023, 15:15:58 - harsh-ps-2003 (Harsh Pratap Singh): Message deleted
+11/03/2023, 15:21:37 - Kris Stern: I saw you wrote that you tried using `-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:8080` to connect to the Jenkins container, hence my question. But I am not sure exactly what steps you took around this step. 
+11/03/2023, 16:16:46 - Kris Stern: Hi harsh-ps-2003 (Harsh Pratap Singh) I was able to reproduce the outcome you described earlier using IntelliJ
+11/03/2023, 16:17:05 - Kris Stern: Screenshot 2023-03-11 at 11.16.32 PM.png (Media omitted)
+11/03/2023, 16:18:33 - Kris Stern: If I were you, the next step would be to set breakpoints so that I could step through and debug the application as they write here at https://www.jetbrains.com/help/idea/run-and-debug-a-spring-boot-application-using-docker-compose.html#debug_app
+11/03/2023, 18:18:29 - Kris Stern: Hi harsh-ps-2003 (Harsh Pratap Singh) I did some more digging and was able to set up a version of the debugger which outputs to the console the stack trace once I have started the debugger, as follows...
+11/03/2023, 18:18:45 - Kris Stern: Screenshot 2023-03-12 at 1.15.33 AM.png (Media omitted)
+11/03/2023, 18:18:55 - Kris Stern: Screenshot 2023-03-12 at 1.16.02 AM.png (Media omitted)
+11/03/2023, 18:19:27 - Kris Stern: If you are interested in the config I have used I could share this later
+12/03/2023, 03:34:54 - harsh-ps-2003 (Harsh Pratap Singh): Screenshot 2023-03-12 at 8.04.40 AM.png (Media omitted)
+12/03/2023, 03:36:54 - harsh-ps-2003 (Harsh Pratap Singh): <@harsh-ps-2003-63ce2d0d6da0373984bd6022:gitter.im "sent an image."> Kris Stern: I got this, but I need to re-setup my test env as I updated docker and a havoc like situation happened after that
+12/03/2023, 05:20:37 - Kris Stern: Okay 👌
+12/03/2023, 05:26:51 - harsh-ps-2003 (Harsh Pratap Singh): Kris Stern: are you able to debug using the docker-compose config? I got `The Docker debug functionality will be deprecated in the next version. Please use Run targets in your run configurations to debug applications in Docker containers.`
+12/03/2023, 05:27:16 - Kris Stern: Actually I see the same warning
+12/03/2023, 05:28:42 - harsh-ps-2003 (Harsh Pratap Singh): <@krisstern:matrix.org "Actually I see the same warning"> 😅
+12/03/2023, 10:53:24 - harsh-ps-2003 (Harsh Pratap Singh): Screenshot 2023-03-12 at 3.23.10 PM.png (Media omitted)
+12/03/2023, 10:54:15 - harsh-ps-2003 (Harsh Pratap Singh): <@harsh-ps-2003-63ce2d0d6da0373984bd6022:gitter.im "sent an image."> Kris Stern: had to add env variables directly in docker compose file. for some reason port 8080 is not working but 50000 worked!
+12/03/2023, 10:57:39 - harsh-ps-2003 (Harsh Pratap Singh): Screenshot 2023-03-12 at 3.27.27 PM.png (Media omitted)
+12/03/2023, 11:52:40 - harsh-ps-2003 (Harsh Pratap Singh): Screenshot 2023-03-12 at 4.21.55 PM.png (Media omitted)
+12/03/2023, 12:24:07 - harsh-ps-2003 (Harsh Pratap Singh): <@harsh-ps-2003-63ce2d0d6da0373984bd6022:gitter.im "sent an image."> Kris Stern: 🎉
+12/03/2023, 14:59:04 - Kris Stern: Awesome 
+12/03/2023, 15:03:27 - harsh-ps-2003 (Harsh Pratap Singh): Kris Stern: not even able to find the code which is causing the issue 🥲 the codebase is too big to even search for custom workspaces. if this situation would have happened to you, how would you have figured it out?
+12/03/2023, 20:54:33 - harsh-ps-2003 (Harsh Pratap Singh) sent an image. (Media omitted)
+12/03/2023, 20:56:58 - harsh-ps-2003 (Harsh Pratap Singh): <@harsh-ps-2003-63ce2d0d6da0373984bd6022:gitter.im "sent an image."> Kris Stern: so I was trying to run Jenkins-core in debug mode to debug it but for some reason build failed! I wanted to use the debugger to reach custom workspace implementation in the codebase.
+13/03/2023, 01:52:15 - Kris Stern: Hi harsh-ps-2003 (Harsh Pratap Singh) What command did you use to run the tests?
+13/03/2023, 04:11:40 - harsh-ps-2003 (Harsh Pratap Singh): Kris Stern:  `mvnDebug clean install -DskipTests`didnt even run the tests
+13/03/2023, 06:07:58 - Kris Stern: I don't think we will need to debug Jenkins core unless we are sure the issue is upstream and a patch is needed there. 
+13/03/2023, 06:24:39 - harsh-ps-2003 (Harsh Pratap Singh): <@krisstern:matrix.org "I don't think we will need to de..."> Kris Stern: I was not debugging to find issue upstream, I just wanted to find out how is `setcustomworkspace` being setup in the jenkins core and was trying to find reasons on why was the bug happening only when gitlab plugin is enabled. felt lost in the huge codebase, thus was jus trying my way out. 🤓
+13/03/2023, 06:26:25 - harsh-ps-2003 (Harsh Pratap Singh): Kris Stern: and btw, for some reason, jenkins core is failing to build, kindof creepy!
+13/03/2023, 06:26:39 - harsh-ps-2003 (Harsh Pratap Singh): Screenshot 2023-03-13 at 10.51.21 AM.png (Media omitted)
+13/03/2023, 06:27:08 - Kris Stern: But what step have you taken before that happens?
+13/03/2023, 06:27:31 - harsh-ps-2003 (Harsh Pratap Singh): just pulled the code and tried mvn debug without tests
+13/03/2023, 06:33:01 - Kris Stern: For the building and debugging of the Jenkins core, there is a note where it says:
+> The WAR file will be created in war/target/jenkins.war. After that, you can start Jenkins using Java CLI (guide). If you want to debug the WAR file without using Maven plugins, You can run the executable with Remote Debug Flags and then attach IDE Debugger to it.
+13/03/2023, 06:33:53 - Kris Stern: I have tried the following and it seemed to work to some degree:
+```
+java -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005 -jar war/target/jenkins.war
+```
+13/03/2023, 07:55:47 - harsh-ps-2003 (Harsh Pratap Singh): <@harsh-ps-2003-63ce2d0d6da0373984bd6022:gitter.im "Kris Stern: and btw, for some re..."> but should error like these even come? I should have messed up something right?
+13/03/2023, 07:57:09 - harsh-ps-2003 (Harsh Pratap Singh): <@krisstern:matrix.org "For the building and debugging o..."> with this approach we are not using maven, directly connecting using jdwp.
+13/03/2023, 08:09:44 - Kris Stern: <@harsh-ps-2003-63ce2d0d6da0373984bd6022:gitter.im "but should error like these even..."> I am not sure why, as you have not explained what steps you took in detail
+13/03/2023, 08:44:49 - harsh-ps-2003 (Harsh Pratap Singh): <@krisstern:matrix.org "I am not sure why, as you have n..."> simple, cloned the jenkins repo, and did mvnDebug install -DskipTests. nothing complicated tbh
+13/03/2023, 08:47:05 - harsh-ps-2003 (Harsh Pratap Singh): can you please tell what are you not able to understand? should I again share a video for better communication. sorry if I am not able to convey properly
+13/03/2023, 08:47:10 - Kris Stern: But that's not the instructions given on this page: https://github.com/jenkinsci/jenkins/blob/master/CONTRIBUTING.md
+13/03/2023, 08:47:26 - Kris Stern: Maybe I better let you investigate the issue for yourself
+13/03/2023, 08:48:28 - harsh-ps-2003 (Harsh Pratap Singh): <@krisstern:matrix.org "Maybe I better let you investiga..."> okay! I will try handling it myself
+13/03/2023, 09:07:49 - harsh-ps-2003 (Harsh Pratap Singh): Screenshot 2023-03-13 at 1.37.24 PM.png (Media omitted)
+13/03/2023, 09:08:55 - Kris Stern: 👍️
+13/03/2023, 09:08:57 - harsh-ps-2003 (Harsh Pratap Singh): <@harsh-ps-2003-63ce2d0d6da0373984bd6022:gitter.im "sent an image."> Kris Stern: I just had some files clashing due to previous installations. sorry for the stupid question
+13/03/2023, 09:09:06 - Kris Stern: No worries
+13/03/2023, 13:35:43 - harsh-ps-2003 (Harsh Pratap Singh): Kris Stern: on debugging here is what I have found - on enabling gitlab plugin, the custom workspace is not modified(the getcustomworkspace method is returning the value that was set when the plugin was disabled) but the previously set workspace is not showing in the ui. its just that the code is retaining it. when I try setting new custom workspace, its not saving it. getcustomworkspace is still returning the same thing but not showing anything in the ui
+13/03/2023, 13:37:02 - Kris Stern: Any suggestion how this can be fixed?
+13/03/2023, 13:38:39 - harsh-ps-2003 (Harsh Pratap Singh): let me try find the sol. I will need to get to the root of the problem before suggesting the sol
+13/03/2023, 13:39:16 - Kris Stern: Sure
+13/03/2023, 14:12:39 - harsh-ps-2003 (Harsh Pratap Singh): Kris Stern: sorry but I have a silly doubt - why are there two same custom workspace sections in the job config page. one under description and one under advanced?
+13/03/2023, 14:19:21 - Kris Stern: <@harsh-ps-2003-63ce2d0d6da0373984bd6022:gitter.im "Kris Stern: sorry but I have a s..."> Do you mean for Freestyle projects in general? Can you provide screenshots to illustrate your ideas?
+13/03/2023, 14:20:47 - Kris Stern: I see what you mean, but in general it would be better to provide some illustrations instead of purely relying on words alone.
+13/03/2023, 14:21:06 - Kris Stern: I think you should report this bug by opening a issue to jenkinsci/jenkins or jenkinsci/gitlab-plugin
+13/03/2023, 14:30:53 - Kris Stern: I have done some work investigative work in this direction. Turns out out of the two `Use custom workspace` fields for Freestyle projects only the second one is functional. So a quick fix would be to hide the first `Use custom workspace` field via a pull request. Would you want to do this or do you want me to follow this up?
+13/03/2023, 14:31:14 - Kris Stern: Screenshot 2023-03-13 at 9.24.13 PM.png (Media omitted)
+13/03/2023, 14:31:43 - Kris Stern: Screenshot 2023-03-13 at 9.31.21 PM.png (Media omitted)
+13/03/2023, 14:42:38 - harsh-ps-2003 (Harsh Pratap Singh): I came up with the same conclusion. I have never really created an issue so it would be an intresting thing to do. and does hiding the first custom workspace involve ui things? as you know I love challenges, maybe I can try these? Kris Stern
+13/03/2023, 14:44:35 - harsh-ps-2003 (Harsh Pratap Singh): <@krisstern:matrix.org "I see what you mean, but in gene..."> from now I will make sure I do post screenshots or videos for explaining myself better. sorry for miscommunication 
+13/03/2023, 14:50:46 - Kris Stern: Sure, remember to open the pull request that will close issue [#1171](https://github.com/jenkinsci/gitlab-plugin/issues/1171)
+13/03/2023, 19:34:05 - harsh-ps-2003 (Harsh Pratap Singh): Kris Stern: is code related to job configuration page ui somewhere in core/src/main/resources/Hudson/model in jenkins? am I looking at the right place?
+14/03/2023, 09:58:39 - harsh-ps-2003 (Harsh Pratap Singh): Kris Stern: I am able to to find jelly files like config-customworkspace, configure-advanced, etc but not able to find the file which is causing the duplicates to exist in jenkins ui. if I modify the config-customworkspace then both of them get changed. same is the case with other jelly files. 🥲
+14/03/2023, 15:38:24 - harsh-ps-2003 (Harsh Pratap Singh): Kris Stern: I am taking hints from ux community members as I was not able to understand how unique identity is assigned to the two custom workspace section. am I even allowed to do that? just informing you that if I am able to find a sol, I took help from other folks and didn't do it alone
+14/03/2023, 18:50:03 - harsh-ps-2003 (Harsh Pratap Singh): Message deleted
+15/03/2023, 09:54:30 - harsh-ps-2003 (Harsh Pratap Singh): Message deleted
+15/03/2023, 09:54:56 - harsh-ps-2003 (Harsh Pratap Singh): Message deleted
+15/03/2023, 11:02:00 - harsh-ps-2003 (Harsh Pratap Singh): Message deleted
+15/03/2023, 15:01:11 - harsh-ps-2003 (Harsh Pratap Singh): Kris Stern: done
+15/03/2023, 15:02:10 - harsh-ps-2003 (Harsh Pratap Singh): Screenshot 2023-03-15 at 7.30.56 PM.png (Media omitted)
+15/03/2023, 15:02:18 - harsh-ps-2003 (Harsh Pratap Singh): this is what we wanted right?
+15/03/2023, 15:02:54 - Kris Stern: Yes
+15/03/2023, 15:03:06 - Kris Stern: Have you tested if it works still?
+15/03/2023, 15:05:59 - harsh-ps-2003 (Harsh Pratap Singh): I just made an hpi file and deployed in jenkins instance to see if the changes are working or not
+15/03/2023, 15:06:45 - Kris Stern: Let us know if you will have opened a pull request and with test(s) added where necessary
+15/03/2023, 15:10:58 - harsh-ps-2003 (Harsh Pratap Singh): <@krisstern:matrix.org "Let us know if you will have ope..."> amazing! now I can learn about testing. will try my best 🤓
+15/03/2023, 20:04:07 - Kris Stern: harsh-ps-2003 (Harsh Pratap Singh): I have tested a fix via [PR #1429](https://github.com/jenkinsci/gitlab-plugin/pull/1429) manually and it seemed to have worked, while also corrected/simplified the `src/docker/README` file you have modified previously. But we would benefit from some automated testing if you are interested in making another PR and that is expected to take a while. My apologies for not waiting since we need the fix the sooner the better. 
+16/03/2023, 04:18:48 - harsh-ps-2003 (Harsh Pratap Singh): Kris Stern:  the thing you did in the pr I already did locally. I was busy with testing as you told. i could have done the same thing yesterday and tbh, you could have told me to make a pr yesterday, I would have made the same pr 😓. anyways I learnt a lot of ux/ux stuff from this issue so no worries. i can try some other issue for learning more any day
+16/03/2023, 04:29:49 - harsh-ps-2003 (Harsh Pratap Singh): Message deleted
+16/03/2023, 05:58:35 - harsh-ps-2003 (Harsh Pratap Singh): Kris Stern: hey! check this issue out - https://github.com/jenkinsci/gitlab-plugin/issues/1194. the sol has already been proposed but pr is in draft stage. you can make a pr to fix this issue as the author of the draft pr has not responded for a long time.
+16/03/2023, 15:53:20 - harsh-ps-2003 (Harsh Pratap Singh): Kris Stern: I was trying to get my hand dirty on this issue - https://github.com/jenkinsci/gitlab-plugin/issues/1305. The error message indicates that the HTTP request sent by the GitLab plugin to update the commit status has failed with the status code 410 Gone. This usually means that the resource being requested is no longer available on the server, in this case, the GitLab commit. but the exception should have been catched if the  commit didnt exist, but the logger doesn't show it, thus commit does exist but getcommit method is not able to retrieve it.  the commit status must have been updated successfully as no exception was logged in the stack trace. is my analysis of the issue correct as I am not able to comprehend how can gitlab api respond incorrectly?
+16/03/2023, 16:38:20 - harsh-ps-2003 (Harsh Pratap Singh): Message deleted
+16/03/2023, 16:52:14 - harsh-ps-2003 (Harsh Pratap Singh): Message deleted
+17/03/2023, 02:42:49 - MarkEWaite (Mark Waite): harsh-ps-2003 (Harsh Pratap Singh): I'm not seeing failing tests in the gitlab plugin.  https://ci.jenkins.io/job/Plugins/job/gitlab-plugin/job/master/ shows the tests are passing. Several different pull requests also show that the tests are passing.  If there is a null pointer exception during a test, that will generally cause the test to fail.  Other unexpected exceptions can also cause tests to fail.
+17/03/2023, 05:08:16 - harsh-ps-2003 (Harsh Pratap Singh): <@markewaite-5a15a09bd73408ce4f7fd2a9:gitter.im "harsh-ps-2003 (Harsh Pratap Sing..."> sorry! my fault. thanks for clarifying 
+18/03/2023, 06:12:57 - Kris Stern: harsh-ps-2003 (Harsh Pratap Singh): I ran `mvn verify` as usual and have been able to get a BUILD SUCCESS. So we are not sure what are these failing tests you have been referring to.
+18/03/2023, 06:13:13 - Kris Stern: Screenshot 2023-03-18 at 1.12.17 PM.png (Media omitted)
+18/03/2023, 06:14:47 - Kris Stern: I would encourage you to work on the issue on your own. Once you have a pull request we can start the discussion on GitHub. 
+18/03/2023, 06:17:24 - Kris Stern: I did more than just submitted a pull request. I also cut a new release so the end users can see the end result plus fixed up the src/docker/README.md doc you worked on previously in an earlier pull request to simplify the setup process. 
+18/03/2023, 06:19:19 - Kris Stern: Note in the spirit of open-source software most issues are settled via pull requests. Usually any other request is not entertained. 
+18/03/2023, 06:31:46 - harsh-ps-2003 (Harsh Pratap Singh): <@krisstern:matrix.org "harsh-ps-2003 (Harsh Pratap Sing..."> oh! sorry, I already messaged. it was due to my fault that tests were not passing. you are right its  passing
+18/03/2023, 06:33:28 - harsh-ps-2003 (Harsh Pratap Singh): Kris Stern : fine! I am currently improving my proposal. will try to solve this issue on my own.
+18/03/2023, 06:39:30 - harsh-ps-2003 (Harsh Pratap Singh): <@krisstern:matrix.org "I did more than just submitted a..."> Kris Stern: that issue taught me a lot about ui/ux in jenkins and was quite an intresting ride. but as I took hint from the community to solve the issue, cant really say that I deserved the pr. thanks for answering 👍️
+18/03/2023, 16:26:28 - harsh-ps-2003 (Harsh Pratap Singh): Kris SternMarkEWaite (Mark Waite) I want to request for a review again as I have tried improving some parts of my proposal.  
+18/03/2023, 16:51:23 - harsh-ps-2003 (Harsh Pratap Singh): and I have a doubt, can I submit my final proposal anyway between 20 march to 4 April or submitting early is better?
+18/03/2023, 17:21:09 - MarkEWaite (Mark Waite): I've not seen any compelling reason to submit as soon as the application period opens.  If you wait a few days or even a week, that gives more time for refinement of the proposal.  I would not wait until the end of the submission period, but the middle of the period does not seem harmful to me.
+18/03/2023, 17:38:25 - harsh-ps-2003 (Harsh Pratap Singh): <@markewaite-5a15a09bd73408ce4f7fd2a9:gitter.im "I've not seen any compelling rea..."> thanks for the clarification
+18/03/2023, 20:32:59 - harsh-ps-2003 (Harsh Pratap Singh): Kris Stern: for some reason I am able to update gitlab commit status successfully! didnt have any http 410 error when trying to push build status to gitlab when I tried reproducing the issue?
+18/03/2023, 20:33:40 - harsh-ps-2003 (Harsh Pratap Singh): Message deleted
+18/03/2023, 20:34:52 - harsh-ps-2003 (Harsh Pratap Singh): Screenshot 2023-03-19 at 1.04.15 AM.png (Media omitted)
+18/03/2023, 20:35:17 - harsh-ps-2003 (Harsh Pratap Singh): Screenshot 2023-03-19 at 1.05.00 AM.png (Media omitted)
+19/03/2023, 04:06:19 - @utsav-06-639b57116da0373984a09b99:gitter.im joined the room
+19/03/2023, 06:42:01 - harsh-ps-2003 (Harsh Pratap Singh): Screenshot 2023-03-19 at 11.11.40 AM.png (Media omitted)
+19/03/2023, 11:41:29 - Kris Stern: harsh-ps-2003 (Harsh Pratap Singh): Could you post on the GitHub issue that you cannot reproduce the issue? Asking me here won't help as I was not the person reporting the problem.
+19/03/2023, 12:18:50 - harsh-ps-2003 (Harsh Pratap Singh): so whom should I ask? the person who raised the issue? Kris Stern 
+19/03/2023, 12:22:30 - Kris Stern: Probably, otherwise who else? 
+19/03/2023, 12:22:52 - Kris Stern: Anyway please stop making open-source development personal
+19/03/2023, 12:23:13 - Kris Stern: Just post on the issue that you cannot reproduce it and move on
+19/03/2023, 12:24:03 - harsh-ps-2003 (Harsh Pratap Singh): okay!
+19/03/2023, 12:30:43 - Kris Stern: Please state all the steps you have used to yield an outcome in all your correspondence from now on. This is really a given/something very basic to open-source software development, it shows that you lack understanding of how open-source really works. 
+19/03/2023, 12:39:06 - harsh-ps-2003 (Harsh Pratap Singh): thanks for letting me know! will keep this in mind. sorry for inconvenience.
+20/03/2023, 19:21:39 - harsh-ps-2003 (Harsh Pratap Singh): <@krisstern:matrix.org "harsh-ps-2003 (Harsh Pratap Sing..."> Kris Stern: sorry I just missed that you asked for some automated tests. can I get some hints on how to proceed, I have written junit tests in past and know a bit of selenium but can you guide how can I go ahead with writing automation tests, sorry if this is a stupid question. 
+20/03/2023, 19:23:53 - Kris Stern: I would prefer you to try and figure it out on your own as a challenge, as this will serve as a practice for GSoC where you will need to figure out solutions to various software development problems on your own. BTW, I did already told you what kind of tests we can do for this particular task previously when you questioned why I provided that info at that time. 
+20/03/2023, 19:33:40 - harsh-ps-2003 (Harsh Pratap Singh): <@krisstern:matrix.org "I would prefer you to try and fi..."> well I expected this answer. thanks. will try my best 
+21/03/2023, 07:15:15 - @utsav-06-639b57116da0373984a09b99:gitter.im: Message deleted
+21/03/2023, 12:41:04 - harsh-ps-2003 (Harsh Pratap Singh): Kris Stern: not very clear tbh - `when you questioned why I provided that info at that time` but I am guessing that I need to add unit tests for custom workspaces feature. btw the plugin has test coverage for almost all classes covering the basics, but that doesn't really mean that it covers all the features that the plugin provides like post build actions, custom workspaces, etc. I had to manually check whether these features are working or not while I was trying to solve issues, shouldn't the plugin also have automated tests for these critical features?
+21/03/2023, 15:43:12 - MarkEWaite (Mark Waite): Yes, it is desirable to have automated tests that cover the features of the plugin.  Coverage reporting of the tests can be visualized with `mvn -P enable-jacoco clean verify` .  The resulting process will create a report in the `target/site` directory
+21/03/2023, 15:45:17 - harsh-ps-2003 (Harsh Pratap Singh): acceptgitlabmergerequeststep, addgitlabmergerequestcommentstep, gitlabbranchbuild, gitlabbuildsstep classes in the workflow folder also dont have unit tests. are they also required?
+21/03/2023, 15:45:55 - MarkEWaite (Mark Waite): Unit tests are highly desirable, especially for classes that have very little coverage.
+21/03/2023, 15:46:37 - MarkEWaite (Mark Waite): https://ci.jenkins.io/job/Plugins/job/gitlab-plugin/job/master/479/coverage/ shows a lot of red that indicates there are many places that need more tests
+21/03/2023, 15:47:14 - harsh-ps-2003 (Harsh Pratap Singh): okay! will try adding them. will be a good learning experience for me
+22/03/2023, 13:51:17 - harsh-ps-2003 (Harsh Pratap Singh): Kris Stern: I am sorry kris but somehow the test cases I wrote are not passing jenkins test. I tested locally using `mvn -Dtest=AcceptGitLabMergeRequestStepTest test` and they were passing. can you please help me out and check whether the tests I am trying to add are correct or not.
+22/03/2023, 13:51:32 - harsh-ps-2003 (Harsh Pratap Singh): Screenshot 2023-03-22 at 6.21.24 PM.png (Media omitted)
+22/03/2023, 13:54:21 - Kris Stern: harsh-ps-2003 (Harsh Pratap Singh): You have a Null Pointer Exception java.base/java.io.Reader.\<init>(Reader.java:167) -> 	at com.dabsquared.gitlabjenkins.workflow.AcceptGitLabMergeRequestStepTest.acceptGitlabMergeRequest(AcceptGitLabMergeRequestStepTest.java:56).
+22/03/2023, 13:55:59 - Kris Stern: Once after you have handled this NPE properly the build failure should go away
+22/03/2023, 13:57:11 - harsh-ps-2003 (Harsh Pratap Singh): wow! so I created a new bug. amazing. 🥲 btw are the tests correct?
+22/03/2023, 14:21:29 - Kris Stern: I will need time to review the PR
+22/03/2023, 14:32:08 - harsh-ps-2003 (Harsh Pratap Singh): no worries!
+22/03/2023, 14:49:03 - Kris Stern: 👌
+22/03/2023, 18:03:47 - harsh-ps-2003 (Harsh Pratap Singh): <@krisstern:matrix.org "harsh-ps-2003 (Harsh Pratap Sing..."> Kris Stern: sorry if this is a stupid question but is there a way for me to check if npe or any other exception is occurring in the test before making any commits and waiting for the checks? tests pass in my local system but produce exceptions when I commit them.
+22/03/2023, 18:05:28 - Kris Stern: I think Mark already demonstrated to you how this can be done on GitHub, as he was able to detect this while running the tests
+22/03/2023, 18:19:45 - harsh-ps-2003 (Harsh Pratap Singh): I think he was able to detect the npe by going to the checks tab and checking the stack trace of the failed test. let me rephrase my question for better communication, can I check whether the jenkins checks will produce exception or not locally without making a new commit?
+22/03/2023, 18:21:50 - Kris Stern: This is what Mark said in his own words:
+
+> I really like this technique with a separate file that is the Pipeline script. Unfortunately, when I run the test, it reports a null pointer exception in the test. I suspect that means that even though the test is running, it is not doing what you hoped it would do.
+>
+> The stack trace that I see is: ...
+22/03/2023, 18:22:14 - Kris Stern: So I think from his wording he ran the test locally first
+22/03/2023, 18:22:28 - Kris Stern: Unless he misspoke
+22/03/2023, 18:22:49 - Kris Stern: I am the one who checked out the stack trace on GitHub to pinpoint the issue
+22/03/2023, 18:23:36 - harsh-ps-2003 (Harsh Pratap Singh): Screenshot 2023-03-22 at 10.53.24 PM.png (Media omitted)
+22/03/2023, 18:24:05 - Kris Stern: What command did you use the run the tests?
+22/03/2023, 18:24:38 - harsh-ps-2003 (Harsh Pratap Singh): <@harsh-ps-2003-63ce2d0d6da0373984bd6022:gitter.im "sent an image."> ❯ mvn -Dtest=AcceptGitLabMergeRequestStepTest test    
+22/03/2023, 18:24:52 - Kris Stern: We usually use `mvn verify`
+22/03/2023, 18:25:19 - Kris Stern: Also, you have patched the bug so the failure should not still be there
+22/03/2023, 18:25:24 - harsh-ps-2003 (Harsh Pratap Singh): ok let me try that also, I doubt it will fail though
+22/03/2023, 18:26:03 - Kris Stern: Now it should not anymore
+22/03/2023, 18:26:36 - Kris Stern: Mark tried it and he actually pasted the relevant stack trace on GitHub
+22/03/2023, 18:26:50 - Kris Stern: Or are you saying he is lying?
+22/03/2023, 18:27:16 - harsh-ps-2003 (Harsh Pratap Singh): sorry I am not saying anything. 
+22/03/2023, 18:36:22 - harsh-ps-2003 (Harsh Pratap Singh): Screenshot 2023-03-22 at 11.05.39 PM.png (Media omitted)
+22/03/2023, 18:36:48 - harsh-ps-2003 (Harsh Pratap Singh): <@harsh-ps-2003-63ce2d0d6da0373984bd6022:gitter.im "sent an image."> this happened when I ran mvn verify
+22/03/2023, 18:36:52 - Kris Stern: What are you trying to show?
+22/03/2023, 18:37:02 - Kris Stern: But you already fixed the bug
+22/03/2023, 18:37:15 - Kris Stern: Mark tested it when the bug was still there
+22/03/2023, 18:38:11 - harsh-ps-2003 (Harsh Pratap Singh): you are taking me wrong!!! I am just showing that the bug is fixed
+22/03/2023, 18:38:50 - harsh-ps-2003 (Harsh Pratap Singh): sorry miscommunication form my side. 
+22/03/2023, 18:38:53 - Kris Stern: You don't have to show me here. I already saw on GitHub
+22/03/2023, 18:40:43 - Kris Stern: Can you please address the requested changes made by Mark for the PR?
+22/03/2023, 18:41:56 - harsh-ps-2003 (Harsh Pratap Singh): sorry but I didnt want to hurt you and I dont want to prove anything. just wanted to let you know that tests were working on my side. I am noob so I really get conscious on myself when something wrong happens. anxiety! just got a bit confused. sorry again
+22/03/2023, 18:48:30 - Kris Stern: Have you run `mvn -P enable-jacoco clean verify` and checked what the changes are before and after you have introduced the test? 
+22/03/2023, 18:50:57 - harsh-ps-2003 (Harsh Pratap Singh): nope 🥲 checking now. sorry yet again
+23/03/2023, 15:55:02 - harsh-ps-2003 (Harsh Pratap Singh): Kris SternMarkEWaite (Mark Waite) : by mistake I made a commit related to spotless in the same pr 🥲. what to do now? forgot changing the branch. sorry. 
+23/03/2023, 16:11:33 - Kris Stern: You can rebase and remove the commit interactively
+23/03/2023, 17:35:44 - harsh-ps-2003 (Harsh Pratap Singh): Message deleted
+23/03/2023, 17:54:39 - Jmm joined the room
+23/03/2023, 19:36:49 - KitKet joined the room
+23/03/2023, 19:40:07 - harsh-ps-2003 (Harsh Pratap Singh): <@krisstern:matrix.org "You can rebase and remove the co..."> done! I was very afraid with the force push that I had to do, but thanks for helping 🥹
+24/03/2023, 06:44:55 - harsh-ps-2003 (Harsh Pratap Singh): Kris Stern: if I try adding spotless to gitlab plugin, shouldn't the contributing guide be updated also?
+24/03/2023, 06:46:09 - Kris Stern: You should update it, but I don't understanding why you are questioning me. I am not the one writing the PR.
+24/03/2023, 06:50:39 - harsh-ps-2003 (Harsh Pratap Singh): I know you want to make me self-reliant but I have a habit of asking and confirming before doing anything 🙁 sorry 
+24/03/2023, 06:53:44 - Kris Stern: It would actually lower your chances of getting selected to be honest
+24/03/2023, 06:54:31 - Kris Stern: I am an org admin on top of the potential mentor, so I am evaluating every interaction, and am obliged to actually
+24/03/2023, 07:00:45 - harsh-ps-2003 (Harsh Pratap Singh): <@krisstern:matrix.org "I am an org admin on top of the ..."> of course you shouldn't select me if you dont find me good enough! I am just here to learn, and because I feel quite under confident I generally ask a lot of questions to make sure I understand things well. I repeat I am here to learn, not obsessed with gsoc. if asking questions lowers my chances of selection then I would like to know what qualities are you looking for in a potential gsoc contributor?
+24/03/2023, 07:02:50 - Kris Stern: We are looking for someone who is likely to be able to complete a GSoC project with adequate but not too much guidance, more like independently. We evaluate based on both behavioural and technical qualities in a candidate.  
+24/03/2023, 07:13:35 - harsh-ps-2003 (Harsh Pratap Singh): <@krisstern:matrix.org "We are looking for someone who i..."> thanks for letting me know. will try improving on my independent coding skills without creating a mess. 
+25/03/2023, 08:11:30 - harsh-ps-2003 (Harsh Pratap Singh): Is there something wrong with the pr I made? I think npe is solved. why is the pr not getting merged? sorry for being impatient
+25/03/2023, 09:13:47 - Kris Stern: I have not reviewed it yet to see whether it really works as intended or not. The PR's are all reviewed case-by-case. Not to be automatically merged simply because all tests are passed. 
+25/03/2023, 09:21:26 - Kris Stern: And, please stop pinging someone in the channel, unless you have very compelling reasons to do so. 
+25/03/2023, 09:47:31 - harsh-ps-2003 (Harsh Pratap Singh): <@krisstern:matrix.org "And, please stop pinging someone..."> sorry and thanks for the info
+26/03/2023, 10:44:45 - Kris Stern: I have reviewed the PR in terms of code coverage but found that the difference with the new test is exactly 0%. 
+26/03/2023, 10:53:11 - harsh-ps-2003 (Harsh Pratap Singh): <@krisstern:matrix.org "I have reviewed the PR in terms ..."> I am checking, this can happen as I didnt use any method of the class to be tested. Thanks for letting me know. 
+26/03/2023, 11:04:33 - Kris Stern: Yeah, that is probably why. But I found out the existing tests already covered `AcceptGitLabMergeRequestStep.DescriptorImpl`, `AcceptGitLabMergeRequestStep.AcceptGitLabMergeRequestStepExecution`, as well as `AcceptGitLabMergeRequestStep`.
+26/03/2023, 11:06:03 - harsh-ps-2003 (Harsh Pratap Singh): oops! its time to close the PR I guess. sorry for the inconvenience
+26/03/2023, 14:03:58 - harsh-ps-2003 (Harsh Pratap Singh): I did run mvn spotless:apply before committing.
+26/03/2023, 14:04:23 - harsh-ps-2003 (Harsh Pratap Singh) sent an image. (Media omitted)
+26/03/2023, 14:24:45 - Kris Stern: Message deleted
+26/03/2023, 14:25:47 - Kris Stern: But the test is failing and they are suggesting to run `mvn spotless:apply`. Did you commit the changes after applying the changes?
+26/03/2023, 14:26:37 - Kris Stern: It may be working for you locally but not on GitHub
+26/03/2023, 14:31:53 - harsh-ps-2003 (Harsh Pratap Singh): <@krisstern:matrix.org "It may be working for you locall..."> okay! thank for letting me know. I will see to it. need some time 
+26/03/2023, 14:47:25 - Kris Stern: 👌
+26/03/2023, 18:13:05 - harsh-ps-2003 (Harsh Pratap Singh): wait! I did changes locally but do I really need to commit all those files which got modified by spotless? you are right I didnt commit them, more than 100 files will be changed
+26/03/2023, 19:39:16 - harsh-ps-2003 (Harsh Pratap Singh): regarding this - `<expandEmptyElements>false</expandEmptyElements>
+              <sortDependencies>groupId,artifactId</sortDependencies>
+              <sortDependencyExclusions>groupId,artifactId</sortDependencyExclusions>
+              <sortExecutions>true</sortExecutions>
+              <sortModules>true</sortModules>
+              <sortPlugins>groupId,artifactId</sortPlugins>
+              <sortProperties>true</sortProperties>
+              <spaceBeforeCloseEmptyElement>true</spaceBeforeCloseEmptyElement>` I added them as I saw them in other plugins with spotless implemented and they can create a mess. For example, changing the sorting order for dependencies or plugins can affect the order in which they are resolved and loaded by Maven, which can cause conflicts or incompatibilities between different versions or dependencies. Similarly, adding or removing empty elements, or adding spaces before closing tags, can affect the way that Maven parses the file, leading to syntax errors or incorrect interpretation of the content of the pom.xml file. so should I remove them?
+26/03/2023, 22:58:12 - Kris Stern: <@harsh-ps-2003-63ce2d0d6da0373984bd6022:gitter.im "wait! I did changes locally but ..."> Yes, you will need to commit all the changes if you want to submit the PR as is. 
+26/03/2023, 23:00:20 - Kris Stern: I think the changes are too aggressive as is. Could you change it to:
+
+```
+<plugin>
+  <groupId>com.diffplug.spotless</groupId>
+  <artifactId>spotless-maven-plugin</artifactId>
+  <version>2.35.0</version>
+  <configuration>
+    <!-- define a language-specific format -->
+    <java>
+      <!-- no need to specify files, inferred automatically -->
+      <endWithNewline />
+      <removeUnusedImports />
+    </java>
+    <pom>
+      <sortPom><encoding>${project.build.sourceEncoding}</encoding>
+        <lineSeparator>\n</lineSeparator>
+        <expandEmptyElements>false</expandEmptyElements>
+        <spaceBeforeCloseEmptyElement>true</spaceBeforeCloseEmptyElement>
+      </sortPom>
+    </pom>
+  </configuration>
+  <executions>
+    <execution>
+      <!-- Runs in verify phase by default -->
+      <goals>
+        <!-- Can be disabled using -Dspotless.check.skip -->
+        <goal>check</goal>
+      </goals>
+    </execution>
+  </executions>
+</plugin>
+```
+26/03/2023, 23:00:44 - Kris Stern: Also, is there a reason why we are not communicating on GitHub but here? It seems odd to me. 
+26/03/2023, 23:03:46 - Kris Stern: Can we please continue our discussion on GitHub instead as the communication here is meant to be transient? 
+28/03/2023, 21:17:32 - harsh-ps-2003 (Harsh Pratap Singh): hey kris! I had a merge conflict so to solve it I made some extra commits. just letting you know.
+29/03/2023, 13:03:12 - harsh-ps-2003 (Harsh Pratap Singh): hey! as mentioned in - https://www.jenkins.io/projects/gsoc/2023/project-ideas/gitlab-plugin-modernization/ the project is long, so should I enter project size to be LARGE instead of MEDIUM during submission of my proposal? I know it's a silly question but saw this - `Do not change the size (larger or smaller) without getting approval from the target organization first.`thats why asked
+29/03/2023, 14:09:31 - Kris Stern: You should not choose large as the project size, as this is intended to be a medium-sized project. 
+29/03/2023, 14:10:11 - Kris Stern: We will not be entertaining any request for the project to be changed to large. 
+29/03/2023, 14:37:24 - harsh-ps-2003 (Harsh Pratap Singh): <@krisstern:matrix.org "You should not choose large as t..."> Thanks for letting me know!
+29/03/2023, 14:39:26 - Kris Stern: But I think you should seriously consider rewriting parts of your proposal to make some parts more high-level so as not to make it detailed in a way that does not convey much insights. 
+29/03/2023, 14:39:45 - Kris Stern: Otherwise it may not be able to stand out from the crowd.
+29/03/2023, 15:36:32 - harsh-ps-2003 (Harsh Pratap Singh): <@krisstern:matrix.org "But I think you should seriously..."> `make some parts more high-level so as not to make it detailed in a way that does not convey much insights` - do you mean I overdid detailing of some parts? maybe I should remove some obvious code snippets and explain things to the point and crisp instead of making it long and descriptive, fitting the proposal in less than 20 pages I guess.
+29/03/2023, 16:09:07 - Kris Stern: Yeah, agree. Do try to make it more intelligent. 
+30/03/2023, 02:36:29 - Kris Stern: Also, be sure to submit an application before the official deadline to avoid any unexpected technical issues. You can always resubmit your proposal after the initial submission. 
+01/04/2023, 18:56:31 - Kris Stern: Hi everyone, 
+A new release of the GitLab plugin (version 1.7.10) has been cut and released just now: https://github.com/jenkinsci/gitlab-plugin/releases/tag/gitlab-plugin-1.7.10
+03/04/2023, 00:41:33 - Wolfy joined the room
+03/04/2023, 00:46:59 - Wolfy: Hi everyone,
+
+My name is El Batouri Badr-eddine and I am a Data Engineering student currently doing an internship as an SDE at AWS. I have been programming for the last three years and have gained some experience through freelancing and other internships. I am very interested in contributing to open source projects, and I recently heard about the GSOC program. I came across the Git Modernization project idea, which is related to the work I am currently doing (heavily using the Jenkins with GitLab plugin). I would love to contribute to this project, but as I am new to open source, I am seeking guidance. Please note that the deadline for applying is 4/4. Thank you in advance for any help you can provide.
+
+Have a nice day.
+
+Kris Stern MarkEWaite (Mark Waite) 
+03/04/2023, 02:02:50 - MarkEWaite (Mark Waite): Thanks for your interest.  I don't think there is enough time for you to learn the necessary information and prepare a viable proposal.  Since you're already interested in the plugin from a professional perspective, you could certainly contribute to the plugin by reviewing pull requests, evaluating bug reports, and performing exploratory testing of changes before they release.
+03/04/2023, 02:42:55 - Kris Stern: I second Mark's observation. It's too late for you to start. 
+03/04/2023, 03:03:05 - MarkEWaite (Mark Waite): We'd love to have more people looking at the plugin, testing it, and assuring that improvements don't create surprises.  If you are interested in fixing bugs, that would be a great help as well.
+03/04/2023, 03:17:22 - Wolfy: oooh i see, fair enough and thanks for the advice.
+03/04/2023, 09:03:32 - Tabitha Mutiso joined the room
+03/04/2023, 09:05:21 - Tabitha Mutiso: Hi mentors, I have made improvements to my proposal as advice. your review will be highly appreciated Kris Stern  MarkEWaite (Mark Waite) https://docs.google.com/document/d/1IBR5LkUafbhG8puqJSjrJOtNQCoXdxvT8tFBAzVJ1PI/edit?usp=sharing
+03/04/2023, 17:44:27 - harsh-ps-2003 (Harsh Pratap Singh): Can I contribute to the gitlab plugin after 4th April i.e in acceptance period or the contributions are to be halted until a gsoc contributor is selected? sorry if this is a stupid question
+03/04/2023, 17:50:48 - Kris Stern: Sure, this is perfectly fine
+03/04/2023, 21:59:46 - harsh-ps-2003 (Harsh Pratap Singh): hey! I just wanted to clarify whether I am getting the testing the gitlab plugin in production env right - instead of using the docker based test env, I will have to setup either a local jenkins instance or a cloud based jenkins in a virtual machine and on a similar line use actual gitlab.com to test the plugin. this is what I mean when I say testing in production server. am i correct?
+04/04/2023, 11:31:24 - Likhiya Uttam joined the room
